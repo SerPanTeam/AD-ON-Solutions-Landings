@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professionelle Hochzeitsfotografie – euer großer Tag in einzigartigen, emotionalen Bildern festgehalten.">
+  <meta name="keywords" content="Hochzeitsfotografie, Hochzeit, Brautpaar, Trauung, Hochzeitsfotograf">
+  <title>Hochzeitsfotografie | Karin Himml Fotografie</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Hochzeitsfotografie | Karin Himml Fotografie">
+  <meta property="og:description" content="Professionelle Hochzeitsfotografie – euer großer Tag in einzigartigen, emotionalen Bildern festgehalten.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="../css/variables.css">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/sections.css">
+  <link rel="stylesheet" href="../css/quiz.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  
+</head>
+<body>
+  <!-- ============================================
+     HERO V5 - Business Hub Landing
+
+     FIGMA (node 585:34):
+     - Full-width gray/image background: 1440x746px
+     - Logo inside hero (beige/gold color)
+     - Title: BLACK text
+     - Subtitle with accent "Herz & Seele"
+     - Gold CTA button "Mehr erfahren"
+     ============================================ -->
+
+<section class="hero hero--v5">
+  <div class="hero__banner" style="background-image: url('https://images.unsplash.com/photo-1521791055366-0d553872125f?w=1440&h=746&fit=crop');">
+    <div class="container">
+      <!-- Logo внутри hero -->
+      <p class="hero__logo">Logo</p>
+
+      <div class="hero__content">
+        <!-- Главный заголовок - ЧЁРНЫЙ (triple braces for HTML line breaks) -->
+        <h1 class="hero__title">Hochzeitsfotografie –<br>Emotionen für die Ewigkeit!</h1>
+
+        <!-- Подзаголовок с акцентным текстом -->
+        
+        <p class="hero__subtitle">– Am besten mit einem<br><span class="text-accent">KOSTENLOSEN Probe-Fotoshooting!</span></p>
+        
+
+        <!-- Описание (опционально, triple braces for HTML) -->
+        
+        <p class="hero__description">Lernt mich ganz unverbindlich bei einem 20-minütigen Probe-Fotoshooting kennen – kostenlos und risikofrei.<br>So könnt ihr euch selbst von meiner Arbeitsweise und Bildqualität überzeugen und herausfinden, ob ich die richtige Fotografin für euch bin, um euch an eurem großen Tag zu begleiten.</p>
+        
+
+        <!-- Кнопка -->
+        <a href="quiz-step1.html" class="btn btn-primary hero__btn">Kostenloses Probe-Fotoshooting sichern</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     CONTENT V1 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Image: 428x440px in white frame
+     - Title: Inter Bold 28px
+     - Text: Inter Medium 22px
+     - Accent text: #E2C08D
+     - Divider + link with arrow
+     ============================================ -->
+
+<section class="content-section content-section--v5 section--bg-primary">
+  <div class="container">
+    <div class="row align-items-center flex-lg-row">
+      <!-- Изображение -->
+      <div class="col-lg-5">
+        <div class="content-section__image-frame">
+          <div class="content-section__image">
+            <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=474&h=493&fit=crop" alt="Eure Liebe, eure Geschichte – einzigartig und unvergesslich festgehalten.">
+          </div>
+          
+          
+        </div>
+      </div>
+
+      <!-- Контент -->
+      <div class="col-lg-6 ms-auto">
+        <div class="content-section__content">
+          
+          <h2 class="content-section__title">Eure Liebe, eure Geschichte – einzigartig und unvergesslich festgehalten.</h2>
+          
+          
+          
+          <p class="content-section__text">Mit meiner Expertise von über 350 fotografischen Hochzeitsbegleitungen halte ich eure Liebe in einzigartigen Bildern fest, die euch ein Leben lang berühren.</p>
+          
+
+          <p class="content-section__text">Mit eurem ganz persönlichen Style, eurer Liebe und meinem Einfühlungsvermögen erschaffen wir gemeinsam den Tag eures Lebens!</p>
+          
+
+          <p class="content-section__text">Lernt mich und meine Arbeit kennen – mit echter Leidenschaft, die man in jedem Bild spürt.</p>
+          
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY SLIDER - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Primary background
+     - 3 visible slides
+     - Navigation arrows
+     - Smooth slide transitions
+
+     VARIANT V5 (L5 Business):
+     - Center slide larger with white frame
+     - Side slides smaller without frame
+     - CTA button support
+     ============================================ -->
+
+<section class="gallery-slider gallery-slider--v5 section--bg-secondary">
+  <div class="gallery-slider__wrapper">
+    <button class="gallery-slider__arrow gallery-slider__arrow--prev" aria-label="Previous slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 14L1 7.5L7.5 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 7.5H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="gallery-slider__viewport">
+      <div class="gallery-slider__track">
+        
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=350&h=350&fit=crop" alt="Hochzeitspaar">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=350&h=350&fit=crop" alt="Brautstrauß">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=350&h=350&fit=crop" alt="Getting Ready">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=350&h=350&fit=crop" alt="Hochzeitsfeier">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1511285560929-80b456fea0bc?w=350&h=350&fit=crop" alt="Trauung">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?w=350&h=350&fit=crop" alt="Brautpaar">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?w=350&h=350&fit=crop" alt="Hochzeitslocation">
+        </div>
+        
+      </div>
+    </div>
+    <button class="gallery-slider__arrow gallery-slider__arrow--next" aria-label="Next slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  
+  <div class="gallery-slider__cta">
+    <a href="quiz-step1.html" class="btn btn-primary">Mehr erfahren</a>
+  </div>
+  
+</section>
+
+
+<!-- ============================================
+     FEATURES CARDS V3 - 3-4 карточки (image + title + text)
+
+     FIGMA (node 369:256):
+     - 3-4 columns, gap 40px
+     - Image: 350x300px, rounded-35px
+     - Title: 28px bold
+     - Text: 22px medium
+
+     Опционально:
+     - title: заголовок секции
+     - subtitle: подзаголовок секции
+     - ctaText/ctaLink: кнопка внизу
+     ============================================ -->
+
+<section class="features-cards features-cards--v3 section--bg-primary">
+  <div class="container">
+    
+    <h2 class="features-cards__section-title">Was du bei mir genießen wirst...</h2>
+    
+    
+    <p class="features-cards__section-subtitle">Ich bin nicht nur eine Fotografin - ich bin deine Lösung für wunderschöne Erinnerungen!</p>
+    
+    <div class="features-cards__grid">
+      
+      
+      <div class="features-cards__item">
+        <div class="features-cards__image">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=230&h=160&fit=crop" alt="Spaß und Wohlfühlen - Individuell angepasst">
+        </div>
+        <h4 class="features-cards__title">Spaß und Wohlfühlen - Individuell angepasst</h4>
+        <p class="features-cards__text">Meine Hochzeits-Fotoshootings sind Momente voller Freude und echter Emotionen. Ich schaffe eine entspannte Atmosphäre, in der ihr euch fallen lassen und ganz ihr selbst sein könnt. Auch wenn ihr vor der Kamera unsicher seid – ich begleite euch mit Feingefühl, damit eure Liebe authentisch und strahlend sichtbar wird.</p>
+      </div>
+      
+
+      <div class="features-cards__item">
+        <div class="features-cards__image">
+          <img src="https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=230&h=160&fit=crop" alt="Hohe Qualität zu fairen Preisen">
+        </div>
+        <h4 class="features-cards__title">Hohe Qualität zu fairen Preisen</h4>
+        <p class="features-cards__text">Meine Hochzeits-Fotoshootings stehen für höchste Qualität zu einem fairen Preis. Mit einem geschulten Blick fürs Detail und moderner Technik halte ich eure schönsten Momente authentisch fest. Vom ersten Gespräch bis zur abschließenden Bearbeitung könnt ihr auf meine Sorgfalt und Zuverlässigkeit zählen.</p>
+      </div>
+      
+
+      <div class="features-cards__item">
+        <div class="features-cards__image">
+          <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=230&h=160&fit=crop" alt="Kreativ und zuverlässig">
+        </div>
+        <h4 class="features-cards__title">Kreativ und zuverlässig</h4>
+        <p class="features-cards__text">Ich verbinde Kreativität mit Organisationstalent, um eure Hochzeitsbilder so einzigartig wie eure Liebe zu gestalten. Vom gefühlvollen Paar-Fotoshooting bis zu bewegenden Momenten mit Familie und Freunden – mit viel Liebe zum Detail setze ich euren großen Tag liebevoll in Szene.</p>
+      </div>
+      
+
+      <div class="features-cards__item">
+        <div class="features-cards__image">
+          <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=230&h=160&fit=crop" alt="Zufriedenheit und vielfältige Möglichkeiten">
+        </div>
+        <h4 class="features-cards__title">Zufriedenheit und vielfältige Möglichkeiten</h4>
+        <p class="features-cards__text">Eure Zufriedenheit steht für mich an erster Stelle. Ob klassisch, modern oder ganz individuell – ich richte mich nach euren Wünschen und Vorstellungen. Gemeinsam gestalten wir ein Fotoshooting, das eure Liebe und Persönlichkeit ehrlich widerspiegelt und unvergessliche Erinnerungen schafft.</p>
+      </div>
+      
+      
+    </div>
+    
+    
+    <div class="features-cards__cta">
+      <a href="quiz-step1.html" class="btn btn-primary">Hochzeit anfragen</a>
+    </div>
+    
+    
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY SINGLE SLIDER - Landing 3 (Hunde-Fotoshooting)
+
+     Особенности:
+     - Одно большое изображение (1233x746px, radius 50px)
+     - Стрелки навигации по краям страницы
+     - Одно изображение видно, клик для переключения
+
+     Данные:
+     - images[]: массив изображений {src, alt}
+     - bgClass: переопределение фона (default: primary)
+     ============================================ -->
+
+<section class="gallery-single-slider section--bg-secondary gallery-single-slider--small-radius">
+  <div class="gallery-single-slider__inner">
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="gallery-single-slider__container" data-gallery-single-slider>
+      
+      <div class="gallery-single-slider__slide is-active">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1233&h=746&fit=crop" alt="Hochzeit 1" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=1233&h=746&fit=crop" alt="Hochzeit 2" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486?w=1233&h=746&fit=crop" alt="Hochzeit 3" class="gallery-single-slider__image">
+      </div>
+      
+    </div>
+
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  
+</section>
+
+
+<!-- ============================================
+     SERVICES LIST V5 - Business Landing (Hochzeit)
+
+     Список услуг с иконками.
+     Каждый пункт: иконка + заголовок + описание.
+
+     DATA:
+     - title: Заголовок секции
+     - subtitle: Подзаголовок (optional)
+     - items: Array of {icon, title, text}
+     - sideImage: (optional) Image on the right side
+     - ctaText: Текст кнопки (optional)
+     - ctaLink: Ссылка кнопки (optional)
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="services-list section--bg-primary services-list--with-image">
+  <div class="container">
+    <div class="services-list__wrapper">
+      <div class="services-list__main">
+        
+        <h2 class="services-list__title">Die Leistungen:</h2>
+        
+        
+
+        <div class="services-list__items">
+          
+          <div class="services-list__item">
+            <div class="services-list__icon"></div>
+            <div class="services-list__content">
+              <h3 class="services-list__item-title">Ausführliche Beratung:</h3>
+              <p class="services-list__item-text">Vom ersten Vorgespräch über die Feierlichkeit bis hin zum finalen Bild – ich bin für euch da.</p>
+            </div>
+          </div>
+          
+
+          <div class="services-list__item">
+            <div class="services-list__icon"></div>
+            <div class="services-list__content">
+              <h3 class="services-list__item-title">Rundum-Betreuung an eurem großen Tag:</h3>
+              <p class="services-list__item-text">Vom Ankleiden und Stylen über die Hochzeitszeremonie bis zum letzten Tanz – ich begleite euch durch diesen Tag voller Ereignisse und Emotionen.</p>
+            </div>
+          </div>
+          
+
+          <div class="services-list__item">
+            <div class="services-list__icon"></div>
+            <div class="services-list__content">
+              <h3 class="services-list__item-title">Produktgarantie:</h3>
+              <p class="services-list__item-text">Damit ihr ganz entspannt sein könnt: sichere ich eure Aufnahmen doppelt – so lange, bis ihr eure Bilder sicher gespeichert habt.</p>
+            </div>
+          </div>
+          
+
+          <div class="services-list__item">
+            <div class="services-list__icon"></div>
+            <div class="services-list__content">
+              <h3 class="services-list__item-title">Erstklassige Qualität:</h3>
+              <p class="services-list__item-text">Mit jahrelanger Erfahrung in der Fotografie, einem geschulten Blick fürs Detail und stets aktueller Technik garantiere ich euch anspruchsvolle und kreative Bilder.</p>
+            </div>
+          </div>
+          
+
+          <div class="services-list__item">
+            <div class="services-list__icon"></div>
+            <div class="services-list__content">
+              <h3 class="services-list__item-title">Die Daten gehören euch:</h3>
+              <p class="services-list__item-text">Ihr erhaltet alle entstandenen Fotos digital – in voller Auflösung. So könnt ihr eure Erinnerungen jederzeit ansehen, teilen und ganz nach Wunsch verwenden – egal wo ihr gerade seid.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+
+      
+      <div class="services-list__image-wrapper">
+        <div class="services-list__image-frame">
+          <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=501&h=728&fit=crop" alt="Die Leistungen:" class="services-list__image">
+        </div>
+      </div>
+      
+    </div>
+
+    
+  </div>
+</section>
+
+
+<!-- ============================================
+     STEPS 6 - Business Landing (Hochzeit)
+
+     6 шагов в сетке 2x3.
+     Каждый шаг: номер + иконка + заголовок + описание.
+
+     DATA:
+     - title: Заголовок секции
+     - steps: Array of {number, icon, title, text}
+     - ctaText: Текст кнопки (optional)
+     - ctaLink: Ссылка кнопки (optional)
+     - bgClass: (optional) Override background
+     ============================================ -->
+
+<section class="steps-6 section--bg-secondary pb-0">
+  <div class="container">
+    <h2 class="steps-6__title">In 5 Schritten zum kostenlosen Probe-Fotoshooting!</h2>
+
+    
+
+    <div class="steps-6__grid">
+      
+      <div class="steps-6__card">
+        <span class="steps-6__number">1</span>
+        <div class="steps-6__content">
+          
+          <p class="steps-6__card-text">Beantworte die folgenden Fragen und melde dich für das Kennenlerngespräch an.</p>
+        </div>
+      </div>
+      
+
+      <div class="steps-6__card">
+        <span class="steps-6__number">2</span>
+        <div class="steps-6__content">
+          
+          <p class="steps-6__card-text">Nach der Eintragung wird die Reservierung für euren Hochzeitstag sowie der Gutschein für das kostenlose Probe-Fotoshooting bei mir vermerkt.</p>
+        </div>
+      </div>
+      
+
+      <div class="steps-6__card">
+        <span class="steps-6__number">3</span>
+        <div class="steps-6__content">
+          
+          <p class="steps-6__card-text">Ich werde euch zu dem von euch angegebenen Zeitpunkt telefonisch kontaktieren. Natürlich könnt ihr mich auch jederzeit per Nachricht oder Anruf erreichen.</p>
+        </div>
+      </div>
+      
+
+      <div class="steps-6__card">
+        <span class="steps-6__number">4</span>
+        <div class="steps-6__content">
+          
+          <p class="steps-6__card-text">Gemeinsam finden wir einen Termin für das unverbindliche Beratungsgespräch und das kostenlose, 20-minütige Probe-Fotoshooting.</p>
+        </div>
+      </div>
+      
+
+      <div class="steps-6__card">
+        <span class="steps-6__number">5</span>
+        <div class="steps-6__content">
+          
+          <p class="steps-6__card-text">Ich stelle euch mein Angebot in Ruhe vor und schenke euch ein 20-minütiges Probeshooting. Wenn ihr mich für eure Hochzeit bucht, bekommt ihr die Bilder auch kostenlos dazu – andernfalls könnt ihr sie bei Gefallen ganz einfach erwerben.</p>
+        </div>
+      </div>
+      
+
+      <div class="steps-6__card">
+        <span class="steps-6__number"></span>
+        <div class="steps-6__content">
+          
+          <h3 class="steps-6__card-title">Fertig!</h3>
+          
+          <p class="steps-6__card-text">Nach dem Kennenlern-Fotoshooting steht einer unvergesslichen Hochzeitsreportage nichts mehr im Weg – und ihr könnt sicher entscheiden, ob ich die richtige Begleiter für euren großen Tag bin.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY SINGLE SLIDER - Landing 3 (Hunde-Fotoshooting)
+
+     Особенности:
+     - Одно большое изображение (1233x746px, radius 50px)
+     - Стрелки навигации по краям страницы
+     - Одно изображение видно, клик для переключения
+
+     Данные:
+     - images[]: массив изображений {src, alt}
+     - bgClass: переопределение фона (default: primary)
+     ============================================ -->
+
+<section class="gallery-single-slider section--bg-secondary gallery-single-slider--small-radius pt-70">
+  <div class="gallery-single-slider__inner">
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="gallery-single-slider__container" data-gallery-single-slider>
+      
+      <div class="gallery-single-slider__slide is-active">
+        <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?w=1327&h=521&fit=crop" alt="Hochzeitsfeier" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1519741497674-611481863552?w=1327&h=521&fit=crop" alt="Brautpaar" class="gallery-single-slider__image">
+      </div>
+      
+    </div>
+
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  
+  <div class="gallery-single-slider__cta">
+    <a href="quiz-step1.html" class="btn btn-primary">Kontakt aufnehmen</a>
+  </div>
+  
+</section>
+
+
+<!-- ============================================
+     FAQ - Часто задаваемые вопросы
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок секции → class="faq__title"
+     • Вопросы → class="faq__question"
+     • Ответы → class="faq__answer-inner"
+     • Кнопка (опционально) → class="faq__cta"
+
+     ДОБАВИТЬ/УДАЛИТЬ ВОПРОС:
+     Скопируйте или удалите блок <div class="faq__item">
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Размер шрифта → --font-size-text-lg (вопрос)
+     ============================================ -->
+
+<section class="faq section--bg-primary faq--no-borders faq--chevron">
+  <div class="container">
+    <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
+    <h2 class="faq__title">Häufige Fragen <span class="text-gray">zum Fotoshooting</span></h2>
+
+    <!-- ====== СПИСОК ВОПРОСОВ ====== -->
+    <div class="faq__list">
+      
+      <!-- ВОПРОС: скопируйте для добавления нового -->
+      <div class="faq__item" data-faq-item>
+        <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
+          <span>Wie lange begleitest du uns am Hochzeitstag?</span>
+          <span class="faq__icon faq__icon--plus">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="faq__icon faq__icon--chevron">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L12 12L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq__answer" data-faq-answer>
+          <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
+            <p>Das hängt ganz von euren Wünschen ab. Ich biete Pakete von 2 Stunden bis zur ganzen Tagesbegleitung an. Im Vorgespräch finden wir gemeinsam heraus, was am besten zu euch passt.</p>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- ВОПРОС: скопируйте для добавления нового -->
+      <div class="faq__item" data-faq-item>
+        <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
+          <span>Wann bekommen wir unsere Bilder?</span>
+          <span class="faq__icon faq__icon--plus">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="faq__icon faq__icon--chevron">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L12 12L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq__answer" data-faq-answer>
+          <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
+            <p>In der Regel erhaltet ihr eure fertig bearbeiteten Hochzeitsbilder innerhalb von 4-6 Wochen nach dem Hochzeitstag in einer privaten Online-Galerie.</p>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- ВОПРОС: скопируйте для добавления нового -->
+      <div class="faq__item" data-faq-item>
+        <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
+          <span>Können wir ein Engagement-Shooting dazubuchen?</span>
+          <span class="faq__icon faq__icon--plus">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="faq__icon faq__icon--chevron">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L12 12L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq__answer" data-faq-answer>
+          <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
+            <p>Ja, sehr gerne! Ein Engagement-Shooting vorab ist eine tolle Möglichkeit, sich kennenzulernen und entspannt vor der Kamera zu üben.</p>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- ВОПРОС: скопируйте для добавления нового -->
+      <div class="faq__item" data-faq-item>
+        <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
+          <span>Wie viele Bilder erhalten wir?</span>
+          <span class="faq__icon faq__icon--plus">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="faq__icon faq__icon--chevron">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L12 12L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq__answer" data-faq-answer>
+          <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
+            <p>Die genaue Anzahl hängt von der Begleitdauer ab. Bei einer ganztägigen Begleitung erhaltet ihr in der Regel 300-500 bearbeitete Bilder.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    <div class="faq__cta">
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
+      <a href="quiz-step1.html" class="btn btn-primary">Kontakt aufnehmen</a>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================
+     ABOUT - Секция "О фотографе"
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Подзаголовок → class="about__label"
+     • Имя фотографа → class="about__name"
+     • Описание → class="about__text" (можно несколько)
+     • Соцсети → class="social-icon" (ссылки)
+
+     КАРТИНКА:
+     • Фото автора: 466x560px → class="about__image"
+
+     ДОБАВИТЬ/УДАЛИТЬ ТЕКСТ:
+     Скопируйте или удалите блок <p class="about__text">
+
+     СОЦСЕТИ:
+     Скопируйте или удалите блок <a class="social-icon">
+     Измените href и src иконки
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     ============================================ -->
+
+<section class="about section--bg-secondary about--v5">
+  <div class="container">
+    <div class="row align-items-start flex-lg-row-reverse">
+      <!-- ====== ФОТО АВТОРА ====== -->
+      <div class="col-lg-5 offset-lg-1">
+        <!-- КАРТИНКА: 466x560px - замените src на свой файл -->
+        <div class="about__image-wrapper">
+          <div class="about__image">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=581&h=450&fit=crop" alt="Karin Himml">
+          </div>
+          
+          <div class="about__image-caption">
+            <h2 class="about__name about__name--under-image">{{nameUnderImage}}</h2>
+            
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- ====== ИНФОРМАЦИЯ ====== -->
+      <div class="col-lg-6">
+        <div class="about__content">
+          
+          <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
+          <p class="about__label">Über mich</p>
+          
+          
+
+          <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->
+          
+
+          
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <p class="about__text">Meine fotografische Reise begann 1979 mit einer Ausbildung zur Fotografin.</p>
+          
+
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <p class="about__text">In den 1980er-Jahren konnte ich mein Können in renommierten Werbestudios wie bei Neckermann sowie als Studioleiterin in verschiedenen Portraitstudios vertiefen.</p>
+          
+
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <p class="about__text">1989 legte ich erfolgreich meine Meisterprüfung ab und eröffnete 1990 mein eigenes Fotostudio – seither lebe ich meine Leidenschaft für kreative, hochwertige Fotografie.</p>
+          
+
+          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <p class="about__text">Durch kontinuierliche Fortbildungen in digitaler Bildbearbeitung, Beauty-Retusche und Workshops bleibe ich am Puls der Zeit – für Bilder, die mit Professionalität, Gefühl und Ästhetik überzeugen.</p>
+          
+
+          
+
+          <!-- ====== СОЦСЕТИ (опционально) ====== -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     FOOTER - Подвал сайта
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     КАРТА:
+     • Google Maps → замените src в <iframe>
+     • Как получить код: Google Maps → Поделиться → Встроить
+
+     ССЫЛКИ:
+     • Impressum → измените href
+     • Datenschutz → измените href
+     • Cookie → измените href
+
+     ДАТА:
+     • "Letzte Aktualisierung" → измените дату
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --footer-bg
+     ============================================ -->
+
+<footer class="footer">
+  <!-- ====== GOOGLE КАРТА ====== -->
+  <div class="footer__map">
+    
+    <!-- КАРТА: замените src на код вставки из Google Maps -->
+    <iframe
+      src="https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - Standort">
+    </iframe>
+    
+  </div>
+
+  <!-- ====== НАВИГАЦИЯ ====== -->
+  <div class="footer__bottom">
+    <div class="container">
+      <nav class="footer__nav">
+        <!-- РЕДАКТИРОВАТЬ: Ссылки на страницы -->
+        <a href="#">Impressum</a>
+        <span class="footer__separator">·</span>
+        <a href="#">Datenschutzerklärung</a>
+        <span class="footer__separator">·</span>
+        <a href="#">Cookie Richtlinien</a>
+      </nav>
+      <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
+      <p class="footer__updated">Letzte Aktualisierung: 29.01.2026 17:31</p>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="../js/faq.js"></script>
+  <script src="../js/quiz.js"></script>
+  <script src="../js/gallery-slider.js"></script>
+  <script src="../js/analytics.js"></script>
+</body>
+</html>

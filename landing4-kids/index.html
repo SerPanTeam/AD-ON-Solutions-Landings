@@ -1,0 +1,943 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kostenloses Kinder-Fotoshooting in Bremen-Findorff! Sichere dir jetzt deinen Gutschein für liebevolle Kinderbilder.">
+  <meta name="keywords" content="Kinder-Fotoshooting, Kinderfotografie, kostenlos, Bremen, Gutschein">
+  <title>Kostenloses Kinder-Fotoshooting | Fotostudio</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Kostenloses Kinder-Fotoshooting | Fotostudio">
+  <meta property="og:description" content="Kostenloses Kinder-Fotoshooting in Bremen-Findorff! Sichere dir jetzt deinen Gutschein für liebevolle Kinderbilder.">
+  <meta property="og:type" content="website">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+</head>
+<body>
+  <!-- ============================================
+     HERO V4 - Главный баннер (Landing 4)
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Логотип → найдите class="hero__logo"
+     • Акцентный текст → найдите class="hero__label"
+     • Заголовок → найдите <h1 class="hero__title">
+     • Подзаголовок → найдите class="hero__subtitle"
+     • Дата акции → найдите class="hero__date-notice"
+     • Кнопка → найдите class="btn btn-primary"
+     • Блок "Почему бесплатно" → hero__why-free
+
+     КАРТИНКИ:
+     • Фон: hero__dark-section background-image
+     • Галерея: 4 картинки в hero__gallery-item (если showGallery: true)
+
+     ФЛАГИ:
+     • showGallery: true/false - показать галерею под тёмной секцией
+
+     СТИЛИ:
+     • Тёмный фон → css/variables.css → --color-dark-bg
+     • Светлый фон галереи → --color-bg-primary
+     ============================================ -->
+
+<section class="hero hero--v4">
+  <!-- ====== ТЁМНАЯ СЕКЦИЯ С ЛОГО ====== -->
+  <div class="hero__dark-section" style="background-image: url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1920&h=900&fit=crop&crop=faces');">
+    <div class="container">
+      
+      <!-- РЕДАКТИРОВАТЬ: Текст логотипа -->
+      <p class="hero__logo">Logo</p>
+      
+      <div class="hero__content">
+        
+        <!-- РЕДАКТИРОВАТЬ: Акцентный текст над заголовком -->
+        <span class="hero__label">Kostenloses</span>
+        
+
+        <!-- РЕДАКТИРОВАТЬ: Главный заголовок -->
+        <h1 class="hero__title">Kinder - Fotoshooting</h1>
+
+        
+        <!-- РЕДАКТИРОВАТЬ: Описание -->
+        <p class="hero__subtitle">Emotionale Bilder – ein persönliches Geschenk zu Weihnachten.</p>
+        
+
+        
+        <!-- РЕДАКТИРОВАТЬ: Дата акции (опционально) -->
+        <p class="hero__date-notice">Die kostenlosen Kinder- Fotoshootings finden nur vom 01.11. bis 29.11.2025 statt!</p>
+        
+
+        <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
+        <a href="quiz-step1.html" class="btn btn-primary">Kostenloses Fotoshooting sichern</a>
+
+        
+        <!-- ====== БЛОК "ПОЧЕМУ БЕСПЛАТНО" ====== -->
+        <div class="hero__why-free">
+          <!-- РЕДАКТИРОВАТЬ: Заголовок блока -->
+          <h3 class="hero__why-free-title">Warum kostenlos?</h3>
+          <!-- РЕДАКТИРОВАТЬ: Текст блока -->
+          <p class="hero__why-free-text">Damit du ganz ohne Risiko unsere Qualität testen und nur die Fotos kaufen kannst, die dir gefallen.</p>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  
+</section>
+
+
+<!-- ============================================
+     CONTENT GALLERY V4 - Landing 4
+
+     Комбинированная секция:
+     - Заголовок галереи
+     - 4 наклонённых фото
+     - 2-колоночный контент (заголовок+кнопка слева, текст справа)
+
+     Данные:
+     - galleryTitle: заголовок галереи
+     - images[]: массив из 4 фото {src, alt}
+     - contentTitle: заголовок контента
+     - texts[]: массив параграфов для правой колонки
+     - buttonText/buttonLink: CTA кнопка
+     ============================================ -->
+
+<section class="content-gallery-v4 section--bg-primary pb-103">
+  <div class="container">
+    <!-- ====== GALLERY PART ====== -->
+    
+    <h2 class="content-gallery-v4__gallery-title">Echte Kinderlachen, echte Erinnerungen!</h2>
+    
+
+    <div class="content-gallery-v4__gallery">
+      
+      <div class="content-gallery-v4__gallery-item content-gallery-v4__gallery-item--1">
+        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=400&fit=crop" alt="Kind 1">
+      </div>
+      
+
+      <div class="content-gallery-v4__gallery-item content-gallery-v4__gallery-item--2">
+        <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=350&h=400&fit=crop" alt="Kind 2">
+      </div>
+      
+
+      <div class="content-gallery-v4__gallery-item content-gallery-v4__gallery-item--3">
+        <img src="https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=350&h=400&fit=crop" alt="Kind 3">
+      </div>
+      
+
+      <div class="content-gallery-v4__gallery-item content-gallery-v4__gallery-item--4">
+        <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=350&h=400&fit=crop" alt="Kind 4">
+      </div>
+      
+    </div>
+
+    <!-- ====== CONTENT PART (2 columns) ====== -->
+    <div class="content-gallery-v4__content">
+      <div class="row">
+        <!-- Left column: Title + Button -->
+        <div class="col-lg-5">
+          <h3 class="content-gallery-v4__content-title">Kinder-Fotoshooting – natürlich, fröhlich & unvergesslich</h3>
+          
+          <a href="quiz-step1.html" class="btn btn-primary content-gallery-v4__btn">Fotoshooting sichern</a>
+          
+        </div>
+        <!-- Right column: Text paragraphs -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="content-gallery-v4__text-block">
+            
+            <p class="content-gallery-v4__text">In entspannter Studioatmosphäre fangen wir echte Momente eurer Kinder ein – mit viel Geduld, Herz und einem Blick für das Besondere.</p>
+            
+
+            <p class="content-gallery-v4__text">Ideal als persönliches Weihnachtsgeschenk für Großeltern, Familie oder euch selbst!</p>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     CTA - Призыв к действию
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → class="cta__title"
+     • Подзаголовок → class="cta__subtitle"
+     • Кнопка → class="btn btn-primary cta__btn"
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-secondary
+     • Цвет кнопки → --color-button-primary
+     ============================================ -->
+
+<section class="cta section--bg-secondary cta--rounded cta--left pb-80">
+  <div class="container">
+    
+    <div class="cta__content">
+      <div class="cta__text">
+        <!-- РЕДАКТИРОВАТЬ: Заголовок -->
+        <h2 class="cta__title">Sichert euch jetzt ein kostenloses Kinder-<br>Fotoshooting in Bremen-Findorff.</h2>
+        <!-- РЕДАКТИРОВАТЬ: Подзаголовок (опционально) -->
+        <p class="cta__subtitle">Dauer bis zum Gutschein: ≈ 30 Sekunden</p>
+      </div>
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
+      <a href="quiz-step1.html" class="btn btn-primary cta__btn">Jetzt Gutschein sichern</a>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================
+     STEPS V4 - Landing 4 (Kinder-Fotoshooting)
+
+     Layout:
+     - 3 карточки шагов слева (белый фон, скруглённые)
+     - Большое изображение + кнопка справа
+
+     Данные:
+     - title: заголовок секции
+     - steps[]: массив шагов {number, title, text}
+     - image/imageAlt: изображение справа
+     - ctaText/ctaLink: кнопка под изображением
+     ============================================ -->
+
+<section class="steps steps--v4 section--bg-primary pb-104">
+  <div class="container">
+    <h2 class="steps__title steps__title--full">Wie genau komme ich zum kostenlosen Fotoshooting?</h2>
+
+    <div class="row">
+      <!-- 3 steps on the left -->
+      <div class="col-lg-6">
+        <div class="steps__cards">
+          
+          <div class="step-card-v4">
+            <div class="step-card-v4__header">
+              <div class="step-card-v4__number">1</div>
+              <h3 class="step-card-v4__title">Eintragen</h3>
+            </div>
+            <p class="step-card-v4__text">Jetzt eintragen und von deinem unschlagbaren Gutschein profitieren!</p>
+          </div>
+          
+
+          <div class="step-card-v4">
+            <div class="step-card-v4__header">
+              <div class="step-card-v4__number">2</div>
+              <h3 class="step-card-v4__title">Termin vereinbaren</h3>
+            </div>
+            <p class="step-card-v4__text">Wir werden uns nach deiner Eintragung bei dir melden um einen passenden Termin zu finden.</p>
+          </div>
+          
+
+          <div class="step-card-v4">
+            <div class="step-card-v4__header">
+              <div class="step-card-v4__number">3</div>
+              <h3 class="step-card-v4__title">Let's start: Fotoshooting</h3>
+            </div>
+            <p class="step-card-v4__text">Während des Fotoshootings gestalten wir gemeinsam wunderschöne Bilder in entspannter Atmosphäre. Im Anschluss hast du die Möglichkeit, deine Lieblingsbilder auszuwählen und nur die zu erwerben, die dir wirklich gefallen</p>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- Image + CTA on the right -->
+      <div class="col-lg-6">
+        <div class="steps__right-content">
+          <div class="steps__image">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=550&h=650&fit=crop" alt="Kinder-Fotoshooting">
+          </div>
+          <div class="steps__cta-right">
+            <a href="quiz-step1.html" class="btn btn-primary">Kostenloses Fotoshooting sichern</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     FAQ V4 - Landing 4 (Kinder-Fotoshooting)
+
+     Layout:
+     - 2 колонки карточек (по 2 в каждой)
+     - Белые карточки со скруглёнными углами
+     - Раскрытие/закрытие с иконками +/-
+
+     Данные:
+     - title: заголовок секции
+     - questionsLeft[]: вопросы левой колонки {question, answer}
+     - questionsRight[]: вопросы правой колонки
+     - ctaText/ctaLink: кнопка внизу (опционально)
+     - bgClass: переопределение фона (default: secondary)
+     ============================================ -->
+
+<section class="faq faq--v4 section--bg-secondary pb-88">
+  <div class="container">
+    <h2 class="faq__title faq__title--left">Häufige Fragen</h2>
+
+    <div class="faq__grid">
+      <!-- Left Column -->
+      <div class="faq__column faq__column--left">
+        
+        <div class="faq-card-v4 faq-card-v4--expanded" data-faq-item>
+          <div class="faq-card-v4__header" data-faq-toggle>
+            <h3 class="faq-card-v4__question">Wie lange dauert das Kinder-Fotoshooting?</h3>
+            <button class="faq-card-v4__toggle" aria-label="Toggle answer">
+              <span class="faq-card-v4__icon"></span>
+            </button>
+          </div>
+          <div class="faq-card-v4__body" data-faq-answer>
+            <p class="faq-card-v4__answer">Das Shooting dauert ca. 30-45 Minuten. Wir nehmen uns genügend Zeit, damit die Kleinen sich wohlfühlen und natürliche Bilder entstehen können.</p>
+          </div>
+        </div>
+        
+
+        <div class="faq-card-v4" data-faq-item>
+          <div class="faq-card-v4__header" data-faq-toggle>
+            <h3 class="faq-card-v4__question">Was sollen die Kinder anziehen?</h3>
+            <button class="faq-card-v4__toggle" aria-label="Toggle answer">
+              <span class="faq-card-v4__icon"></span>
+            </button>
+          </div>
+          <div class="faq-card-v4__body" data-faq-answer>
+            <p class="faq-card-v4__answer">Bequeme Kleidung, in der sich die Kinder wohlfühlen. Neutrale Farben wie Beige, Weiß oder Pastelltöne eignen sich besonders gut. Vermeidet große Aufdrucke oder Logos.</p>
+          </div>
+        </div>
+        
+      </div>
+
+      <!-- Right Column -->
+      <div class="faq__column faq__column--right">
+        
+        <div class="faq-card-v4" data-faq-item>
+          <div class="faq-card-v4__header" data-faq-toggle>
+            <h3 class="faq-card-v4__question">Können Eltern mit auf die Fotos?</h3>
+            <button class="faq-card-v4__toggle" aria-label="Toggle answer">
+              <span class="faq-card-v4__icon"></span>
+            </button>
+          </div>
+          <div class="faq-card-v4__body" data-faq-answer>
+            <p class="faq-card-v4__answer">Ja, sehr gerne! Familienfotos mit Eltern und Kindern sind wunderschöne Erinnerungen. Teilt uns einfach bei der Buchung mit, wer dabei sein soll.</p>
+          </div>
+        </div>
+        
+
+        <div class="faq-card-v4" data-faq-item>
+          <div class="faq-card-v4__header" data-faq-toggle>
+            <h3 class="faq-card-v4__question">Was ist, wenn mein Kind schüchtern ist?</h3>
+            <button class="faq-card-v4__toggle" aria-label="Toggle answer">
+              <span class="faq-card-v4__icon"></span>
+            </button>
+          </div>
+          <div class="faq-card-v4__body" data-faq-answer>
+            <p class="faq-card-v4__answer">Kein Problem! Wir haben viel Erfahrung mit Kindern aller Altersgruppen. Wir schaffen eine spielerische Atmosphäre und lassen den Kindern Zeit, sich einzugewöhnen.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+
+    
+    <div class="faq__cta faq__cta--left">
+      <a href="quiz-step1.html" class="btn btn-primary">Kostenloses Fotoshooting sichern</a>
+    </div>
+    
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY SINGLE SLIDER - Landing 3 (Hunde-Fotoshooting)
+
+     Особенности:
+     - Одно большое изображение (1233x746px, radius 50px)
+     - Стрелки навигации по краям страницы
+     - Одно изображение видно, клик для переключения
+
+     Данные:
+     - images[]: массив изображений {src, alt}
+     - bgClass: переопределение фона (default: primary)
+     ============================================ -->
+
+<section class="gallery-single-slider section--bg-primary pb-120">
+  <div class="gallery-single-slider__inner">
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+
+    <div class="gallery-single-slider__container" data-gallery-single-slider>
+      
+      <div class="gallery-single-slider__slide is-active">
+        <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=1233&h=746&fit=crop" alt="Galerie 1" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1233&h=746&fit=crop" alt="Galerie 2" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=1233&h=746&fit=crop" alt="Galerie 3" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=1233&h=746&fit=crop" alt="Galerie 4" class="gallery-single-slider__image">
+      </div>
+      
+
+      <div class="gallery-single-slider__slide">
+        <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?w=1233&h=746&fit=crop" alt="Galerie 5" class="gallery-single-slider__image">
+      </div>
+      
+    </div>
+
+    <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
+      <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </button>
+  </div>
+
+  
+</section>
+
+
+<!-- ============================================
+     SERVICES V4 - Landing 4 (Kinder-Fotoshooting)
+
+     PIXEL-PERFECT ПО FIGMA (node 479:77):
+     - Title: 45px Bold, left-aligned
+     - 3 white cards in row (424x596px, radius 15px)
+     - Card: image (339x257px) + title (28px) + text (22px)
+     - No CTA button
+     - Background: secondary (#EEE3D0)
+     ============================================ -->
+
+<section class="services-v4 section--bg-secondary">
+  <div class="container">
+    <h2 class="services-v4__title">Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.</h2>
+
+    <div class="services-v4__grid">
+      
+      <div class="services-v4__card">
+        <div class="services-v4__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=300&fit=crop" alt="Family Time" class="services-v4__image">
+        </div>
+        <div class="services-v4__content">
+          <h3 class="services-v4__card-title">Family Time</h3>
+          <p class="services-v4__card-text">Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen.</p>
+        </div>
+      </div>
+      
+
+      <div class="services-v4__card">
+        <div class="services-v4__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=400&h=300&fit=crop" alt="Newborn & Babybauch" class="services-v4__image">
+        </div>
+        <div class="services-v4__content">
+          <h3 class="services-v4__card-title">Newborn & Babybauch</h3>
+          <p class="services-v4__card-text">Schwangerschaft auf einzigartige Weise in Bildern festhalten und diese wertvollen Momente für immer bewahren.</p>
+        </div>
+      </div>
+      
+
+      <div class="services-v4__card">
+        <div class="services-v4__image-wrapper">
+          <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&h=300&fit=crop" alt="Tierisches Fotoshooting" class="services-v4__image">
+        </div>
+        <div class="services-v4__content">
+          <h3 class="services-v4__card-title">Tierisches Fotoshooting</h3>
+          <p class="services-v4__card-text">Wir widmen ausgiebig Zeit, damit sich dein geliebtes Haustier im Studio einfinden und sich wohlfühlen kann.</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY FULLWIDTH - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Max-width: 1440px
+     - Height: 656px
+     - Full-width image (no container for Landing 1/2)
+     - Между Steps и FAQ
+     - Rounded: 30px radius + container (Landing 3)
+
+     ФЛАГИ:
+     - title: Заголовок над изображением (опционально)
+     - rounded: Скруглённые углы + container
+     ============================================ -->
+
+<section class="gallery-fullwidth section--bg-primary">
+  
+  
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1400&h=600&fit=crop" alt="Fotostudio" class="gallery-fullwidth__image">
+  </div>
+  
+</section>
+
+
+<!-- ============================================
+     ABOUT V2 - Images Right layout (content left, 2 stacked images right)
+
+     Используется в Landing 4 (Kids)
+     ============================================ -->
+
+<section class="about section--bg-primary about--images-right pb-106">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Контент слева -->
+      <div class="col-lg-5">
+        <div class="about__content">
+          
+          <h2 class="about__title-compact">Herzlich Willkommen in unserem Fotostudio in Bremen-Findorff!</h2>
+          
+
+          
+
+          
+          <p class="about__text">Egal ob in der Natur bei Hochzeits- oder Tieraufnahmen, im Studio fürs Familienfoto oder beim 'einfachen' Passbild - wir kümmern uns gerne um euer Anliegen. In zentraler Lage erwarten wir euch in einer gemütlichen Atmosphäre, in der wir eure Fotowünsche umsetzen.</p>
+          
+
+          <p class="about__text">Wir beraten euch gerne bei der Suche nach dem passenden Fotogeschenk oder der perfekten Momentaufnahme für eure Familie.</p>
+          
+
+          <p class="about__text">Falls ihr lieber Fotos bei euch zuhause oder in der Natur machen möchtet, vereinbaren wir gerne einen Termin, um diesen Wunsch vor Ort zu erfüllen.</p>
+          
+
+          <p class="about__text">Euer Portraitfotostudio in Bremen-Findorff freut sich auf euren Besuch!</p>
+          
+
+          
+          <div class="about__cta">
+            <a href="quiz-step1.html" class="btn btn-primary">Jetzt Gutschein sichern</a>
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- 2 stacked images on right -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="about__images-stack">
+          
+          <div class="about__image-stacked">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=400&fit=crop" alt="Studio 1">
+          </div>
+          
+
+          <div class="about__image-stacked">
+            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=350&h=400&fit=crop" alt="Studio 2">
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     QUIZ CONTAINER - Landing Generator
+
+     Контейнер для всего квиза с шагами, формой и success.
+     Управляется через quiz.js
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Card style: square (L1, L2) or rounded (L3, L4)
+     ============================================ -->
+
+<section class="quiz section--bg-primary" id="quiz" data-quiz data-quiz-steps="4">
+  <div class="container">
+
+    
+    <!-- STEP 1: Kennst du uns bereits? -->
+    <div class="quiz-step" data-quiz-step="0">
+      <div class="quiz-step__header">
+        <span class="quiz-step__progress">Weiter zum Gutschein</span>
+        <h2 class="quiz-step__question">Kennst du uns bereits?</h2>
+      </div>
+      <div class="quiz-step__options quiz-step__options--4">
+        
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="ja_vom_hoeren">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" alt="Ja, vom Hören">
+          </div>
+          <span class="quiz-option__text">Ja, vom Hören</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="ja_na_klar">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" alt="Ja, na klar!">
+          </div>
+          <span class="quiz-option__text">Ja, na klar!</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="schon_sehr_lang">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=200&h=200&fit=crop" alt="Schon sehr lang">
+          </div>
+          <span class="quiz-option__text">Schon sehr lang</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="nein_noch_nicht">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=200&h=200&fit=crop" alt="Nein, noch nicht">
+          </div>
+          <span class="quiz-option__text">Nein, noch nicht</span>
+        </button>
+        
+      </div>
+    </div>
+    
+
+    <!-- STEP 2: Schon mal ein Kinder-Fotoshooting gehabt? -->
+    <div class="quiz-step" data-quiz-step="1">
+      <div class="quiz-step__header">
+        <span class="quiz-step__progress">2 Fragen bis zum Gutschein</span>
+        <h2 class="quiz-step__question">Schon mal ein Kinder-Fotoshooting gehabt?</h2>
+      </div>
+      <div class="quiz-step__options quiz-step__options--2">
+        
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="ja_hammer">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" alt="Ja, das war der Hammer!">
+          </div>
+          <span class="quiz-option__text">Ja, das war der Hammer!</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="nein_noch_nicht">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" alt="Nein, bisher noch nicht!">
+          </div>
+          <span class="quiz-option__text">Nein, bisher noch nicht!</span>
+        </button>
+        
+      </div>
+    </div>
+    
+
+    <!-- STEP 3: Wer soll mit auf die Fotos? -->
+    <div class="quiz-step" data-quiz-step="2">
+      <div class="quiz-step__header">
+        <span class="quiz-step__progress">1 Fragen bis zum Gutschein</span>
+        <h2 class="quiz-step__question">Wer soll mit auf die Fotos?</h2>
+      </div>
+      <div class="quiz-step__options quiz-step__options--4">
+        
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="nur_kinder">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" alt="Nur das Kind / die Kinder">
+          </div>
+          <span class="quiz-option__text">Nur das Kind / die Kinder</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="kinder_eltern">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" alt="Kind(er) mit Eltern">
+          </div>
+          <span class="quiz-option__text">Kind(er) mit Eltern</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="auch_grosseltern">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=200&h=200&fit=crop" alt="Auch Großeltern">
+          </div>
+          <span class="quiz-option__text">Auch Großeltern</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="noch_nicht_genau">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=200&h=200&fit=crop" alt="Wir wissen es noch nicht genau">
+          </div>
+          <span class="quiz-option__text">Wir wissen es noch nicht genau</span>
+        </button>
+        
+      </div>
+    </div>
+    
+
+    <!-- STEP 4: Welches Bild gefällt dir am Besten? -->
+    <div class="quiz-step" data-quiz-step="3">
+      <div class="quiz-step__header">
+        <span class="quiz-step__progress">Letzte Frage!</span>
+        <h2 class="quiz-step__question">Welches Bild gefällt dir am Besten?</h2>
+      </div>
+      <div class="quiz-step__options quiz-step__options--4">
+        
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="bild_1">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=200&h=200&fit=crop" alt="1">
+          </div>
+          <span class="quiz-option__text">1</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="bild_2">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=200&h=200&fit=crop" alt="2">
+          </div>
+          <span class="quiz-option__text">2</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="bild_3">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=200&h=200&fit=crop" alt="3">
+          </div>
+          <span class="quiz-option__text">3</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--rounded" data-quiz-option="bild_4">
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1519457431-44ccd64a579b?w=200&h=200&fit=crop" alt="4">
+          </div>
+          <span class="quiz-option__text">4</span>
+        </button>
+        
+      </div>
+    </div>
+    
+
+    <!-- FORM: Контактная форма -->
+    <div class="quiz-step quiz-form" data-quiz-step="form">
+      <div class="row">
+        <!-- Форма слева -->
+        <div class="col-lg-5">
+          <div class="quiz-form__header">
+            <span class="quiz-form__label">Klasse, jetzt zum Gutschein</span>
+            <p class="quiz-form__title">Trag dich jetzt ein und sichere dir dein</p>
+            <h2 class="quiz-form__subtitle">kostenloses Kinder-Fotoshooting</h2>
+            <p class="quiz-form__note">Das kostenlose Fotoshooting findet nur vom 1.11.- 29.11.25 statt!
+
+Schnell sein lohnt sich - wir freuen uns auf euch!</p>
+          </div>
+
+          <form class="quiz-form__form" data-quiz-form>
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Dein Vor- und Nachname" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Deine E-Mail Adresse" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Deine Telefonnummer" required>
+            </div>
+            <div class="form-group">
+              <select name="availability">
+                <option value="" disabled selected>Wann seid ihr erreichbar (Mehrfachauswahl)</option>
+                
+                <option value="morgens">Morgens</option>
+                
+
+                <option value="mittags">Mittags</option>
+                
+
+                <option value="nachmittags">Nachmittags</option>
+                
+
+                <option value="abends">Abends</option>
+                
+              </select>
+            </div>
+            <div class="form-group form-group--checkbox">
+              <label>
+                <input type="checkbox" name="privacy" required>
+                <span>Ich akzeptiere die <a href="#" target="_blank">Datenschutzbestimmungen</a>.</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Jetzt Gutschein sichern!</button>
+          </form>
+        </div>
+
+        <!-- Контент справа -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="quiz-form__image">
+            <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=400&h=550&fit=crop" alt="Kinder-Fotoshooting">
+          </div>
+          <p class="quiz-form__privacy">Deine Privatsphäre ist bei uns sicher – wir schätzen dein Vertrauen.</p>
+          <div class="quiz-form__info">
+            <p class="quiz-form__info-title">WICHTIG! Bitte halte deinen Termin ein oder informiere mich rechtzeitig über eventuelle Änderungen.</p>
+            <p class="quiz-form__info-text">Da mein Zeitplan besonders straff ist, plane ich meine Termine äußerst präzise. Kurzfristige Absagen bedeuten leider, dass andere diese einzigartige Gelegenheit verpassen könnten. Vielen Dank für dein Verständnis und deine Kooperation.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS: Страница благодарности -->
+    <div class="quiz-step quiz-success" data-quiz-step="success">
+      <div class="row">
+        <!-- Контент слева -->
+        <div class="col-lg-5">
+          <h2 class="quiz-success__title">Herzlichen Glückwunsch!</h2>
+          <p class="quiz-success__subtitle">Deine Anfrage ist bei uns eingegangen!</p>
+          
+          <p class="quiz-success__text">Wir melden uns bald bei dir.</p>
+          
+
+          <p class="quiz-success__text">Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!</p>
+          
+
+          <div class="quiz-success__cta">
+            <a href="#" class="btn btn-primary">Jetzt Termin wählen & sichern!</a>
+          </div>
+
+          <p class="quiz-success__alternative">Natürlich kannst du uns auch ganz unkompliziert telefonisch oder per E-Mail erreichen – wir freuen uns auf deine Nachricht!</p>
+
+          <div class="quiz-success__buttons">
+            <a href="tel:+4915290908090" class="btn btn-outline">Jetzt anrufen</a>
+            <a href="mailto:info@foto-findorff.de" class="btn btn-outline">Mail uns!</a>
+          </div>
+        </div>
+
+        <!-- Изображение справа -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="quiz-success__image">
+            <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=400&h=550&fit=crop" alt="Kinder-Fotoshooting">
+          </div>
+        </div>
+      </div>
+
+      <!-- About section -->
+      
+      <div class="quiz-success__about">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="about__image">
+              <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=400&h=550&fit=crop" alt="Yvonne Jadke – Fotograf Hannover">
+            </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <h3 class="about__name">Yvonne Jadke – Fotograf Hannover</h3>
+            <p class="about__tagline">Familienfotos, Businessportraits & Hochzeitsfotografie</p>
+            
+            <p class="about__text">Wir freuen uns darauf, dein Fotograf für jegliche Anlässe zu sein – sei es für Familienfotos, Business-Portraits oder als Hochzeitsfotograf. Auf eine gute Zusammenarbeit!</p>
+            
+
+            <p class="about__text">Wenn du noch Fragen hast, stehen wir dir jederzeit gerne zur Verfügung.</p>
+            
+            <div class="about__social">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <img src="assets/icons/facebook.svg" alt="Facebook">
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <img src="assets/icons/instagram.svg" alt="Instagram">
+              </a>
+              <a href="#" class="social-icon" aria-label="Website">
+                <img src="assets/icons/web.svg" alt="Website">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     FOOTER - Подвал сайта
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     КАРТА:
+     • Google Maps → замените src в <iframe>
+     • Как получить код: Google Maps → Поделиться → Встроить
+
+     ССЫЛКИ:
+     • Impressum → измените href
+     • Datenschutz → измените href
+     • Cookie → измените href
+
+     ДАТА:
+     • "Letzte Aktualisierung" → измените дату
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --footer-bg
+     ============================================ -->
+
+<footer class="footer">
+  <!-- ====== GOOGLE КАРТА ====== -->
+  <div class="footer__map">
+    
+    <!-- КАРТА: замените src на код вставки из Google Maps -->
+    <iframe
+      src="https://maps.google.com/maps?q=Bremen-Findorff&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - Standort">
+    </iframe>
+    
+  </div>
+
+  <!-- ====== НАВИГАЦИЯ ====== -->
+  <div class="footer__bottom">
+    <div class="container">
+      <nav class="footer__nav">
+        <!-- РЕДАКТИРОВАТЬ: Ссылки на страницы -->
+        <a href="#">Impressum</a>
+        <span class="footer__separator">·</span>
+        <a href="#">Datenschutzerklärung</a>
+        <span class="footer__separator">·</span>
+        <a href="#">Cookie Richtlinien</a>
+      </nav>
+      <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
+      <p class="footer__updated">Letzte Aktualisierung: 29.01.2026 17:31</p>
+    </div>
+  </div>
+</footer>
+
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/faq.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/gallery-slider.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>

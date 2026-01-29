@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ADON Solutions - Fotoshooting Landingpages</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; background: #ffffff; color: #111111; min-height: 100vh; display: flex; flex-direction: column; }
+
+    /* Header */
+    .header { background: #111111; color: white; padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; }
+    .header__logo { font-size: 20px; font-weight: 600; letter-spacing: 1px; display: flex; align-items: center; gap: 8px; }
+    .header__logo-dot { color: #D1F383; }
+    .header__nav { display: flex; gap: 30px; }
+    .header__link { color: white; text-decoration: none; font-size: 14px; font-weight: 500; opacity: 0.8; transition: opacity 0.3s; }
+    .header__link:hover { opacity: 1; }
+
+    /* Main */
+    .main { flex: 1; padding: 80px 40px; }
+    .container { max-width: 1200px; margin: 0 auto; }
+
+    /* Hero */
+    .hero { margin-bottom: 80px; }
+    .hero__tagline { display: inline-block; background: #D1F383; color: #111111; padding: 8px 16px; font-size: 12px; font-weight: 600; border-radius: 20px; margin-bottom: 24px; letter-spacing: 1px; }
+    .hero__title { font-size: 56px; font-weight: 700; margin-bottom: 20px; line-height: 1.1; max-width: 700px; }
+    .hero__title span { background: linear-gradient(90deg, #D1F383, #a8e063); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .hero__subtitle { font-size: 18px; color: #666; max-width: 500px; line-height: 1.6; font-weight: 400; }
+
+    /* Landings Grid */
+    .landings { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .landing-card {
+      background: #fafafa;
+      border-radius: 16px;
+      padding: 28px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      position: relative;
+      border: 1px solid #eee;
+    }
+    .landing-card:hover {
+      background: #111111;
+      color: white;
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+    }
+    .landing-card__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .landing-card__number { font-size: 14px; font-weight: 600; color: #D1F383; }
+    .landing-card__arrow {
+      width: 36px;
+      height: 36px;
+      background: #D1F383;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s;
+    }
+    .landing-card__arrow svg { width: 14px; height: 14px; stroke: #111111; }
+    .landing-card:hover .landing-card__arrow { transform: translateX(4px); }
+    .landing-card__title { font-size: 18px; font-weight: 600; margin-bottom: 12px; line-height: 1.4; }
+    .landing-card__description { font-size: 14px; color: #666; line-height: 1.5; }
+    .landing-card:hover .landing-card__description { color: rgba(255,255,255,0.7); }
+
+    /* Footer */
+    .footer { background: #111111; color: white; padding: 40px; }
+    .footer__inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .footer__brand { font-size: 18px; font-weight: 600; }
+    .footer__brand-dot { color: #D1F383; }
+    .footer__links { display: flex; gap: 24px; align-items: center; }
+    .footer__link { color: white; text-decoration: none; font-size: 14px; opacity: 0.7; transition: opacity 0.3s; }
+    .footer__link:hover { opacity: 1; }
+    .footer__copyright { font-size: 12px; opacity: 0.5; }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .landings { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .landings { grid-template-columns: 1fr; }
+      .hero__title { font-size: 36px; }
+      .hero__subtitle { font-size: 16px; }
+      .header { padding: 16px 20px; }
+      .header__nav { display: none; }
+      .main { padding: 40px 20px; }
+      .footer__inner { flex-direction: column; gap: 20px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="header__logo">AD<span class="header__logo-dot">•</span>ON solutions</div>
+    <nav class="header__nav">
+      <a href="https://www.adonsolutions.de/" class="header__link" target="_blank">Website</a>
+      <a href="https://www.adonsolutions.de/#contact" class="header__link" target="_blank">Kontakt</a>
+    </nav>
+  </header>
+  <main class="main">
+    <div class="container">
+      <div class="hero">
+        <span class="hero__tagline">LANDINGPAGES FÜR FOTOGRAFEN</span>
+        <h1 class="hero__title">Schnell. Einfach. <span>Effektiv.</span></h1>
+        <p class="hero__subtitle">Professionelle Fotoshooting-Landingpages mit Quiz-System. Ein Klick zum Erfolg.</p>
+      </div>
+      <div class="landings">
+        
+      <a href="landing1-family/" class="landing-card">
+        <div class="landing-card__header">
+          <span class="landing-card__number">01</span>
+          <span class="landing-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+        <h2 class="landing-card__title">Familien-Fotoshooting zu Weihnachten</h2>
+        <p class="landing-card__description">Weihnachts-Fotoshooting-Aktion: Familienbilder für nur 39€ statt 89€! Sichere dir jetzt deinen Gutschein für ein liebevo...</p>
+      </a>
+
+      <a href="landing2-family-kids/" class="landing-card">
+        <div class="landing-card__header">
+          <span class="landing-card__number">02</span>
+          <span class="landing-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+        <h2 class="landing-card__title">Kostenloses Familien und Kinder-Fotoshooting</h2>
+        <p class="landing-card__description">Kostenloses Familien- und Kinder-Fotoshooting! Sichere dir jetzt deinen Gutschein für liebevolle Familienbilder....</p>
+      </a>
+
+      <a href="landing3-dogs/" class="landing-card">
+        <div class="landing-card__header">
+          <span class="landing-card__number">03</span>
+          <span class="landing-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+        <h2 class="landing-card__title">Kostenloses Hunde-Fotoshooting</h2>
+        <p class="landing-card__description">Kostenloses Hunde-Fotoshooting! Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest....</p>
+      </a>
+
+      <a href="landing4-kids/" class="landing-card">
+        <div class="landing-card__header">
+          <span class="landing-card__number">04</span>
+          <span class="landing-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+        <h2 class="landing-card__title">Kostenloses Kinder-Fotoshooting</h2>
+        <p class="landing-card__description">Kostenloses Kinder-Fotoshooting in Bremen-Findorff! Sichere dir jetzt deinen Gutschein für liebevolle Kinderbilder....</p>
+      </a>
+
+      <a href="landing5-business/" class="landing-card">
+        <div class="landing-card__header">
+          <span class="landing-card__number">05</span>
+          <span class="landing-card__arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
+        <h2 class="landing-card__title">Karin Himml Fotografie</h2>
+        <p class="landing-card__description">Professionelle Fotoshootings für Hochzeiten, Familien, Tiere und Business. Jetzt Termin sichern!...</p>
+      </a>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">AD<span class="footer__brand-dot">•</span>ON solutions</div>
+      <div class="footer__links">
+        <a href="https://www.adonsolutions.de/" class="footer__link" target="_blank">adonsolutions.de</a>
+        <span class="footer__copyright">© 2025 ADON Solutions</span>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
