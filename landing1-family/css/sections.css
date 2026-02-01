@@ -991,6 +991,30 @@
   font-size: var(--font-size-text);
 }
 
+/* Tablet Landscape (992-1199px) */
+@media (max-width: 1199.98px) and (min-width: 992px) {
+  .hero--v5 .hero__banner {
+    height: 600px;
+  }
+
+  .hero--v5 .hero__logo {
+    padding-top: 40px;
+    margin-bottom: 50px;
+  }
+
+  .hero--v5 .hero__title {
+    font-size: 40px;
+  }
+
+  .hero--v5 .hero__subtitle {
+    font-size: 24px;
+  }
+
+  .hero--v5 .hero__description {
+    font-size: 15px;
+  }
+}
+
 @media (max-width: 991.98px) {
   .hero--v5 .hero__banner {
     height: auto;
@@ -1228,6 +1252,17 @@
   overflow: visible;
 }
 
+/* Stacking context для колонок */
+.content-section--v5 .row > .col-lg-5 {
+  position: relative;
+  z-index: 1; /* Колонка с изображением — ниже */
+}
+
+.content-section--v5 .row > .col-lg-6 {
+  position: relative;
+  z-index: 2; /* Колонка с текстом — выше */
+}
+
 /* Добавляем отступ снизу для подложки */
 .content-section--v5 {
   padding-bottom: 80px; /* Место для подложки */
@@ -1268,14 +1303,38 @@
 }
 
 @media (max-width: 991.98px) {
+  /* Stacked layout for all tablet */
+  .content-section--v5 .row {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+
+  /* Image column first */
+  .content-section--v5 .row > .col-lg-5 {
+    order: -1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+    margin-bottom: 110px; /* Компенсирует height:200px + bottom:-30px подложки */
+  }
+
+  /* Content column second */
+  .content-section--v5 .row > .col-lg-6 {
+    order: 1 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important;
+  }
+
   .content-section--v5 .content-section__image-frame {
     width: 100%;
-    max-width: 400px;
-    margin: 0 auto 60px;
+    max-width: 474px;
+    margin: 0 auto;
   }
 
   .content-section--v5 .content-section__image-frame::after {
     width: 100%;
+    height: 200px; /* Уменьшенная высота для stacked layout */
     right: -30px;
     bottom: -30px;
   }
@@ -1294,69 +1353,57 @@
     height: auto;
     aspect-ratio: 474 / 340;
   }
+
+  .content-section--v5 .content-section__content {
+    text-align: justify;
+  }
+
+  .content-section--v5 .content-section__title,
+  .content-section--v5 .content-section__subtitle,
+  .content-section--v5 .content-section__text {
+    max-width: 100%;
+    text-align: justify;
+  }
 }
 
 @media (max-width: 767.98px) {
-  /* Content V5 - image first, then text */
-  .content-section--v5 .row {
-    display: flex !important;
-    flex-direction: column !important;
+  /* Override display:contents from responsive.css - колонки должны участвовать в layout */
+  .content-section--v5 .row > .col-lg-5,
+  .content-section--v5 .row > .col-lg-6 {
+    display: block !important;
   }
 
-  /* Image column first */
+  /* Mobile-specific: add padding and extra margin for backdrop */
   .content-section--v5 .row > .col-lg-5 {
-    order: -1 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
     padding-left: 16px;
     padding-right: 16px;
-    margin-bottom: 40px;
-  }
-
-  /* Content column second */
-  .content-section--v5 .row > .col-lg-6 {
-    order: 1 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    flex: 0 0 100% !important;
+    margin-bottom: 100px; /* Компенсирует height:150px + bottom:-20px подложки */
   }
 
   .content-section--v5 .content-section__image-frame {
     max-width: 100%;
-    margin: 0;
   }
 
   .content-section--v5 .content-section__image {
-    width: calc(100% - 30px); /* smaller than backdrop */
+    width: calc(100% - 30px);
   }
 
   .content-section--v5 .content-section__image-frame::after {
     width: calc(100% - 30px);
+    height: 150px; /* Ещё меньше на mobile */
     right: 0;
-    left: auto;
     bottom: -20px;
   }
 
-  /* Stacked images - mobile */
   .content-section--v5 .content-section__image-secondary {
     width: calc(100% - 30px);
     right: 0;
-    left: auto;
     bottom: -20px;
-    height: auto;
-    aspect-ratio: 474 / 340;
   }
 
-  /* Content V5 - left aligned text */
   .content-section--v5 .content-section__content {
-    text-align: left;
     padding-left: 16px;
     padding-right: 16px;
-  }
-
-  .content-section--v5 .content-section__text {
-    text-align: left;
   }
 }
 
@@ -4488,7 +4535,7 @@
 /* ============================================
    RESPONSIVE - V5 SECTIONS
    ============================================ */
-@media (max-width: 991.98px) {
+@media (max-width: 1199.98px) {
   .services-cards-v5__grid,
   .cta-cards-v5__grid {
     grid-template-columns: repeat(2, 1fr);
