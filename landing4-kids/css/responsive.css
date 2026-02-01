@@ -5,12 +5,95 @@
    Адаптивные стили для всех секций
    ============================================ */
 
-/* ===== TABLET LANDSCAPE (992px - 1199px) ===== */
-@media (max-width: 1199.98px) {
-  /* Hero V1 - скрыть secondary image на tablet-landscape и меньше */
-  .hero--v1 .hero__image-secondary {
-    display: none !important;
+/* ===== SHARED: Content images 100% width on mobile (≤576px) ===== */
+@media (max-width: 576px) {
+  .hero__image-main,
+  .hero__sidebar-image,
+  .promo__image,
+  .content-section__image,
+  .content-section__image-frame,
+  .content-sidebar__image,
+  .about__image,
+  .about__image-stacked,
+  .service-card__image,
+  .services-v4__image,
+  .features-cards__image,
+  .gallery-fullwidth__image,
+  .gallery-decorated__main,
+  .gallery-single-slider__image,
+  .quiz-form__image,
+  .quiz-success__image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
   }
+
+  /* Content section: remove frame padding so image fills width */
+  .content-section__image-frame {
+    padding: 0 !important;
+  }
+
+  /* About: override fixed max-width from sections.css */
+  .about:has(.about__btn) .about__image {
+    max-width: 100% !important;
+  }
+
+  /* Gallery single slider: container full width, arrows overlay */
+  .gallery-single-slider__container {
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .gallery-single-slider__inner {
+    position: relative;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    gap: 0 !important;
+  }
+
+  .gallery-single-slider__arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    background: rgba(255,255,255,0.8) !important;
+    border-radius: 50%;
+    min-width: 44px !important;
+    min-height: 44px !important;
+    padding: 8px !important;
+  }
+
+  .gallery-single-slider__arrow--prev {
+    left: 8px;
+  }
+
+  .gallery-single-slider__arrow--next {
+    right: 8px;
+  }
+}
+
+/* ===== TABLET LANDSCAPE (992px - 1199px) ===== */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* Hero - убрать фиксированную высоту на tablet-landscape */
+  .hero {
+    min-height: auto !important;
+  }
+
+  /* Hero V1 - уменьшенная secondary image на tablet-landscape */
+  .hero--v1 .hero__image-secondary {
+    width: 200px;
+    height: 190px;
+    top: 180px;
+    right: calc(350px / 2 + 200px / 2 - 80px);
+  }
+
+  .hero--v1 .hero__image-main {
+    width: 350px;
+    height: 320px;
+  }
+}
+
+@media (max-width: 1199.98px) {
 
   /* Buttons - разрешить перенос текста на tablet-landscape для длинных немецких текстов */
   .btn {
@@ -43,6 +126,23 @@
     max-width: calc(50% - 12px) !important;
     margin-top: 0 !important;
   }
+
+  /* Gallery Decorated - adaptive images */
+  .gallery-decorated__main {
+    height: auto;
+    aspect-ratio: 16/10;
+  }
+
+  .gallery-decorated__decor {
+    width: 220px;
+    height: 145px;
+  }
+
+  /* About rounded - adaptive images */
+  .about--rounded .about__image {
+    max-width: 100%;
+    height: auto;
+  }
 }
 
 /* ===== TABLET (768px - 991px) ===== */
@@ -52,10 +152,115 @@
     font-size: 28px;
   }
 
-  /* Hero V1 */
+  /* Hero V1 - Stacked layout on tablet (col-lg-6 = 100% below 992px) */
+  .hero--v1 {
+    padding-bottom: 40px;
+    overflow-x: clip;
+  }
+
+  .hero--v1 .row {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hero--v1 .row > .col-lg-6:first-child {
+    display: contents;
+  }
+
+  .hero--v1 .row > .col-lg-6:last-child {
+    display: contents;
+  }
+
   .hero--v1 .hero__content {
-    padding-top: 60px;
-    margin-bottom: 40px;
+    display: contents;
+  }
+
+  /* Order: 1-Label/Title, 2-Images, 3-Subtitle, 4-Button */
+  .hero--v1 .hero__label {
+    order: 1;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero--v1 .hero__title {
+    order: 1;
+    max-width: 100%;
+    margin-bottom: 20px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero--v1 .hero__image-wrapper {
+    order: 2;
+    display: block !important;
+    width: 100% !important;
+    margin: 0 !important;
+    position: relative !important;
+    padding-bottom: 40px !important;
+    height: auto !important;
+  }
+
+  .hero--v1 .hero__subtitle {
+    order: 3;
+    max-width: 100%;
+    margin-bottom: 20px;
+    height: auto !important;
+    line-height: 1.4;
+    padding-top: 16px;
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .hero--v1 .hero__content > .btn {
+    order: 4;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .hero--v1 .hero__image-main {
+    width: 70% !important;
+    max-width: 70% !important;
+    height: auto !important;
+    aspect-ratio: 428/394 !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: 0 !important;
+    right: auto !important;
+    top: auto !important;
+    left: auto !important;
+  }
+
+  .hero--v1 .hero__image-main img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* Secondary image - показываем на tablet с наложением (скрытие на mobile в @media max-width: 767.98px) */
+  .hero--v1 .hero__image-secondary {
+    display: block !important;
+    visibility: visible !important;
+    width: 215px !important;
+    height: 203px !important;
+    position: absolute !important;
+    top: 140px !important;
+    right: calc(70% - 30px) !important;
+    left: auto !important;
+    z-index: 2;
+    overflow: visible !important;
+  }
+
+  .hero--v1 .hero__image-secondary img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   /* Steps - fix col-lg-6 overflow on tablet */
@@ -65,24 +270,10 @@
     width: 100%;
   }
 
-  .hero--v1 .hero__image-main {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    aspect-ratio: 428/394;
-  }
-
-  .hero--v1 .hero__image-secondary {
-    width: 250px;
-    height: 230px;
-    bottom: -60px;
-    left: -30px;
-  }
-
-  /* Promo */
+  /* Promo - картинка на всю ширину на tablet */
   .promo__image {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     aspect-ratio: 428/440;
     margin-bottom: 30px;
@@ -120,15 +311,142 @@
   /* About */
   .about__image {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
     height: auto;
     aspect-ratio: 466/560;
     margin-bottom: 30px;
   }
 
+  .about__label,
+  .about__name {
+    text-align: center;
+  }
+
   .about__divider {
     width: 100%;
-    max-width: 400px;
+    max-width: 100%;
+  }
+
+  /* Services - кнопка по центру */
+  .services__cta {
+    text-align: center;
+  }
+
+  .services__cta .btn {
+    display: inline-flex;
+    width: auto;
+    max-width: fit-content;
+  }
+
+  /* Promo - центрирование divider и кнопки на tablet */
+  .promo__divider {
+    width: 80% !important;
+    max-width: 500px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  .promo__bottom {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  .promo__btn {
+    width: auto !important;
+    max-width: fit-content !important;
+  }
+
+  /* Content Section - tablet: фото на всю ширину, центрирование */
+  .content-section .row {
+    flex-direction: column;
+  }
+
+  .content-section .row > .col-lg-5 {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .content-section .row > .col-lg-6 {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .content-section__image-frame {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 20px;
+    margin-bottom: 30px;
+  }
+
+  .content-section__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 428/440;
+  }
+
+  .content-section__content {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .content-section__divider {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 30px 0 !important;
+  }
+
+  .content-section .row > .col-lg-6 {
+    order: 1;
+  }
+
+  .content-section .row > .col-lg-5 {
+    order: 2;
+  }
+
+  .content-section__accent {
+    margin-bottom: 16px;
+  }
+
+  .content-section__btn {
+    display: flex !important;
+    width: auto !important;
+    max-width: fit-content !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Steps - заголовок и кнопка в один ряд на tablet */
+  .steps .row.align-items-center.mb-5 {
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    gap: 20px;
+  }
+
+  .steps .row.align-items-center.mb-5 > .col-lg-6:first-child {
+    flex: 1;
+    width: auto;
+  }
+
+  .steps .row.align-items-center.mb-5 > .col-lg-6:last-child {
+    flex: 0 0 auto;
+    width: auto;
+    text-align: right;
+  }
+
+  .steps__title {
+    margin-bottom: 0 !important;
+    font-size: 28px;
+  }
+
+  .steps__cta-btn {
+    white-space: nowrap;
+    font-size: 16px;
+    padding: 12px 20px;
   }
 }
 
@@ -272,7 +590,7 @@
 
   /* Promo */
   .promo {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
     overflow: hidden; /* Предотвращаем горизонтальный скролл */
   }
 
@@ -326,28 +644,39 @@
     text-align: left;
   }
 
-  /* Content Section - картинка на всю ширину */
+  /* Content Section - Mobile: Title → Image → Text → Divider → Button */
   .content-section .row {
+    display: flex;
     flex-direction: column;
   }
 
-  .content-section .row > .col-lg-5 {
-    order: 2;
-    width: 100%;
+  /* display: contents чтобы дети колонок участвовали в flex order */
+  .content-section .row > .col-lg-5,
+  .content-section .row > .col-lg-6 {
+    display: contents;
   }
 
-  .content-section .row > .col-lg-6 {
+  .content-section__content {
+    display: contents;
+  }
+
+  /* Order: 1-Title, 2-Image, 3-Text, 4-Divider, 5-Button */
+  .content-section__title {
     order: 1;
     width: 100%;
-    margin: 0;
+    text-align: center;
+    padding: 0 16px;
+    margin-bottom: 24px;
   }
 
   .content-section__image-frame {
+    order: 2;
     width: calc(100% + 32px); /* Выходим за контейнер */
     margin-left: -16px;
     margin-right: -16px;
-    padding: 16px;
-    margin-bottom: 24px;
+    padding: 16px !important;
+    padding-bottom: 10px !important; /* Место под accent внутри рамки */
+    margin-bottom: 32px;
   }
 
   .content-section__image {
@@ -356,20 +685,39 @@
     aspect-ratio: 428/440;
   }
 
-  .content-section__content {
+  .content-section__accent {
+    margin-bottom: 40px !important;
+  }
+
+  .content-section__subtitle,
+  .content-section__text {
+    order: 3;
+    width: 100%;
     text-align: center;
+    padding: 0 16px;
+  }
+
+  .content-section__divider {
+    order: 4;
+    width: calc(100% - 32px);
+    margin: 24px 16px;
   }
 
   .content-section__link {
+    order: 5;
     justify-content: center;
+    width: 100%;
+    padding: 0 16px;
   }
 
   /* Content Section Button (Landing 1/2) */
   .content-section__btn {
+    order: 5;
     width: calc(100% - 32px) !important;
     max-width: calc(100% - 32px) !important;
     margin-left: 16px !important;
     margin-right: 16px !important;
+    margin-bottom: 30px;
     white-space: normal;
     height: auto;
     min-height: 55px;
@@ -380,7 +728,7 @@
 
   /* Features */
   .features {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .features__title {
@@ -461,7 +809,8 @@
 
   /* Gallery Decorated */
   .gallery-decorated__main {
-    height: 400px;
+    height: auto;
+    aspect-ratio: 16/10;
     border-radius: 30px;
   }
 
@@ -482,7 +831,7 @@
 
   /* Steps */
   .steps {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .steps .container {
@@ -615,7 +964,7 @@
 
   /* FAQ */
   .faq {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .faq__title {
@@ -665,7 +1014,7 @@
 
   /* Services */
   .services {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .services__header {
@@ -704,7 +1053,7 @@
 
   /* About - картинка на всю ширину */
   .about {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .about .row {
@@ -798,7 +1147,7 @@
 
   /* CTA */
   .cta {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .cta__content {
@@ -845,6 +1194,15 @@
   }
 }
 
+/* ===== MOBILE LANDSCAPE & SMALL (≤ 576px) - hero image full width ===== */
+@media (max-width: 576px) {
+  .hero--v1 .hero__image-main {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin-left: 0 !important;
+  }
+}
+
 /* ===== SMALL MOBILE (< 576px) ===== */
 @media (max-width: 575.98px) {
   /* Hero V1 - маленькие экраны */
@@ -854,11 +1212,6 @@
 
   .hero--v1 .hero__label {
     font-size: 20px;
-  }
-
-  .hero--v1 .hero__image-main {
-    width: 70%;
-    max-width: 70%;
   }
 
   .hero--v1 .hero__image-secondary {
@@ -908,7 +1261,7 @@
   .cta .btn,
   .cta .btn-primary,
   .cta .btn-outline {
-    max-width: 280px;
+    max-width: 100%;
     min-height: 50px;
     font-size: 15px;
     padding: 10px 16px;
@@ -916,7 +1269,7 @@
 
   /* Content Section Button small mobile (Landing 1/2) */
   .content-section__btn {
-    max-width: 280px;
+    max-width: 100%;
     min-height: 50px;
     font-size: 15px;
     padding: 10px 16px;
@@ -1056,14 +1409,16 @@
     max-width: 100%;
   }
 
-  /* FIX: Features Cards L3 (rounded) - prevent overflow at 1200px */
+  /* Features Cards L3 (rounded) - 3 cards in a row, centered with gaps */
   .features-cards--v3.rounded .features-cards__grid {
-    flex-wrap: wrap;
-    gap: 24px;
+    flex-wrap: nowrap;
+    gap: 30px;
+    justify-content: center;
   }
 
   .features-cards--v3.rounded .features-cards__item {
-    max-width: calc(50% - 12px);
+    flex: 0 1 390px; /* FIGMA: ~390px card width, shrink if needed */
+    max-width: 390px;
   }
 
   .features-cards--v3.rounded .features-cards__image {
@@ -1127,10 +1482,40 @@
   }
 }
 
+/* Tablet landscape (992-1100px) - gallery-slider-v5 viewport overflow fix */
+@media (max-width: 1100px) {
+  .gallery-slider--v5 .gallery-slider__viewport {
+    width: calc(100% - 100px) !important; /* Место для стрелок */
+    max-width: calc(100% - 100px);
+  }
+
+  .gallery-slider--v5 .gallery-slider__slide {
+    flex: 0 0 200px !important;
+    width: 200px !important;
+    height: 200px !important;
+    min-width: 200px !important;
+  }
+
+  .gallery-slider--v5 .gallery-slider__slide.is-center {
+    flex: 0 0 350px !important;
+    width: 350px !important;
+    height: 350px !important;
+    min-width: 350px !important;
+  }
+}
+
+/* Tablet portrait (768-850px) - adjust viewport to prevent arrow clipping */
+@media (max-width: 850px) {
+  .gallery-slider__viewport {
+    width: calc(100% - 100px) !important;
+    max-width: calc(100% - 100px);
+  }
+}
+
 @media (max-width: 767.98px) {
   /* Gallery Slider - предотвращаем overflow */
   .gallery-slider {
-    padding: 30px 0;
+    padding: var(--section-padding-y) 0;
     overflow: hidden;
   }
 
@@ -1163,6 +1548,24 @@
   /* Rounded вариант */
   .gallery-slider--rounded .gallery-slider__slide {
     border-radius: 30px;
+  }
+}
+
+/* Mobile landscape (576-600px) - smaller arrows to prevent clipping */
+@media (max-width: 600px) {
+  .gallery-slider__arrow {
+    padding: 8px;
+    min-width: 32px;
+  }
+
+  .gallery-slider__arrow svg {
+    width: 18px;
+    height: 14px;
+  }
+
+  .gallery-slider__viewport {
+    width: calc(100% - 64px) !important;
+    max-width: calc(100% - 64px);
   }
 }
 
@@ -1277,7 +1680,7 @@
 
 @media (max-width: 767.98px) {
   .content-section {
-    padding: 60px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .content-section__image-frame {
@@ -1325,83 +1728,80 @@
   }
 }
 
+/* Services - STACKED LAYOUT on all mobile (≤767px) */
 @media (max-width: 767.98px) {
+  /* Remove container padding for services */
+  .services > .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* Services grid full width, vertical */
   .services__grid {
     flex-direction: column;
-    align-items: center;
+    width: 100% !important;
+    padding: 0 !important;
+    gap: 0 !important;
   }
 
-  /* Services - Zigzag layout */
+  /* Services header with padding */
+  .services__header {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Service cards - VERTICAL STACKED layout */
   .service-card {
-    display: grid !important;
-    grid-template-columns: 40% 1fr !important;
-    grid-template-rows: auto auto !important;
-    gap: 8px 16px !important;
-    align-items: center !important;
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 24px;
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  /* Картинка занимает 2 ряда слева */
-  .service-card__image {
-    grid-row: 1 / 3;
-    grid-column: 1;
+    display: block !important;
     width: 100% !important;
     max-width: 100% !important;
-    height: auto;
-    aspect-ratio: 1;
+    flex: 1 1 100% !important;
+    padding: 0 !important;
+    margin: 0 0 32px 0 !important;
+  }
+
+  /* Image FULL WIDTH edge-to-edge */
+  .service-card__image {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4/3 !important;
     margin: 0 !important;
   }
 
   .service-card__image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
   }
 
-  /* Заголовок справа сверху */
+  /* Title below image with padding */
   .service-card__title {
-    grid-column: 2;
-    grid-row: 1;
+    padding: 16px 16px 8px 16px !important;
+    font-size: 20px !important;
     text-align: left !important;
-    font-size: 18px;
-    margin-bottom: 0;
-    align-self: end;
+    margin: 0 !important;
   }
 
-  /* Текст справа снизу */
+  /* Text below title with padding */
   .service-card__text {
-    grid-column: 2;
-    grid-row: 2;
+    padding: 0 16px 16px 16px !important;
+    font-size: 16px !important;
     text-align: left !important;
-    font-size: 14px;
-    align-self: start;
+    margin: 0 !important;
   }
 
-  /* Чётные карточки - картинка справа */
-  .service-card:nth-child(even) .service-card__image {
-    grid-column: 2;
-  }
-
-  .service-card:nth-child(even) .service-card__title,
-  .service-card:nth-child(even) .service-card__text {
-    grid-column: 1;
-  }
-
-  /* CTA button full width */
+  /* CTA with padding */
   .services__cta {
+    padding: 0 16px !important;
     text-align: center;
   }
 
   .services__cta .btn-outline,
   .services__cta .btn-primary {
-    width: calc(100% - 32px) !important;
-    max-width: calc(100% - 32px) !important;
-    margin-left: 16px !important;
-    margin-right: 16px !important;
+    width: 100% !important;
+    max-width: 100% !important;
     white-space: normal;
     height: auto;
     min-height: 55px;
@@ -1410,17 +1810,6 @@
     font-size: 16px;
     text-align: center !important;
     justify-content: center !important;
-  }
-}
-
-/* Services CTA small mobile fix */
-@media (max-width: 575.98px) {
-  .services__cta .btn-outline,
-  .services__cta .btn-primary {
-    max-width: 280px;
-    min-height: 50px;
-    font-size: 15px;
-    padding: 10px 16px;
   }
 }
 
@@ -1508,8 +1897,16 @@
 }
 
 /* ===== HERO V1 BUTTON & LABEL FIX ===== */
+/* ===== CONSOLIDATED BUTTON FIXES (Hero V1/V2, Promo, About - Landing 1/2) ===== */
 @media (max-width: 767.98px) {
-  .hero--v1 .btn-primary {
+  .hero--v1 .btn-primary,
+  .hero--v2 .btn-primary,
+  .promo .btn,
+  .promo .btn-primary,
+  .promo .btn-outline,
+  .about__cta .btn,
+  .about__cta .btn-primary,
+  .about__cta .btn-outline {
     width: calc(100% - 32px) !important;
     max-width: calc(100% - 32px) !important;
     margin-left: 16px !important;
@@ -1524,41 +1921,7 @@
     justify-content: center !important;
   }
 
-  .hero--v1 .hero__label {
-    font-size: 24px;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .hero--v1 .btn-primary {
-    max-width: 100%;
-    min-height: 50px;
-    font-size: 15px;
-    padding: 10px 16px;
-  }
-
-  .hero--v1 .hero__label {
-    font-size: 20px;
-  }
-}
-
-/* ===== HERO V2 BUTTON FIX (Landing 2) ===== */
-@media (max-width: 767.98px) {
-  .hero--v2 .btn-primary {
-    width: calc(100% - 32px) !important;
-    max-width: calc(100% - 32px) !important;
-    margin-left: 16px !important;
-    margin-right: 16px !important;
-    white-space: normal;
-    height: auto;
-    min-height: 55px;
-    padding: 12px 20px;
-    line-height: 1.3;
-    font-size: 16px;
-    text-align: center !important;
-    justify-content: center !important;
-  }
-
+  .hero--v1 .hero__label,
   .hero--v2 .hero__label {
     font-size: 24px;
   }
@@ -1575,13 +1938,21 @@
 }
 
 @media (max-width: 575.98px) {
-  .hero--v2 .btn-primary {
-    max-width: 280px;
+  .hero--v1 .btn-primary,
+  .hero--v2 .btn-primary,
+  .promo .btn,
+  .promo .btn-primary,
+  .promo .btn-outline,
+  .about__cta .btn,
+  .about__cta .btn-primary,
+  .about__cta .btn-outline {
+    max-width: 100%;
     min-height: 50px;
     font-size: 15px;
     padding: 10px 16px;
   }
 
+  .hero--v1 .hero__label,
   .hero--v2 .hero__label {
     font-size: 20px;
   }
@@ -1592,68 +1963,6 @@
 
   .hero--v2 .hero__subtitle {
     font-size: 14px;
-  }
-}
-
-/* ===== PROMO BUTTON FIX (Landing 1/2) ===== */
-@media (max-width: 767.98px) {
-  .promo .btn,
-  .promo .btn-primary,
-  .promo .btn-outline {
-    width: calc(100% - 32px) !important;
-    max-width: calc(100% - 32px) !important;
-    margin-left: 16px !important;
-    margin-right: 16px !important;
-    white-space: normal;
-    height: auto;
-    min-height: 55px;
-    padding: 12px 20px;
-    line-height: 1.3;
-    font-size: 16px;
-    text-align: center !important;
-    justify-content: center !important;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .promo .btn,
-  .promo .btn-primary,
-  .promo .btn-outline {
-    max-width: 280px;
-    min-height: 50px;
-    font-size: 15px;
-    padding: 10px 16px;
-  }
-}
-
-/* ===== ABOUT CTA BUTTON FIX (Landing 1/2) ===== */
-@media (max-width: 767.98px) {
-  .about__cta .btn,
-  .about__cta .btn-primary,
-  .about__cta .btn-outline {
-    width: calc(100% - 32px) !important;
-    max-width: calc(100% - 32px) !important;
-    margin-left: 16px !important;
-    margin-right: 16px !important;
-    white-space: normal;
-    height: auto;
-    min-height: 55px;
-    padding: 12px 20px;
-    line-height: 1.3;
-    font-size: 16px;
-    text-align: center !important;
-    justify-content: center !important;
-  }
-}
-
-@media (max-width: 575.98px) {
-  .about__cta .btn,
-  .about__cta .btn-primary,
-  .about__cta .btn-outline {
-    max-width: 280px;
-    min-height: 50px;
-    font-size: 15px;
-    padding: 10px 16px;
   }
 }
 
@@ -1894,6 +2203,7 @@
   .cta--rounded .btn-primary {
     width: 100%;
     max-width: 100%;
+    min-width: 0;
   }
 }
 
@@ -2604,7 +2914,7 @@
 /* ===== FAQ V4 MOBILE ===== */
 @media (max-width: 767.98px) {
   .faq--v4 {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .faq--v4 .faq__title--left {
@@ -2641,8 +2951,10 @@
   }
 
   .faq-card-v4__toggle {
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .faq-card-v4__icon {
@@ -2662,6 +2974,7 @@
   .faq--v4 .faq__cta--left .btn {
     width: 100%;
     max-width: 100%;
+    min-width: 0;
     height: auto;
     min-height: 55px;
     padding: 12px 20px;
@@ -2860,7 +3173,7 @@
 /* ===== SERVICES V4 MOBILE ===== */
 @media (max-width: 767.98px) {
   .services-v4 {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .services-v4__title {
@@ -2914,7 +3227,8 @@
   }
 
   .services-v4__image {
-    height: 180px;
+    height: auto;
+    aspect-ratio: 339/257;
     border-radius: 10px;
   }
 
@@ -3029,6 +3343,7 @@
 
   .steps--v4 .steps__title {
     font-size: 28px;
+    margin-bottom: 40px !important; /* Override generic .steps__title margin-bottom: 0 !important */
   }
 
   .steps--v4 .row {
@@ -3059,13 +3374,13 @@
 
 @media (max-width: 767.98px) {
   .steps--v4 {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .steps--v4 .steps__title {
     font-size: 22px;
     text-align: left;
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
 
   .steps--v4 .steps__image {
@@ -3171,9 +3486,17 @@
     text-align: left;
   }
 
-  .cta--left .btn {
-    width: 100%;
-    max-width: 100%;
+  .cta--left .cta__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .cta--left .cta__btn {
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 0 !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
 }
 
@@ -3209,7 +3532,7 @@
 
 @media (max-width: 767.98px) {
   .about--images-right {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   /* Reorder: Title → Photos → Text → Button */
@@ -3385,14 +3708,13 @@
   /* === ЕДИНООБРАЗНЫЕ ОТСТУПЫ СЕКЦИЙ === */
   /* Все секции Landing 3 имеют одинаковый padding */
   .hero--v3,
-  .gallery-slider,
   .cta--row,
   .steps--rounded,
   .features--grid,
   .faq--cards-only,
   .services--rounded,
   .about--rounded {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
   /* .gallery-decorated имеет отдельные стили ниже */
 
@@ -3460,6 +3782,7 @@
     width: 60px;
     height: 60px;
     min-width: 60px;
+    margin: 0; /* Reset margin: 0 auto from general mobile rules */
     border-radius: 12px;
     overflow: hidden;
   }
@@ -3469,6 +3792,10 @@
     height: 100%;
     object-fit: cover;
     object-position: center top; /* Головы собак не обрезаются */
+  }
+
+  .features--grid .feature-item__content {
+    flex: 1;
   }
 
   .features--grid .feature-item__text {
@@ -3562,84 +3889,105 @@
     margin-top: 30px;
   }
 
-  /* === SERVICES ROUNDED - Zigzag layout === */
+  /* === SERVICES ROUNDED - STACKED FULL-WIDTH on mobile (≤767px) === */
   .services--rounded .services__title {
     font-size: 20px;
     line-height: 1.3;
     text-align: center;
     margin-bottom: 30px;
+    padding: 0 16px !important;
+  }
+
+  .services--rounded,
+  .services--rounded.section--bg-primary {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .services--rounded .container,
+  .services--rounded > .container,
+  section.services--rounded .container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
   }
 
   .services--rounded .services__grid {
     flex-direction: column;
-    gap: 24px;
+    padding: 0 !important;
+    margin: 0 !important;
+    gap: 24px !important;
+    width: 100% !important;
   }
 
-  /* Zigzag grid для rounded карточек */
   .services--rounded .service-card {
-    display: grid !important;
-    grid-template-columns: 40% 1fr !important;
-    grid-template-rows: auto auto !important;
-    gap: 8px 16px !important;
-    align-items: center !important;
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 0;
-  }
-
-  /* Картинка занимает 2 ряда */
-  .services--rounded .service-card__image {
-    grid-row: 1 / 3;
-    grid-column: 1;
+    display: flex !important;
+    flex-direction: column !important;
+    flex: 1 1 100% !important;
+    gap: 12px !important;
+    padding: 0 !important;
+    margin: 0 !important;
     width: 100% !important;
     max-width: 100% !important;
-    height: auto;
-    aspect-ratio: 1;
+    min-width: 100% !important;
+  }
+
+  .services--rounded .service-card__image {
+    grid-row: unset !important;
+    grid-column: unset !important;
+    width: 100% !important;
+    max-width: 100% !important;
     margin: 0 !important;
-    border-radius: 16px;
+    padding: 0 !important;
+    border-radius: 0 !important;
+    aspect-ratio: 4/3 !important;
+    height: auto !important;
     overflow: hidden;
   }
 
   .services--rounded .service-card__image img {
-    width: 100%;
-    height: 100%;
+    width: 100% !important;
+    max-width: 100% !important;
+    height: 100% !important;
     object-fit: cover;
-    object-position: center top; /* Головы не обрезаются */
+    object-position: center top;
+    border-radius: 0 !important;
   }
 
-  /* Заголовок справа сверху */
   .services--rounded .service-card__title {
-    grid-column: 2;
-    grid-row: 1;
-    text-align: left !important;
-    font-size: 18px;
-    margin-bottom: 0;
-    align-self: end;
+    grid-row: unset !important;
+    grid-column: unset !important;
+    width: 100% !important;
+    padding: 0 16px !important;
+    margin: 0 !important;
+    text-align: center !important;
+    font-size: 18px !important;
+    line-height: 1.3 !important;
   }
 
-  /* Текст справа снизу */
   .services--rounded .service-card__text {
-    grid-column: 2;
-    grid-row: 2;
-    text-align: left !important;
-    font-size: 14px;
-    line-height: 1.5;
-    align-self: start;
+    grid-row: unset !important;
+    grid-column: unset !important;
+    width: 100% !important;
+    padding: 0 16px !important;
+    margin: 0 !important;
+    text-align: center !important;
+    font-size: 15px !important;
+    line-height: 1.5 !important;
   }
 
-  /* Чётные карточки - картинка справа */
-  .services--rounded .service-card:nth-child(even) .service-card__image {
-    grid-column: 2;
-  }
-
+  /* Reset zigzag for even cards */
+  .services--rounded .service-card:nth-child(even) .service-card__image,
   .services--rounded .service-card:nth-child(even) .service-card__title,
   .services--rounded .service-card:nth-child(even) .service-card__text {
-    grid-column: 1;
+    grid-column: unset !important;
   }
 
   .services--rounded .services__cta {
     margin-top: 30px;
     text-align: center;
+    padding: 0 16px !important;
   }
 
   /* === ABOUT ROUNDED - картинка и текст === */
@@ -3699,7 +4047,6 @@
 @media (max-width: 575.98px) {
   /* Ещё меньше отступы на маленьких экранах */
   .hero--v3,
-  .gallery-slider,
   .cta--row,
   .steps--rounded,
   .features--grid,
@@ -3753,103 +4100,7 @@
     border-radius: 16px;
   }
 
-  /* Service card image меньше радиус */
-  .services--rounded .service-card__image {
-    border-radius: 16px;
-  }
-
-  /* ===== SERVICES CARDS - ВЕРТИКАЛЬНЫЙ FULL-WIDTH НА МАЛЕНЬКИХ ЭКРАНАХ ===== */
-  .services--rounded,
-  .services--rounded.section--bg-primary {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  .services--rounded .container,
-  .services--rounded > .container,
-  section.services--rounded .container {
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-    max-width: 100% !important;
-    width: 100% !important;
-  }
-
-  .services--rounded .services__grid {
-    padding: 0 !important;
-    margin: 0 !important;
-    gap: 24px !important;
-    width: 100% !important;
-  }
-
-  /* Вертикальный layout */
-  .services--rounded .service-card {
-    display: flex !important;
-    flex-direction: column !important;
-    flex: 1 1 100% !important;
-    gap: 12px !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 100% !important;
-  }
-
-  /* Картинка на всю ширину, без скруглений */
-  .services--rounded .service-card__image {
-    grid-row: unset !important;
-    grid-column: unset !important;
-    width: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border-radius: 0 !important;
-    aspect-ratio: 4/3 !important;
-  }
-
-  .services--rounded .service-card__image img {
-    width: 100% !important;
-    max-width: 100% !important;
-    border-radius: 0 !important;
-  }
-
-  /* Заголовок на всю ширину */
-  .services--rounded .service-card__title {
-    grid-row: unset !important;
-    grid-column: unset !important;
-    width: 100% !important;
-    padding: 0 16px !important;
-    margin: 0 !important;
-    text-align: center !important;
-    font-size: 18px !important;
-    line-height: 1.3 !important;
-  }
-
-  /* Текст на всю ширину */
-  .services--rounded .service-card__text {
-    grid-row: unset !important;
-    grid-column: unset !important;
-    width: 100% !important;
-    padding: 0 16px !important;
-    margin: 0 !important;
-    text-align: center !important;
-    font-size: 15px !important;
-    line-height: 1.5 !important;
-  }
-
-  /* Сброс zigzag для чётных */
-  .services--rounded .service-card:nth-child(even) .service-card__image,
-  .services--rounded .service-card:nth-child(even) .service-card__title,
-  .services--rounded .service-card:nth-child(even) .service-card__text {
-    grid-column: unset !important;
-  }
-
-  .services--rounded .services__title {
-    padding: 0 16px !important;
-  }
-
-  .services--rounded .services__cta {
-    padding: 0 16px !important;
-  }
+  /* services--rounded stacked rules now in 767.98px block above */
 }
 
 /* ===== HERO BANNER V3 RESPONSIVE ===== */
@@ -3939,6 +4190,7 @@
     min-width: 0 !important;
     height: auto !important;
     min-height: 55px;
+    margin-bottom: 24px; /* Gap to next section */
     padding: 14px 20px !important;
     font-size: 16px !important;
     white-space: normal !important;
@@ -4071,6 +4323,7 @@
     min-width: auto;
     height: auto;
     min-height: 55px;
+    margin-bottom: 20px; /* Gap to next section */
     padding: 14px 20px;
     font-size: 16px;
     white-space: normal;
@@ -4097,8 +4350,7 @@
 
 /* ===== FEATURES CARDS V3 RESPONSIVE ===== */
 
-/* Fix overflow at 1200px - 1024px viewport */
-/* Fix features-cards overflow at 1200px viewport */
+/* Features-cards 2-column layout at 1200px and below */
 @media (max-width: 1200px) {
   .features-cards--v3 .features-cards__grid {
     flex-wrap: wrap;
@@ -4108,6 +4360,7 @@
   .features-cards--v3 .features-cards__item {
     flex: 0 0 calc(50% - 12px);
     max-width: calc(50% - 12px);
+    width: auto;
   }
 }
 
@@ -4185,23 +4438,8 @@
     line-height: 1.5;
     text-align: left;
   }
-}
 
-@media (max-width: 575.98px) {
-  .features-cards--v3 .features-cards__image {
-    aspect-ratio: 1;
-    border-radius: 20px;
-  }
-
-  .features-cards--v3 .features-cards__title {
-    font-size: 16px;
-  }
-
-  .features-cards--v3 .features-cards__text {
-    font-size: 14px;
-  }
-
-  /* ROUNDED variant (L3 Dogs) - FULL WIDTH cards on mobile */
+  /* ROUNDED variant (L3 Dogs) - FULL WIDTH cards on mobile ≤767px */
   .features-cards--v3.rounded .features-cards__grid {
     flex-direction: column !important;
     gap: 24px !important;
@@ -4219,6 +4457,22 @@
     aspect-ratio: 350/300;
     border-radius: 25px;
   }
+}
+
+@media (max-width: 575.98px) {
+  .features-cards--v3 .features-cards__image {
+    aspect-ratio: 1;
+    border-radius: 20px;
+  }
+
+  .features-cards--v3 .features-cards__title {
+    font-size: 16px;
+  }
+
+  .features-cards--v3 .features-cards__text {
+    font-size: 14px;
+  }
+
 }
 
 /* ============================================
@@ -4294,7 +4548,7 @@
 /* ===== CONTENT GALLERY V4 - Tablet ===== */
 @media (max-width: 991.98px) {
   .content-gallery-v4 {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .content-gallery-v4__gallery-title {
@@ -4380,6 +4634,8 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   /* Make columns transparent to flex ordering */
@@ -4417,6 +4673,7 @@
     height: auto;
     min-height: 55px;
     margin-top: 24px;
+    margin-bottom: 30px; /* Gap to next section */
     padding: 12px 20px;
     font-size: 16px;
     white-space: normal;
@@ -4496,7 +4753,7 @@
 
 @media (max-width: 767.98px) {
   .steps--v4 {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .steps--v4 .row {
@@ -4526,14 +4783,14 @@
 
   .steps--v4 .steps__cta-right {
     margin-top: 24px;
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* Gap to next section */
     order: 3;
   }
 
   .steps--v4 .steps__title {
     font-size: 22px;
     max-width: 100%;
-    margin-bottom: 30px;
+    margin-bottom: 30px !important;
   }
 
   .step-card-v4 {
@@ -4609,7 +4866,7 @@
   .services-v4,
   .gallery-fullwidth,
   .about--images-right {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   /* Hero dark section - особые отступы */
@@ -4651,7 +4908,7 @@
 /* ===== FAQ V4 (Rounded) - Mobile ===== */
 @media (max-width: 767.98px) {
   .faq--rounded {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .faq--rounded .faq__title {
@@ -4705,8 +4962,10 @@
   }
 
   .gallery-single-slider__arrow {
-    width: 30px;
-    height: 30px;
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    min-height: 44px;
   }
 
   .gallery-single-slider__slide img {
@@ -4717,7 +4976,7 @@
 /* ===== SERVICES V4 - Mobile ===== */
 @media (max-width: 767.98px) {
   .services-v4 {
-    padding: 40px 0;
+    padding: var(--section-padding-y) 0;
   }
 
   .services-v4__title {
@@ -4743,7 +5002,8 @@
   }
 
   .services-v4__image {
-    height: 200px;
+    height: auto;
+    aspect-ratio: 339/257;
     border-radius: 12px;
   }
 
@@ -4768,7 +5028,8 @@
   }
 
   .services-v4__image {
-    height: 180px;
+    height: auto;
+    aspect-ratio: 339/257;
   }
 
   .services-v4__card-title {
@@ -4799,9 +5060,9 @@
   }
 }
 
-/* ===== CRITICAL: SERVICES ROUNDED 1024px FIX ===== */
-/* Must be at END of file to override generic .service-card rules */
-@media (max-width: 1200px) {
+/* ===== CRITICAL: SERVICES ROUNDED TABLET (768-1200px) ===== */
+/* 2-column grid on tablet, stacked on mobile (≤767px rules above) */
+@media (min-width: 768px) and (max-width: 1200px) {
   .services--rounded .services__grid {
     flex-wrap: wrap !important;
     justify-content: center !important;
