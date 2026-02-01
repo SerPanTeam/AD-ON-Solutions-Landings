@@ -33,12 +33,14 @@
     .landing-card {
       background: #fafafa;
       border-radius: 16px;
-      padding: 28px;
+      overflow: hidden;
       transition: all 0.3s ease;
       text-decoration: none;
       color: inherit;
       position: relative;
       border: 1px solid #eee;
+      display: flex;
+      flex-direction: column;
     }
     .landing-card:hover {
       background: #111111;
@@ -46,7 +48,14 @@
       transform: translateY(-4px);
       box-shadow: 0 20px 40px rgba(0,0,0,0.15);
     }
-    .landing-card__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .landing-card__image {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+    }
+    .landing-card__body { padding: 24px 28px 28px; }
+    .landing-card__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
     .landing-card__number { font-size: 14px; font-weight: 600; color: #D1F383; }
     .landing-card__arrow {
       width: 36px;
@@ -107,58 +116,73 @@
       <div class="landings">
         
       <a href="landing1-family/" class="landing-card">
-        <div class="landing-card__header">
-          <span class="landing-card__number">01</span>
-          <span class="landing-card__arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+        <img class="landing-card__image" src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=600&h=400&fit=crop" alt="Familien-Fotoshooting zu Weihnachten" loading="lazy">
+        <div class="landing-card__body">
+          <div class="landing-card__header">
+            <span class="landing-card__number">01</span>
+            <span class="landing-card__arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+          <h2 class="landing-card__title">Familien-Fotoshooting zu Weihnachten</h2>
+          <p class="landing-card__description">Weihnachts-Fotoshooting-Aktion: Familienbilder für nur 39€ statt 89€! Sichere dir jetzt deinen Gutschein für ein liebevo...</p>
         </div>
-        <h2 class="landing-card__title">Familien-Fotoshooting zu Weihnachten</h2>
-        <p class="landing-card__description">Weihnachts-Fotoshooting-Aktion: Familienbilder für nur 39€ statt 89€! Sichere dir jetzt deinen Gutschein für ein liebevo...</p>
       </a>
 
       <a href="landing2-family-kids/" class="landing-card">
-        <div class="landing-card__header">
-          <span class="landing-card__number">02</span>
-          <span class="landing-card__arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+        <img class="landing-card__image" src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=600&h=400&fit=crop" alt="Kostenloses Familien und Kinder-Fotoshooting" loading="lazy">
+        <div class="landing-card__body">
+          <div class="landing-card__header">
+            <span class="landing-card__number">02</span>
+            <span class="landing-card__arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+          <h2 class="landing-card__title">Kostenloses Familien und Kinder-Fotoshooting</h2>
+          <p class="landing-card__description">Kostenloses Familien- und Kinder-Fotoshooting! Sichere dir jetzt deinen Gutschein für liebevolle Familienbilder....</p>
         </div>
-        <h2 class="landing-card__title">Kostenloses Familien und Kinder-Fotoshooting</h2>
-        <p class="landing-card__description">Kostenloses Familien- und Kinder-Fotoshooting! Sichere dir jetzt deinen Gutschein für liebevolle Familienbilder....</p>
       </a>
 
       <a href="landing3-dogs/" class="landing-card">
-        <div class="landing-card__header">
-          <span class="landing-card__number">03</span>
-          <span class="landing-card__arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+        <img class="landing-card__image" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&h=400&fit=crop" alt="Kostenloses Hunde-Fotoshooting" loading="lazy">
+        <div class="landing-card__body">
+          <div class="landing-card__header">
+            <span class="landing-card__number">03</span>
+            <span class="landing-card__arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+          <h2 class="landing-card__title">Kostenloses Hunde-Fotoshooting</h2>
+          <p class="landing-card__description">Kostenloses Hunde-Fotoshooting! Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest....</p>
         </div>
-        <h2 class="landing-card__title">Kostenloses Hunde-Fotoshooting</h2>
-        <p class="landing-card__description">Kostenloses Hunde-Fotoshooting! Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest....</p>
       </a>
 
       <a href="landing4-kids/" class="landing-card">
-        <div class="landing-card__header">
-          <span class="landing-card__number">04</span>
-          <span class="landing-card__arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+        <img class="landing-card__image" src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=600&h=400&fit=crop&crop=faces" alt="Kostenloses Kinder-Fotoshooting" loading="lazy">
+        <div class="landing-card__body">
+          <div class="landing-card__header">
+            <span class="landing-card__number">04</span>
+            <span class="landing-card__arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+          <h2 class="landing-card__title">Kostenloses Kinder-Fotoshooting</h2>
+          <p class="landing-card__description">Kostenloses Kinder-Fotoshooting in Bremen-Findorff! Sichere dir jetzt deinen Gutschein für liebevolle Kinderbilder....</p>
         </div>
-        <h2 class="landing-card__title">Kostenloses Kinder-Fotoshooting</h2>
-        <p class="landing-card__description">Kostenloses Kinder-Fotoshooting in Bremen-Findorff! Sichere dir jetzt deinen Gutschein für liebevolle Kinderbilder....</p>
       </a>
 
       <a href="landing5-business/" class="landing-card">
-        <div class="landing-card__header">
-          <span class="landing-card__number">05</span>
-          <span class="landing-card__arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </span>
+        <img class="landing-card__image" src="https://images.unsplash.com/photo-1606216794079-73f85bbd57d5?w=600&h=400&fit=crop" alt="Karin Himml Fotografie" loading="lazy">
+        <div class="landing-card__body">
+          <div class="landing-card__header">
+            <span class="landing-card__number">05</span>
+            <span class="landing-card__arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
+          </div>
+          <h2 class="landing-card__title">Karin Himml Fotografie</h2>
+          <p class="landing-card__description">Professionelle Fotoshootings für Hochzeiten, Familien, Tiere und Business. Jetzt Termin sichern!...</p>
         </div>
-        <h2 class="landing-card__title">Karin Himml Fotografie</h2>
-        <p class="landing-card__description">Professionelle Fotoshootings für Hochzeiten, Familien, Tiere und Business. Jetzt Termin sichern!...</p>
       </a>
       </div>
     </div>
