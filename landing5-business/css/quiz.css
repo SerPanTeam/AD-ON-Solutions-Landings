@@ -1332,18 +1332,32 @@
   margin-bottom: 12px;
 }
 
+/* Left column — flex column to push contacts below image level */
+.quiz-success-v5 .col-lg-5 {
+  display: flex;
+  flex-direction: column;
+}
+
 .quiz-success-v5__cta {
-  margin-bottom: 30px;
+  margin-bottom: 0; /* auto margin on contacts handles positioning */
 }
 
 .quiz-success-v5__contacts {
+  margin-top: auto; /* Push to bottom of flex column = below image level */
   display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
+  gap: 20px; /* FIGMA: ~20px gap between buttons */
+  flex-wrap: nowrap; /* FIGMA: all 3 buttons in single row on desktop */
 }
 
 .quiz-success-v5__contact-btn {
-  min-width: 140px;
+  /* FIGMA: 187px / 174px / 174px, height 40px, border-radius 15px */
+  min-width: 0;
+  flex: 1 1 auto;
+  padding: 10px 24px;
+  height: 40px;
+  border-radius: 15px !important;
+  font-size: 18px; /* Slightly smaller to fit */
+  white-space: nowrap;
 }
 
 .quiz-success-v5__image {
@@ -1467,11 +1481,20 @@
     margin-top: 40px;
   }
 
+  .quiz-success-v5 .col-lg-5 {
+    display: block; /* Reset flex on mobile — columns stack vertically */
+  }
+
   .quiz-success-v5__contacts {
+    margin-top: 40px; /* Regular spacing instead of auto on mobile */
     flex-direction: column;
+    flex-wrap: wrap;
+    gap: 12px;
   }
 
   .quiz-success-v5__contacts .btn {
     width: 100%;
+    height: auto;
+    min-height: 50px;
   }
 }
