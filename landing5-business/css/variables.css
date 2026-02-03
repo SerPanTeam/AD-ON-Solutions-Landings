@@ -141,7 +141,7 @@
 
   --input-height: 60px;           /* Высота поля ввода */
   --input-padding: 16px 20px;
-  --input-border-radius: 0;       /* Скругление полей */
+  --input-border-radius: 15px;       /* Скругление полей */
   --input-border-color: var(--color-border);
   --input-bg: var(--color-bg-white);
   --input-focus-border-color: var(--color-accent);
