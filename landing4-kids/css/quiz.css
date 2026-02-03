@@ -1339,7 +1339,7 @@
 }
 
 .quiz-success-v5__cta {
-  margin-bottom: 0; /* auto margin on contacts handles positioning */
+  margin-bottom: 20px; /* min gap to contacts; margin-top:auto on contacts adds rest */
 }
 
 .quiz-success-v5__contacts {
