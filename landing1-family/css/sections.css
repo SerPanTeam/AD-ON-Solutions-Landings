@@ -4493,6 +4493,58 @@
   aspect-ratio: auto;
 }
 
+/* Gallery Cards Business - Responsive */
+@media (max-width: 1199.98px) {
+  .gallery-cards--business .gallery-cards__grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+  }
+
+  .gallery-cards--business .gallery-cards__card:nth-child(1),
+  .gallery-cards--business .gallery-cards__card:nth-child(3) {
+    width: calc(50% - 12px);
+    max-width: 400px;
+  }
+
+  .gallery-cards--business .gallery-cards__card:nth-child(1) .gallery-cards__image,
+  .gallery-cards--business .gallery-cards__card:nth-child(3) .gallery-cards__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 400 / 550;
+  }
+
+  .gallery-cards--business .gallery-cards__card:nth-child(2) {
+    width: calc(50% - 12px);
+    max-width: 349px;
+    order: 3;
+  }
+
+  .gallery-cards--business .gallery-cards__card:nth-child(2) .gallery-cards__image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 349 / 268;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .gallery-cards--business .gallery-cards__grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .gallery-cards--business .gallery-cards__card:nth-child(1),
+  .gallery-cards--business .gallery-cards__card:nth-child(2),
+  .gallery-cards--business .gallery-cards__card:nth-child(3) {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .gallery-cards--business .gallery-cards__card:nth-child(2) {
+    order: 0;
+  }
+}
+
 /* ============================================
    SERVICES LIST V5 - Business Landing (Hochzeit)
    List of services with icons
