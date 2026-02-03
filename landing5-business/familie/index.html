@@ -30,89 +30,51 @@
 </head>
 <body>
   <!-- ============================================
-     HEADER V1 - Landing Generator
+     HERO V5 - Business Hub Landing
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Logo: Inter Bold, 45px, #3D3D3D
-     - Padding: 53px top (от края до текста логотипа)
-     - Left margin: 101px (в контейнере 1440px)
+     FIGMA (node 585:34):
+     - Full-width gray/image background: 1440x746px
+     - Logo inside hero (beige/gold color)
+     - Title: BLACK text
+     - Subtitle with accent "Herz & Seele"
+     - Gold CTA button "Mehr erfahren"
      ============================================ -->
 
-<header class="header">
-  <div class="container">
-    <a href="../" class="header__logo">
-      <span class="logo-text">Karin Himml</span>
-    </a>
-  </div>
-</header>
+<section class="hero hero--v5">
+  <div class="hero__banner" style="background-image: url('https://images.unsplash.com/photo-1609220136736-443140cffec6?w=1440&h=746&fit=crop');">
+    <div class="container">
+      <!-- Logo внутри hero -->
+      <p class="hero__logo">Logo</p>
 
+      <div class="hero__content">
+        <!-- Главный заголовок - ЧЁРНЫЙ (triple braces for HTML line breaks) -->
+        <h1 class="hero__title">Dein Familien-Fotoshooting</h1>
 
-<!-- ============================================
-     HERO V1 - Главный баннер (Landing 1, 2)
+        <!-- Подзаголовок с акцентным текстом -->
+        
+        <p class="hero__subtitle">Eure Familiengeschichte in Bildern.</p>
+        
 
-     ЧТО РЕДАКТИРОВАТЬ:
-     ─────────────────────────────────────────────
-     ТЕКСТ:
-     • Заголовок → найдите <h1 class="hero__title">
-     • Подзаголовок → найдите <p class="hero__subtitle">
-     • Кнопка → найдите class="btn btn-primary"
+        <!-- Описание (опционально, triple braces for HTML) -->
+        
 
-     КАРТИНКИ:
-     • Главная картинка: 428x394px → hero__image-main
-     • Вторая картинка: 306x290px → hero__image-secondary
-
-     СТИЛИ:
-     • Цвет фона → css/variables.css → --color-bg-primary
-     • Цвет кнопки → css/variables.css → --color-button-primary
-     • Размер шрифта → css/variables.css → --font-size-h1
-     ============================================ -->
-
-<section class="hero hero--v1 hero--l5 section--bg-primary">
-  <div class="container">
-    <div class="row align-items-start">
-      <!-- ====== КОНТЕНТ СЛЕВА ====== -->
-      <div class="col-lg-6">
-        <div class="hero__content">
+        
+        <!-- Описание из нескольких параграфов -->
+        <div class="hero__description">
+          
+          <p>Jede Familie hat ihre eigene Dynamik, ihr eigenes Gefühl von Nähe und Liebe.</p>
           
 
-          <!-- РЕДАКТИРОВАТЬ: Главный заголовок страницы -->
-          <h1 class="hero__title">Dein Familien-Fotoshooting</h1>
-
-          <!-- РЕДАКТИРОВАТЬ: Подзаголовок (28px Bold) -->
-          <p class="hero__subtitle">Eure Familiengeschichte in Bildern.</p>
-
-          
-          <!-- РЕДАКТИРОВАТЬ: Описание (22px Medium) -->
-          <div class="hero__description">
-            
-            <p>Jede Familie hat ihre eigene Dynamik, ihr eigenes Gefühl von Nähe und Liebe.</p>
-            
-
-            <p>Mit Feingefühl und Erfahrung halte ich diese besonderen Momente für euch fest – ehrlich, natürlich und voller Leben.</p>
-            
-
-            <p>Lasst uns Erinnerungen schaffen, die euch berühren und euch noch in vielen Jahren ein Lächeln ins Gesicht zaubern.</p>
-            
-          </div>
+          <p>Mit Feingefühl und Erfahrung halte ich diese besonderen Momente für euch fest – ehrlich, natürlich und voller Leben.</p>
           
 
-          <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка (href) -->
-          <a href="quiz-step1.html" class="btn btn-primary">Dein Familien-Fotoshooting anfragen</a>
+          <p>Lasst uns Erinnerungen schaffen, die euch berühren und euch noch in vielen Jahren ein Lächeln ins Gesicht zaubern.</p>
+          
         </div>
-      </div>
+        
 
-      <!-- ====== КАРТИНКИ СПРАВА ====== -->
-      <div class="col-lg-6">
-        <div class="hero__image-wrapper">
-          <!-- КАРТИНКА: 428x394px - замените src на свой файл -->
-          <div class="hero__image-main">
-            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=428&h=394&fit=crop" alt="Familienfotografie">
-          </div>
-          <!-- КАРТИНКА: 306x290px - скрыта на <768px, показана на tablet и desktop -->
-          <div class="hero__image-secondary">
-            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=306&h=290&fit=crop" alt="Familienfotografie">
-          </div>
-        </div>
+        <!-- Кнопка -->
+        <a href="quiz-step1.html" class="btn btn-primary hero__btn">Dein Familien-Fotoshooting anfragen</a>
       </div>
     </div>
   </div>
@@ -133,9 +95,9 @@
 
 <section class="content-section content-section--v5 section--bg-primary">
   <div class="container">
-    <div class="row align-items-center flex-lg-row-reverse">
+    <div class="row align-items-center flex-lg-row">
       <!-- Изображение -->
-      <div class="col-lg-5 ms-auto">
+      <div class="col-lg-5">
         <div class="content-section__image-frame">
           <div class="content-section__image">
             <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=474&h=493&fit=crop" alt="Jetzt dein Familien-Fotoshooting anfragen!" loading="lazy">
@@ -146,7 +108,7 @@
       </div>
 
       <!-- Контент -->
-      <div class="col-lg-6">
+      <div class="col-lg-6 ms-auto">
         <div class="content-section__content">
           
           <h2 class="content-section__title">Jetzt dein Familien-Fotoshooting anfragen!</h2>
@@ -158,14 +120,8 @@
           <p class="content-section__text">Beantworte ein paar kurze Fragen, damit ich dein Fotoshooting optimal vorbereiten kann.</p>
           
           
-          <div class="content-section__divider"></div>
-          <a href="quiz-step1.html" class="btn btn-outline content-section__btn">
-            Dein Familien-Fotoshooting anfragen
-            <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </a>
+          <a href="quiz-step1.html" class="btn btn-primary content-section__btn">Dein Familien-Fotoshooting anfragen</a>
+          
           
           
         </div>
@@ -229,21 +185,23 @@
 
 
 <!-- ============================================
-     FEATURES CARDS V3 - 3-4 карточки (image + title + text)
+     FEATURES CARDS V5 - L5 sublandings (горизонтальные карточки)
 
-     FIGMA (node 369:256):
-     - 3-4 columns, gap 40px
-     - Image: 350x300px, rounded-35px
-     - Title: 28px bold
-     - Text: 22px medium
+     FIGMA (L5 sublandings):
+     - 2x2 grid, gap 27px
+     - Horizontal cards: icon 80x80 left, title+text right
+     - White card background (#fff), beige section bg
+     - Card padding: 37px 35px
+     - Card border-radius: 10px
+     - Container: max-width 1384px
 
      Опционально:
      - title: заголовок секции
      - subtitle: подзаголовок секции
-     - ctaText/ctaLink: кнопка внизу
+     - buttonText/buttonLink: кнопка внизу
      ============================================ -->
 
-<section class="features-cards features-cards--v3 section--bg-primary">
+<section class="features-cards features-cards--v5 section--bg-primary">
   <div class="container">
     
     <h2 class="features-cards__section-title">Was du bei mir genießen wirst...</h2>
@@ -254,43 +212,49 @@
       
       
       <div class="features-cards__item">
-        <div class="features-cards__image">
+        <div class="features-cards__icon">
           <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=80&h=80&fit=crop" alt="Spaß und Wohlfühlen - Individuell angepasst" loading="lazy">
         </div>
-        <h4 class="features-cards__title">Spaß und Wohlfühlen - Individuell angepasst</h4>
-        <p class="features-cards__text">Ob im Studio oder Outdoor – ich schaffe eine entspannte Atmosphäre, in der echte, liebevolle Familienmomente ganz natürlich entstehen.</p>
+        <div class="features-cards__content">
+          <h4 class="features-cards__title">Spaß und Wohlfühlen - Individuell angepasst</h4>
+          <p class="features-cards__text">Ob im Studio oder Outdoor – ich schaffe eine entspannte Atmosphäre, in der echte, liebevolle Familienmomente ganz natürlich entstehen.</p>
+        </div>
       </div>
       
 
       <div class="features-cards__item">
-        <div class="features-cards__image">
+        <div class="features-cards__icon">
           <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=80&h=80&fit=crop" alt="Hohe Qualität zu fairen Preisen" loading="lazy">
         </div>
-        <h4 class="features-cards__title">Hohe Qualität zu fairen Preisen</h4>
-        <p class="features-cards__text">Mit Gefühl und Präzision setze ich eure Familie liebevoll und professionell in Szene – emotional berührend, visuell stark und zu einem fairen Preis.</p>
+        <div class="features-cards__content">
+          <h4 class="features-cards__title">Hohe Qualität zu fairen Preisen</h4>
+          <p class="features-cards__text">Mit Gefühl und Präzision setze ich eure Familie liebevoll und professionell in Szene – emotional berührend, visuell stark und zu einem fairen Preis.</p>
+        </div>
       </div>
       
 
       <div class="features-cards__item">
-        <div class="features-cards__image">
+        <div class="features-cards__icon">
           <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=80&h=80&fit=crop" alt="Kreativ und zuverlässig" loading="lazy">
         </div>
-        <h4 class="features-cards__title">Kreativ und zuverlässig</h4>
-        <p class="features-cards__text">Gemeinsam bringen wir eure Familienpersönlichkeit zum Ausdruck – dank intensiver Vorgespräche und liebevoll geplanter Fotoshootings.</p>
+        <div class="features-cards__content">
+          <h4 class="features-cards__title">Kreativ und zuverlässig</h4>
+          <p class="features-cards__text">Gemeinsam bringen wir eure Familienpersönlichkeit zum Ausdruck – dank intensiver Vorgespräche und liebevoll geplanter Fotoshootings.</p>
+        </div>
       </div>
       
 
       <div class="features-cards__item">
-        <div class="features-cards__image">
+        <div class="features-cards__icon">
           <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&h=80&fit=crop" alt="Zufriedenheit und vielfältige Möglichkeiten" loading="lazy">
         </div>
-        <h4 class="features-cards__title">Zufriedenheit und vielfältige Möglichkeiten</h4>
-        <p class="features-cards__text">Mit flexiblen Sets und individuellen Anpassungen sorge ich dafür, dass eure Familienfotos genau euren Vorstellungen entsprechen – und eure Geschichte authentisch erzählen.</p>
+        <div class="features-cards__content">
+          <h4 class="features-cards__title">Zufriedenheit und vielfältige Möglichkeiten</h4>
+          <p class="features-cards__text">Mit flexiblen Sets und individuellen Anpassungen sorge ich dafür, dass eure Familienfotos genau euren Vorstellungen entsprechen – und eure Geschichte authentisch erzählen.</p>
+        </div>
       </div>
       
     </div>
-    
-    
     
     <div class="features-cards__cta">
       <a href="quiz-step1.html" class="btn btn-primary">Weiter zum Familien-Fotoshooting</a>
@@ -315,11 +279,13 @@
 
 <section class="gallery-single-slider section--bg-secondary">
   <div class="gallery-single-slider__inner">
+    
     <button class="gallery-single-slider__arrow gallery-single-slider__arrow--prev" aria-label="Previous">
       <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M13 2L2 14.5L13 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
+    
 
     <div class="gallery-single-slider__container" data-gallery-single-slider>
       
@@ -339,11 +305,13 @@
       
     </div>
 
+    
     <button class="gallery-single-slider__arrow gallery-single-slider__arrow--next" aria-label="Next">
       <svg width="15" height="29" viewBox="0 0 15 29" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M2 2L13 14.5L2 27" stroke="#3D3D3D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
     </button>
+    
   </div>
 
   
@@ -369,7 +337,7 @@
      • Размер шрифта → --font-size-text-lg (вопрос)
      ============================================ -->
 
-<section class="faq section--bg-primary">
+<section class="faq section--bg-primary faq--chevron">
   <div class="container">
     <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
     <h2 class="faq__title">Häufige Fragen</h2>
@@ -493,9 +461,9 @@
 
 <section class="about section--bg-secondary about--v5">
   <div class="container">
-    <div class="row align-items-start">
+    <div class="row align-items-start flex-lg-row-reverse">
       <!-- ====== ФОТО АВТОРА ====== -->
-      <div class="col-lg-5">
+      <div class="col-lg-5 offset-lg-1">
         <!-- КАРТИНКА: 466x560px - замените src на свой файл -->
         <div class="about__image-wrapper">
           <div class="about__image">
@@ -511,7 +479,7 @@
       </div>
 
       <!-- ====== ИНФОРМАЦИЯ ====== -->
-      <div class="col-lg-6 offset-lg-1">
+      <div class="col-lg-6">
         <div class="about__content">
           
           <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
@@ -600,7 +568,7 @@
         <a href="#">Cookie Richtlinien</a>
       </nav>
       <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
-      <p class="footer__updated">Letzte Aktualisierung: 01.02.2026 18:27</p>
+      <p class="footer__updated">Letzte Aktualisierung: 03.02.2026 08:32</p>
     </div>
   </div>
 </footer>

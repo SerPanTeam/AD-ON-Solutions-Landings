@@ -723,6 +723,74 @@
   line-height: normal;
 }
 
+/* ========================================
+   Features Cards V5 - L5 Sublandings
+   FIGMA node 817:70:
+   - 2x2 grid, horizontal cards
+   - White card bg, beige section bg
+   - Icon 80x80 left, title+text right
+   - Card: 650x242px, rounded-10px
+   ======================================== */
+.features-cards--v5 .container {
+  max-width: 1384px;
+  padding-left: 57px;
+  padding-right: 57px;
+}
+
+.features-cards--v5 .features-cards__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 27px 27px;
+}
+
+.features-cards--v5 .features-cards__item {
+  display: flex;
+  align-items: flex-start;
+  gap: 25px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 37px 35px;
+  min-height: 242px;
+}
+
+.features-cards--v5 .features-cards__icon {
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.features-cards--v5 .features-cards__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.features-cards--v5 .features-cards__content {
+  flex: 1;
+}
+
+.features-cards--v5 .features-cards__title {
+  font-size: 22px;
+  font-weight: var(--font-weight-bold);
+  line-height: 1.3;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+.features-cards--v5 .features-cards__text {
+  font-size: 16px;
+  font-weight: var(--font-weight-regular);
+  line-height: 1.5;
+  color: var(--color-text-primary);
+}
+
+.features-cards--v5 .features-cards__cta {
+  text-align: center;
+  margin-top: 60px;
+}
+
 /* Hero V4 - Landing 4 (Kinder-Fotoshooting)
    Тёмный фон с лого внутри секции
    Галерея изображений: 4 карточки 293x348px, rounded-30px, с наклоном
@@ -1075,6 +1143,19 @@
   }
 }
 
+/* Mobile Landscape fix (576×320) */
+@media (max-width: 576px) {
+  .hero--v5 .hero__banner {
+    min-height: auto;
+    padding: 20px 0 30px;
+  }
+
+  .hero--v5 .hero__btn {
+    height: auto;
+    min-height: 50px;
+  }
+}
+
 /* ===== PROMO SECTION ===== */
 /* Image: 428x533px (Landing 2) or 428x440px (Landing 1, shortImage: true)
    Title: 28px bold, Text: 22px medium
@@ -1270,6 +1351,7 @@
 
 .content-section--v5 .content-section__content {
   min-height: auto;
+  justify-content: flex-start; /* FIGMA: элементы идут плотно, без space-between */
 }
 
 /* ===== CONTENT V5 STACKED IMAGES - два перекрывающихся изображения ===== */
@@ -1295,11 +1377,41 @@
   object-fit: cover;
 }
 
+.content-section--v5 .content-section__title {
+  font-size: var(--font-size-h2); /* FIGMA L5 Tier/Familie/Business: 45px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1; /* FIGMA: 100% */
+  margin-bottom: 0; /* FIGMA: стыкуется с subtitle */
+}
+
+.content-section--v5 .content-section__subtitle {
+  font-size: var(--font-size-text-lg); /* FIGMA L5 Tier: 28px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1;
+  margin-top: 25px; /* FIGMA: визуальный gap от font metrics */
+  margin-bottom: 25px; /* FIGMA: 25px gap to text */
+}
+
 .content-section--v5 .content-section__text {
-  font-size: var(--font-size-text); /* FIGMA: 22px */
-  font-weight: var(--font-weight-medium); /* FIGMA: Medium */
-  line-height: 1.5;
+  font-size: var(--font-size-text); /* FIGMA L5: 22px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1; /* FIGMA: 100% */
+  margin-bottom: 25px; /* FIGMA: 25px gap to button */
+}
+
+/* L5 Hochzeit variant: smaller text (16px Regular), bigger title (45px) */
+.content-section--v5.content-section--text-small .content-section__title {
+  font-size: var(--font-size-h2); /* FIGMA Hochzeit: 45px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1; /* FIGMA: 100% */
   margin-bottom: 20px;
+}
+
+.content-section--v5.content-section--text-small .content-section__text {
+  font-size: 16px; /* FIGMA Hochzeit: 16px */
+  font-weight: var(--font-weight-regular); /* FIGMA Hochzeit: Regular */
+  line-height: 1; /* FIGMA: 100% */
+  margin-bottom: 16px; /* Меньше gap между параграфами */
 }
 
 @media (max-width: 991.98px) {
@@ -1404,6 +1516,17 @@
   .content-section--v5 .content-section__content {
     padding-left: 16px;
     padding-right: 16px;
+  }
+}
+
+/* Mobile Landscape fix (576×320) */
+@media (max-width: 576px) {
+  .content-section--v5 .row > .col-lg-5 {
+    margin-bottom: 40px;
+  }
+
+  .content-section--v5 .content-section__image-frame::after {
+    height: 100px; /* Уменьшить декоративную подложку */
   }
 }
 
@@ -3097,12 +3220,13 @@
 }
 
 /* About V5 - Hochzeit variant (no button, name under image) */
-.about--v5 .about__image-wrapper {
+/* NOTE: Using .about.about--v5 for higher specificity to override :has(.about__btn) rules */
+.about.about--v5 .about__image-wrapper {
   position: relative;
   overflow: visible;
 }
 
-.about--v5 .about__image {
+.about.about--v5 .about__image {
   width: 100%; /* Responsive by default */
   max-width: 581px; /* FIGMA Hochzeit: 581x450 */
   height: auto;
@@ -3113,70 +3237,70 @@
   background: transparent;
 }
 
-.about--v5 .about__image::after {
+.about.about--v5 .about__image::after {
   content: '';
   position: absolute;
   width: calc(100% + 40px); /* Responsive by default */
-  height: 300px;
+  height: 310px; /* Minimal gap below tagline */
   background: var(--color-bg-secondary); /* FIGMA Hub: #EEE3D0 */
   border-radius: 10px;
   left: -20px;
-  top: 50%;
+  top: 241px; /* FIGMA: 241px from top of image */
   z-index: 1;
 }
 
-/* Full-size backdrop for large screens */
-@media (min-width: 1440px) {
-  .about--v5 .about__image::after {
+/* Full-size backdrop for large screens (account for scrollbar: 1440-17=1423) */
+@media (min-width: 1400px) {
+  .about.about--v5 .about__image::after {
     width: 595px; /* FIGMA: exact */
-    height: 383px;
-    left: -63px; /* FIGMA Hochzeit: 730-793=-63px */
+    height: 310px; /* Minimal gap below tagline */
+    left: -63px; /* FIGMA Familie: 730-793=-63px */
     top: 241px; /* FIGMA: same as hub */
   }
 }
 
 /* When About section has secondary background, backdrop should be primary (inverted) */
-.about--v5.section--bg-secondary .about__image::after {
+.about.about--v5.section--bg-secondary .about__image::after {
   background: var(--color-bg-primary); /* FIGMA Hochzeit: #F5EDE0 */
 }
 
-.about--v5 .about__image img {
+.about.about--v5 .about__image img {
   border-radius: 15px;
   position: relative;
   z-index: 2;
 }
 
-.about--v5 .row,
-.about--v5 [class*="col-"] {
+.about.about--v5 .row,
+.about.about--v5 [class*="col-"] {
   overflow: visible;
 }
 
-.about--v5 .about__label {
+.about.about--v5 .about__label {
   font-size: var(--font-size-h2); /* FIGMA Hochzeit: 45px */
   font-weight: var(--font-weight-bold);
   margin-bottom: 50px; /* FIGMA: y(text)8104 - y(title)8005 - font45 ≈ 54px, adjusted for bbox */
 }
 
-.about--v5 .about__image-caption {
+.about.about--v5 .about__image-caption {
   position: relative;
   z-index: 2; /* Above backdrop */
   padding-top: 35px; /* FIGMA: gap below image */
 }
 
-.about--v5 .about__name--under-image {
+.about.about--v5 .about__name--under-image {
   font-size: var(--font-size-h2); /* FIGMA: 45px */
   font-weight: var(--font-weight-bold);
   margin-bottom: 0;
 }
 
-.about--v5 .about__tagline--under-image {
+.about.about--v5 .about__tagline--under-image {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-medium);
   margin-top: 25px; /* FIGMA: gap between name and tagline */
   margin-bottom: 0;
 }
 
-.about--v5 {
+.about.about--v5 {
   padding-bottom: 130px; /* Extra space for backdrop overflow */
   overflow-x: hidden; /* Prevent horizontal scroll from backdrop ::after */
 }
@@ -3184,20 +3308,20 @@
 /* About V5 Responsive */
 /* Fix overflow at desktop (1200px) and tablet-landscape */
 @media (max-width: 1250px) {
-  .about--v5 .about__image {
+  .about.about--v5 .about__image {
     width: 100%;
     max-width: 500px;
     height: auto;
     aspect-ratio: 581 / 450;
   }
 
-  .about--v5 .about__image img {
+  .about.about--v5 .about__image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
 
-  .about--v5 .about__image::after {
+  .about.about--v5 .about__image::after {
     width: calc(100% + 40px);
     height: 300px;
     left: -20px;
@@ -3205,7 +3329,26 @@
 }
 
 @media (max-width: 991.98px) {
-  .about--v5 .about__image {
+  /* About V5: stack columns on tablet */
+  .about.about--v5 .row {
+    flex-direction: column !important;
+  }
+
+  .about.about--v5 .row > .col-lg-5,
+  .about.about--v5 .row > .col-lg-6 {
+    flex: 0 0 100% !important;
+    max-width: 100% !important;
+    width: 100% !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Remove offset on tablet */
+  .about.about--v5 .row > .offset-lg-1 {
+    margin-left: 0 !important;
+  }
+
+  .about.about--v5 .about__image {
     width: 100%;
     max-width: 400px;
     height: auto;
@@ -3213,7 +3356,7 @@
     margin: 0 auto 60px;
   }
 
-  .about--v5 .about__image::after {
+  .about.about--v5 .about__image::after {
     width: calc(100% + 60px);
     height: 200px;
     left: -30px;
@@ -3221,41 +3364,51 @@
     bottom: -30px;
   }
 
-  .about--v5 .about__name--under-image,
-  .about--v5 .about__tagline--under-image {
+  .about.about--v5 .about__name--under-image,
+  .about.about--v5 .about__tagline--under-image {
     text-align: center;
   }
 
-  .about--v5 {
+  .about.about--v5 .about__content {
+    width: 100%;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+  .about.about--v5 .about__text {
+    max-width: 100%;
+  }
+
+  .about.about--v5 {
     padding-bottom: 80px;
   }
 }
 
 @media (max-width: 767.98px) {
-  .about--v5 .about__image {
+  .about.about--v5 .about__image {
     max-width: 300px;
   }
 
-  .about--v5 .about__image::after {
+  .about.about--v5 .about__image::after {
     height: 150px;
     left: -20px;
     bottom: -20px;
     width: calc(100% + 40px);
   }
 
-  .about--v5 .about__name--under-image {
+  .about.about--v5 .about__name--under-image {
     font-size: var(--font-size-h3);
   }
 
-  .about--v5 .about__tagline--under-image {
+  .about.about--v5 .about__tagline--under-image {
     font-size: 18px;
   }
 
-  .about--v5 {
+  .about.about--v5 {
     padding-bottom: 60px;
   }
 
-  .about--v5 .about__content {
+  .about.about--v5 .about__content {
     text-align: left;
     padding-left: 16px;
     padding-right: 16px;
@@ -4270,12 +4423,16 @@
 
 .gallery-cards__card {
   overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  padding: 45px 43px;
 }
 
 .gallery-cards__image {
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
+  border-radius: 10px;
 }
 
 .gallery-cards__image img {
@@ -4588,9 +4745,33 @@
   }
 
   .services-list__item {
-    flex-direction: column;
+    flex-direction: row;
     align-items: flex-start;
     text-align: left;
+    gap: 20px;
+  }
+
+  .services-list__icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .services-list__item-title {
+    font-size: 18px;
+  }
+
+  .services-list__item-text {
+    font-size: 16px;
+  }
+
+  /* Services list image - full width on mobile */
+  .services-list--with-image .services-list__image-wrapper {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .services-list--with-image .services-list__image-frame {
+    padding: 14px;
   }
 
   .steps-6__grid {
@@ -4598,14 +4779,18 @@
   }
 
   .steps-6__card {
-    flex-direction: column;
+    flex-direction: row;
     gap: 16px;
   }
 
   .steps-6__number {
-    width: 60px;
-    height: 60px;
-    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    font-size: 28px;
+  }
+
+  .steps-6__card-text {
+    font-size: 16px;
   }
 
   /* Steps 6 - left aligned */
@@ -4707,5 +4892,29 @@
     max-width: 100% !important;
     height: auto !important;
     aspect-ratio: 350/300;
+  }
+}
+
+/* ===== FEATURES CARDS V5 RESPONSIVE (L5 Sublandings) ===== */
+@media (max-width: 1399.98px) {
+  .features-cards--v5 .container {
+    max-width: 100%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .features-cards--v5 .features-cards__grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .features-cards--v5 .features-cards__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .features-cards--v5 .features-cards__item {
+    padding: 25px;
   }
 }

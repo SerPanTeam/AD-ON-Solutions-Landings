@@ -34,12 +34,22 @@ class GallerySlider {
     return 3;                    // Desktop: 3 слайда
   }
 
+  /**
+   * V5: Check if only center slide is visible (CSS hides others on small screens)
+   * @returns {boolean} true if only 1 slide visible
+   */
+  isV5SingleSlideMode() {
+    if (!this.isV5) return false;
+    const width = window.innerWidth;
+    return width <= 850; // CSS @media (max-width: 850px) shows only center slide
+  }
+
   init() {
     if (this.slides.length === 0) return;
 
-    // V5: start with second slide as center (index 1)
+    // V5: start with second slide as center on desktop, first on mobile
     if (this.isV5 && this.slides.length >= 3) {
-      this.currentIndex = 1;
+      this.currentIndex = this.isV5SingleSlideMode() ? 0 : 1;
     }
 
     this.calculateSlideWidth();
@@ -76,11 +86,20 @@ class GallerySlider {
     const viewport = this.wrapper.querySelector('.gallery-slider__viewport');
     if (!viewport) return;
 
-    // V5 variant has CSS-defined slide widths, don't override
+    // V5 variant has CSS-defined slide widths - READ from DOM, don't hardcode
     if (this.isV5) {
       this.track.style.gap = `${this.slideGap}px`;
-      this.sideSlideWidth = 250;
-      this.centerSlideWidth = 450;
+      // Read actual slide widths from CSS (responsive values)
+      const centerSlide = this.track.querySelector('.gallery-slider__slide.is-center') || this.slides[1];
+      const sideSlide = this.slides[0];
+      if (centerSlide && sideSlide) {
+        this.centerSlideWidth = centerSlide.offsetWidth || 450;
+        this.sideSlideWidth = sideSlide.offsetWidth || 250;
+        // Read actual gap from computed style
+        const trackStyle = window.getComputedStyle(this.track);
+        const gap = parseFloat(trackStyle.gap) || this.slideGap;
+        this.slideGap = gap;
+      }
       // Set initial center slide
       this.updateCenterSlide();
       return;
@@ -141,7 +160,7 @@ class GallerySlider {
   }
 
   prev() {
-    const minIndex = this.isV5 ? 1 : 0;
+    const minIndex = this.isV5 ? 0 : 0;
     if (this.currentIndex > minIndex) {
       this.currentIndex--;
       this.updatePosition();
@@ -151,7 +170,7 @@ class GallerySlider {
 
   next() {
     const maxIndex = this.isV5
-      ? this.slides.length - 2
+      ? this.slides.length - 1
       : Math.max(0, this.slides.length - this.slidesToShow);
     if (this.currentIndex < maxIndex) {
       this.currentIndex++;
@@ -164,11 +183,20 @@ class GallerySlider {
     let offset = 0;
 
     if (this.isV5) {
-      // V5: center the currentIndex slide in viewport
-      // All non-center slides are 250px, gaps are 40px
-      // offset = (currentIndex - 1) * (250 + 40) to keep center slide in middle
       this.updateCenterSlide();
-      offset = (this.currentIndex - 1) * (this.sideSlideWidth + this.slideGap);
+
+      // Single slide mode (≤850px): just swap is-center, no translate needed
+      if (this.isV5SingleSlideMode()) {
+        this.track.style.transform = 'translateX(0)';
+        return;
+      }
+
+      // Multi-slide mode (desktop/tablet-landscape):
+      // Calculate offset to keep center slide in middle of viewport
+      // Slides before currentIndex-1 are scrolled out
+      for (let i = 0; i < this.currentIndex - 1; i++) {
+        offset += this.slides[i].offsetWidth + this.slideGap;
+      }
       if (offset < 0) offset = 0;
     } else {
       offset = this.currentIndex * (this.slideWidth + this.slideGap);
@@ -181,10 +209,17 @@ class GallerySlider {
     let minIndex = 0;
     let maxIndex = Math.max(0, this.slides.length - this.slidesToShow);
 
-    // V5: need slides on both sides of center
+    // V5: different limits depending on mode
     if (this.isV5) {
-      minIndex = 1; // Need slide on left
-      maxIndex = this.slides.length - 2; // Need slide on right
+      if (this.isV5SingleSlideMode()) {
+        // Single slide mode: can scroll through all slides
+        minIndex = 0;
+        maxIndex = this.slides.length - 1;
+      } else {
+        // Multi-slide mode: need slides on both sides of center
+        minIndex = 1;
+        maxIndex = this.slides.length - 2;
+      }
     }
 
     if (this.prevBtn) {
