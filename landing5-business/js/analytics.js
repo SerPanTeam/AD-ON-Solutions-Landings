@@ -1,18 +1,32 @@
 /* ============================================
    ANALYTICS - LANDING GENERATOR
-   
+
    Заготовка для подключения аналитики.
-   Раскомментируйте нужные сервисы и добавьте свои ID.
    ============================================ */
 
 /**
- * Analytics Configuration
- * 
- * Поддерживаемые сервисы:
- * - Google Analytics 4
- * - Google Tag Manager
- * - Facebook Pixel
- * - Yandex Metrika
+ * =============================================
+ * ИНСТРУКЦИЯ ПО ПОДКЛЮЧЕНИЮ АНАЛИТИКИ
+ * =============================================
+ *
+ * ШАГ 1: Найдите нужный сервис ниже (ga4, gtm, facebook, yandex)
+ * ШАГ 2: Измените `enabled: false` на `enabled: true`
+ * ШАГ 3: Замените ID на ваш (например, G-XXXXXXXXXX на ваш GA4 ID)
+ * ШАГ 4: Сохраните файл
+ *
+ * ПРИМЕРЫ ID:
+ * - Google Analytics 4: G-XXXXXXXXXX (начинается с G-)
+ * - Google Tag Manager: GTM-XXXXXXX (начинается с GTM-)
+ * - Facebook Pixel: 15-16 цифр (например, 1234567890123456)
+ * - Yandex Metrika: 8 цифр (например, 12345678)
+ *
+ * ГДЕ ВЗЯТЬ ID:
+ * - GA4: Google Analytics → Admin → Data Streams → Measurement ID
+ * - GTM: Google Tag Manager → Container ID (вверху страницы)
+ * - Facebook: Events Manager → Data Sources → Pixel ID
+ * - Yandex: Metrika → Настройки → Номер счётчика
+ *
+ * =============================================
  */
 
 const AnalyticsConfig = {

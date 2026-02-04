@@ -7,12 +7,23 @@
   <meta name="keywords" content="Businessfotografie, Portrait, Bewerbungsfoto, Teamfoto, LinkedIn">
   <title>Businessfotografie | Karin Himml Fotografie</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Businessfotografie | Karin Himml Fotografie">
+  <!-- Open Graph / Facebook -->
+  <!-- CHANGE: SEO - Заголовок страницы для соцсетей -->
+  <meta property="og:title" content="Businessfotografie | Karin Himml">
+  <!-- CHANGE: SEO - Описание для соцсетей (до 200 символов) -->
   <meta property="og:description" content="Professionelle Business-Portraits und Teamfotos für einen überzeugenden Auftritt.">
+  <!-- CHANGE: SEO - Картинка превью (1200x630px) -->
+  <meta property="og:image" content="../images/og-preview.jpg">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
 
-  <!-- Fonts -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Businessfotografie | Karin Himml">
+  <meta name="twitter:description" content="Professionelle Business-Portraits und Teamfotos für einen überzeugenden Auftritt.">
+  <meta name="twitter:image" content="../images/og-preview.jpg">
+
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -32,34 +43,42 @@
   <!-- ============================================
      HERO V5 - Business Hub Landing
 
-     FIGMA (node 585:34):
-     - Full-width gray/image background: 1440x746px
-     - Logo inside hero (beige/gold color)
-     - Title: BLACK text
-     - Subtitle with accent "Herz & Seele"
-     - Gold CTA button "Mehr erfahren"
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Логотип → найдите class="hero__logo"
+     • Заголовок → найдите <h1 class="hero__title">
+     • Подзаголовок → найдите class="hero__subtitle"
+     • Кнопка → найдите class="btn btn-primary"
+
+     КАРТИНКА:
+     • Фон баннера: 1440x746px → style="background-image"
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Цвет кнопки → css/variables.css → --color-button-primary
      ============================================ -->
 
 <section class="hero hero--v5">
+  <!-- CHANGE: Фоновое изображение hero (1440x746px) -->
   <div class="hero__banner" style="background-image: url('https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=1440&h=746&fit=crop');">
     <div class="container">
-      <!-- Logo внутри hero -->
+      <!-- CHANGE: Текст логотипа -->
       <p class="hero__logo">Logo</p>
 
       <div class="hero__content">
-        <!-- Главный заголовок - ЧЁРНЫЙ (triple braces for HTML line breaks) -->
+        <!-- CHANGE: Главный заголовок страницы -->
         <h1 class="hero__title">Business-Fotografie</h1>
 
-        <!-- Подзаголовок с акцентным текстом -->
         
+        <!-- CHANGE: Подзаголовок -->
         <p class="hero__subtitle">Eure Unternehmensgeschichte in starken Bildern.</p>
         
 
-        <!-- Описание (опционально, triple braces for HTML) -->
         
 
         
-        <!-- Описание из нескольких параграфов -->
+        <!-- CHANGE: Описание (несколько параграфов) -->
         <div class="hero__description">
           
           <p>Ein erfolgreiches Business lebt nicht nur von Zahlen - sondern von Menschen, Visionen und Persönlichkeit.</p>
@@ -73,7 +92,7 @@
         </div>
         
 
-        <!-- Кнопка -->
+        <!-- CHANGE: Текст кнопки и ссылка (href) -->
         <a href="quiz-step1.html" class="btn btn-primary hero__btn">Dein Business-Fotoshooting anfragen</a>
       </div>
     </div>
@@ -82,24 +101,33 @@
 
 
 <!-- ============================================
-     CONTENT V1 - Landing Generator
+     CONTENT V1 - Секция с изображением и текстом
 
-     PIXEL-PERFECT ПО FIGMA:
-     - Background: #F5EDE0 (primary)
-     - Image: 428x440px in white frame
-     - Title: Inter Bold 28px
-     - Text: Inter Medium 22px
-     - Accent text: #E2C08D
-     - Divider + link with arrow
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → найдите class="content-section__title"
+     • Подзаголовок → найдите class="content-section__subtitle"
+     • Текст → найдите class="content-section__text"
+     • Кнопка/Ссылка → найдите class="btn"
+
+     КАРТИНКА:
+     • Основная: 428x440px → content-section__image
+     • Вторая (опц.): → content-section__image-secondary
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Акцентный текст → css/variables.css → --color-accent
      ============================================ -->
 
 <section class="content-section content-section--v5 section--bg-primary">
   <div class="container">
     <div class="row align-items-center flex-lg-row">
-      <!-- Изображение -->
+      <!-- ====== ИЗОБРАЖЕНИЕ ====== -->
       <div class="col-lg-5">
         <div class="content-section__image-frame">
           <div class="content-section__image">
+            <!-- CHANGE: Основное изображение (428x440px) -->
             <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=474&h=493&fit=crop" alt="Jetzt anfragen und beraten lassen!" loading="lazy">
           </div>
           
@@ -107,19 +135,23 @@
         </div>
       </div>
 
-      <!-- Контент -->
+      <!-- ====== КОНТЕНТ ====== -->
       <div class="col-lg-6 ms-auto">
         <div class="content-section__content">
           
+          <!-- CHANGE: Заголовок секции -->
           <h2 class="content-section__title">Jetzt anfragen und beraten lassen!</h2>
           
           
+          <!-- CHANGE: Подзаголовок -->
           <p class="content-section__subtitle">Quiz starten & 5 % Rabatt sichern!</p>
           
           
+          <!-- CHANGE: Текст описания -->
           <p class="content-section__text">Beantworte ein paar kurze Fragen, damit ich dein Fotoshooting optimal vorbereiten kann.</p>
           
           
+          <!-- CHANGE: Текст кнопки и ссылка (href) -->
           <a href="quiz-step1.html" class="btn btn-primary content-section__btn">Dein Business-Fotoshooting anfragen</a>
           
           
@@ -463,7 +495,7 @@
     <div class="row align-items-start flex-lg-row-reverse">
       <!-- ====== ФОТО АВТОРА ====== -->
       <div class="col-lg-5 offset-lg-1">
-        <!-- КАРТИНКА: 466x560px - замените src на свой файл -->
+        <!-- CHANGE: Фото автора (466x560px) -->
         <div class="about__image-wrapper">
           <div class="about__image">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=581&h=450&fit=crop" alt="{{name}}" loading="lazy">
@@ -481,7 +513,7 @@
       <div class="col-lg-6">
         <div class="about__content">
           
-          <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
+          <!-- CHANGE: Подзаголовок (например "Ihr Fotograf") -->
           <p class="about__label">Über mich</p>
           
           
@@ -490,15 +522,15 @@
           
 
           
-          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <!-- CHANGE: Текст описания -->
           <p class="about__text">Meine Mission ist es, unvergessliche Erinnerungen zu schaffen - für Familien, für Babys und auch für unsere treuen tierischen Begleiter.</p>
           
 
-          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <!-- CHANGE: Текст описания -->
           <p class="about__text">Denn Bilder sind das Einzige, was bleibt, wenn die Zeit vergeht. Ich selbst habe leider keine schönen Kinderfotos von mir - und weiß nicht einmal, wie meine Mutter während ihrer Schwangerschaft mit mir aussah. Das berührt mich bis heute.</p>
           
 
-          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <!-- CHANGE: Текст описания -->
           <p class="about__text">Genau deshalb ist es mein Herzensanliegen, solche besonderen Momente für euch festzuhalten - auch mit euren Haustieren, die einen festen Platz in eurer Familie haben und deren Liebe ebenso wertvoll ist.</p>
           
 
@@ -541,7 +573,7 @@
   <!-- ====== GOOGLE КАРТА ====== -->
   <div class="footer__map">
     
-    <!-- КАРТА: замените src на код вставки из Google Maps -->
+    <!-- CHANGE: Google Maps - замените src на код вставки из Google Maps -->
     <iframe
       src="https://maps.google.com/maps?q=Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
       width="100%"
@@ -559,17 +591,38 @@
   <div class="footer__bottom">
     <div class="container">
       <nav class="footer__nav">
-        <!-- РЕДАКТИРОВАТЬ: Ссылки на страницы -->
-        <a href="#">Impressum</a>
+        <!-- CHANGE: Ссылка на Impressum -->
+        <a href="../#">Impressum</a>
         <span class="footer__separator">·</span>
-        <a href="#">Datenschutzerklärung</a>
+        <!-- CHANGE: Ссылка на Datenschutz -->
+        <a href="../#">Datenschutzerklärung</a>
         <span class="footer__separator">·</span>
-        <a href="#">Cookie Richtlinien</a>
+        <!-- CHANGE: Ссылка на Cookie Richtlinien -->
+        <a href="../#">Cookie Richtlinien</a>
       </nav>
-      <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
-      <p class="footer__updated">Letzte Aktualisierung: 03.02.2026 18:20</p>
+      <!-- CHANGE: Дата последнего обновления -->
+      <p class="footer__updated">Letzte Aktualisierung: 04.02.2026 05:18</p>
     </div>
   </div>
+
+  <!-- ====== SEO: Structured Data (JSON-LD) ====== -->
+  <!-- CHANGE: SEO - Данные для Google (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Photographer",
+    "name": "Karin Himml",
+    "image": "../images/photographer.jpg",
+    "telephone": "+49 123 456789",
+    "email": "info@karinhimml.de",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ansbach",
+      "addressCountry": "DE"
+    },
+    "priceRange": "€€"
+  }
+  </script>
 </footer>
 
 

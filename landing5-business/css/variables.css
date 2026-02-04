@@ -217,3 +217,38 @@
     --section-padding-y: 48px;
   }
 }
+
+/* =============================================
+   ГОТОВЫЕ ЦВЕТОВЫЕ СХЕМЫ
+   ─────────────────────────────────────────────
+   Скопируйте нужную схему и замените
+   значения переменных в :root выше.
+   ============================================= */
+
+/* --- Тёплая бежевая (текущая) ---
+   color-bg-primary      →  #F5EDE0
+   color-bg-secondary    →  #EEE3D0
+   color-button-primary  →  #E2C08D
+   color-accent          →  #D4A574
+*/
+
+/* --- Холодная серая ---
+   color-bg-primary      →  #F5F5F5
+   color-bg-secondary    →  #E8E8E8
+   color-button-primary  →  #4A4A4A
+   color-accent          →  #666666
+*/
+
+/* --- Мягкая розовая ---
+   color-bg-primary      →  #FDF5F3
+   color-bg-secondary    →  #F8E8E4
+   color-button-primary  →  #D4A5A5
+   color-accent          →  #C48B8B
+*/
+
+/* --- Природная зелёная ---
+   color-bg-primary      →  #F5F8F5
+   color-bg-secondary    →  #E8EFE8
+   color-button-primary  →  #7BA07B
+   color-accent          →  #5C8A5C
+*/

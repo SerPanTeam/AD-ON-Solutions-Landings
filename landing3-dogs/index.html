@@ -7,12 +7,23 @@
   <meta name="keywords" content="Hunde-Fotoshooting, Hund, kostenlos, Haustier-Fotoshooting, Gutschein">
   <title>Kostenloses Hunde-Fotoshooting | Fotostudio</title>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Kostenloses Hunde-Fotoshooting | Fotostudio">
-  <meta property="og:description" content="Kostenloses Hunde-Fotoshooting! Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest.">
+  <!-- Open Graph / Facebook -->
+  <!-- CHANGE: SEO - Заголовок страницы для соцсетей -->
+  <meta property="og:title" content="Kostenloses Hunde-Fotoshooting">
+  <!-- CHANGE: SEO - Описание для соцсетей (до 200 символов) -->
+  <meta property="og:description" content="Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest!">
+  <!-- CHANGE: SEO - Картинка превью (1200x630px) -->
+  <meta property="og:image" content="images/og-preview.jpg">
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
 
-  <!-- Fonts -->
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kostenloses Hunde-Fotoshooting">
+  <meta name="twitter:description" content="Halte die besonderen Momente mit deinem Vierbeiner in professionellen Bildern fest!">
+  <meta name="twitter:image" content="images/og-preview.jpg">
+
+  <!-- FONTS -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -50,21 +61,36 @@
 <!-- ============================================
      HERO BANNER V3 - Landing 3 (Hunde-Fotoshooting)
 
-     FIGMA (node 369:256):
-     - Full-width banner: 1237x641px, rounded-50px
-     - Text overlay on banner (white)
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Метка над заголовком → найдите class="hero-banner__label"
+     • Заголовок → найдите <h1 class="hero-banner__title">
+     • Подзаголовок → найдите class="hero-banner__subtitle"
+     • Кнопка → найдите class="btn btn-primary"
+
+     КАРТИНКА:
+     • Баннер: 1237x641px, скругления 50px → bannerImage
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Цвет кнопки → css/variables.css → --color-button-primary
      ============================================ -->
 
 <section class="hero-banner hero-banner--v3 section--bg-primary pb-92">
   <div class="container">
     <div class="hero-banner__image">
+      <!-- CHANGE: Изображение баннера (1237x641px) -->
       <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1400&h=700&fit=crop" alt="Hunde-Fotoshooting">
 
       <div class="hero-banner__overlay">
+        <!-- CHANGE: Метка над заголовком -->
         <span class="hero-banner__label">Kostenloses</span>
+        <!-- CHANGE: Главный заголовок -->
         <h1 class="hero-banner__title">Hunde-Fotoshooting</h1>
         <div class="hero-banner__subtitle">
           
+          <!-- CHANGE: Подзаголовок (несколько строк) -->
           
           <p>Hallo an alle Hundebesitzer!</p>
           
@@ -79,6 +105,7 @@
           
           
         </div>
+        <!-- CHANGE: Текст кнопки и ссылка (href) -->
         <a href="quiz-step1.html" class="btn btn-primary hero-banner__btn">Hier geht's zu den Gutscheinen</a>
       </div>
     </div>
@@ -686,7 +713,7 @@
     <div class="row align-items-start">
       <!-- ====== ФОТО АВТОРА ====== -->
       <div class="col-lg-5">
-        <!-- КАРТИНКА: 466x560px - замените src на свой файл -->
+        <!-- CHANGE: Фото автора (466x560px) -->
         <div class="about__image-wrapper">
           <div class="about__image">
             <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=600&h=650&fit=crop" alt="Möst Fotografie" loading="lazy">
@@ -700,24 +727,24 @@
         <div class="about__content">
           
           <h2 class="about__title-compact">
-            <!-- РЕДАКТИРОВАТЬ: Подзаголовок -->
+            <!-- CHANGE: Подзаголовок (например "Ihr Fotograf") -->
             <span class="about__title-line">Willkommen bei</span>
-            <!-- РЕДАКТИРОВАТЬ: Имя фотографа -->
+            <!-- CHANGE: Имя фотографа -->
             <span class="about__title-line">Möst Fotografie</span>
           </h2>
           
 
           <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->
           
-          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <!-- CHANGE: Текст описания -->
           <p class="about__text">Ich bin Maren Möst – ausgebildete Fotografin und Mediengestalterin mit einem Bachelor in Medienwirtschaft. Nach mehreren Jahren im Medienbereich, unter anderem beim SWR und bei Bavaria Film, habe ich mich ganz der Fotografie verschrieben.</p>
           
 
-          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <!-- CHANGE: Текст описания -->
           <p class="about__text">In meinem Studio kombiniere ich technisches Know-how mit einem künstlerischen Blick fürs Detail. Ich liebe es, echte Momente einzufangen – ruhig, authentisch und mit Gefühl. Meine Erfahrung aus der Filmwelt und der Mediengestaltung hilft mir dabei, Geschichten nicht nur festzuhalten, sondern sichtbar zu machen.</p>
           
 
-          <!-- РЕДАКТИРОВАТЬ: Текст описания -->
+          <!-- CHANGE: Текст описания -->
           <p class="about__text">Ob Babybauch, Familie oder Porträt – für mich steht der Mensch im Mittelpunkt. Mit viel Ruhe und einem sicheren Gespür für Atmosphäre entstehen Bilder, die bleiben.</p>
           
 
@@ -1066,7 +1093,7 @@
   <!-- ====== GOOGLE КАРТА ====== -->
   <div class="footer__map">
     
-    <!-- КАРТА: замените src на код вставки из Google Maps -->
+    <!-- CHANGE: Google Maps - замените src на код вставки из Google Maps -->
     <iframe
       src="https://maps.google.com/maps?q=Br%C3%BCckenzentrum+Ansbach,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
       width="100%"
@@ -1084,17 +1111,38 @@
   <div class="footer__bottom">
     <div class="container">
       <nav class="footer__nav">
-        <!-- РЕДАКТИРОВАТЬ: Ссылки на страницы -->
+        <!-- CHANGE: Ссылка на Impressum -->
         <a href="#">Impressum</a>
         <span class="footer__separator">·</span>
+        <!-- CHANGE: Ссылка на Datenschutz -->
         <a href="#">Datenschutzerklärung</a>
         <span class="footer__separator">·</span>
+        <!-- CHANGE: Ссылка на Cookie Richtlinien -->
         <a href="#">Cookie Richtlinien</a>
       </nav>
-      <!-- РЕДАКТИРОВАТЬ: Дата обновления -->
-      <p class="footer__updated">Letzte Aktualisierung: 03.02.2026 18:20</p>
+      <!-- CHANGE: Дата последнего обновления -->
+      <p class="footer__updated">Letzte Aktualisierung: 04.02.2026 05:18</p>
     </div>
   </div>
+
+  <!-- ====== SEO: Structured Data (JSON-LD) ====== -->
+  <!-- CHANGE: SEO - Данные для Google (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Photographer",
+    "name": "Ihr Name",
+    "image": "images/photographer.jpg",
+    "telephone": "+49 123 456789",
+    "email": "info@example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ansbach",
+      "addressCountry": "DE"
+    },
+    "priceRange": "€€"
+  }
+  </script>
 </footer>
 
 

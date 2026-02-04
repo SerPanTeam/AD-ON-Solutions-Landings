@@ -5,6 +5,24 @@
    Все размеры, отступы, цвета берём из Figma
    ============================================ */
 
+/* =============================================
+   ВНИМАНИЕ ДЛЯ РЕДАКТОРОВ
+
+   МОЖНО менять:
+   - Цвета через variables.css (--color-*)
+   - Размеры шрифтов через variables.css (--font-size-*)
+   - Отступы через variables.css (--spacing-*)
+
+   НЕЛЬЗЯ менять (сломает вёрстку):
+   - Свойства с комментарием "FIGMA:" — это точные размеры из дизайна
+   - Классы Bootstrap (.container, .row, .col-*)
+   - Flexbox/Grid свойства (display, flex-direction, grid-template)
+   - Position свойства (position, top, left, z-index)
+   - Pseudo-элементы (::before, ::after) — декоративные подложки
+
+   Если нужно изменить layout — обратитесь к разработчику.
+   ============================================= */
+
 /* ===== HEADER ===== */
 /* FIGMA: Logo at top 53px, font-size 45px Inter Bold */
 .header {
