@@ -1,0 +1,96 @@
+<!-- ============================================
+     QUIZ PAGE STEP - Landing Generator
+
+     Universal template for quiz step pages.
+     Each option is a link that saves answer to localStorage
+     and redirects to the next page.
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Logo: Inter Bold, 45px
+     - Progress: Inter Medium, 22px
+     - Question: Inter Bold, 45px
+     - Options: Cards with images (300x300px) + text below
+     ============================================ -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professionelle Hochzeitsfotografie aus Weilheim (Oberbayern). Echte Emotionen, liebevoll festgehalten. Kostenloses Fotoshooting anfragen!">
+  <title>Hochzeitsfotografie | Herzfotografie Weilheim - Schritt 4</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="quiz-page" data-quiz-step="4">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <span class="logo-text">Logo</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Quiz Content -->
+  <main class="quiz-page__main">
+    <div class="container">
+      <!-- Progress -->
+      <p class="quiz-page__progress">Deine Meinung ist mir wichtig!</p>
+
+      <!-- Question -->
+      <h1 class="quiz-page__question">Wie war deine Erfahrung für die bereitgestellten Informationen?</h1>
+
+      <!-- Options -->
+      <div class="quiz-page__options quiz-page__options--1col">
+        
+        <a href="quiz-form.html" class="quiz-option quiz-option--square" data-value="informativ">
+          
+          <span class="quiz-option__text">Informativ und verständlich</span>
+        </a>
+        
+
+        <a href="quiz-form.html" class="quiz-option quiz-option--square" data-value="okay">
+          
+          <span class="quiz-option__text">Es war okay</span>
+        </a>
+        
+
+        <a href="quiz-form.html" class="quiz-option quiz-option--square" data-value="nicht_informativ">
+          
+          <span class="quiz-option__text">Nicht informativ und kompliziert</span>
+        </a>
+        
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="quiz-page__footer">
+    <nav class="quiz-page__nav">
+      <a href="#">Impressum</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Datenschutzerklärung</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Cookie Richtlinien</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/quiz-navigation.js"></script>
+</body>
+</html>
