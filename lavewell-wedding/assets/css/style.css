@@ -1,0 +1,1957 @@
+/*===============================================
+Template Name: lavewell - Marriage Story HTML5 Template
+Author:  htlavewells://themeforest.net/user/dreamit-solution
+Description: Description
+Version: 1.0.0
+Text Domain: lavewell
+Tags: consulting, finance, corporate, business, consultant, multipurpose, technology, it-solution, software, agency, company, portfolio, bangking, insurance, digital-agency, digital-marketing.
+================================================*/
+
+/*TABLE OF CONTENTS*/
+/*=====================
+01. lavewell Nav Menu Area Css
+02. lavewell slider area css
+03. lavewell service area css
+04. lavewell counter area css
+05. lavewell section title Css
+06. lavewell wedding event area css
+07. lavewell about area css
+08. lavewell best friends area css
+09. lavewell gallery area css
+10. lavewell contact area css
+11. lavewell testimonial-area css
+12. lavewell blog area css
+13. lavewell brand area css
+14. lavewell Footer Area css
+15. lavewell banner area css
+16. lavewell service section css
+17. lavewell about section css
+18. lavewell wishes area css
+19. start lavewell team area css
+20. Start lavewell  Video section css
+21. start lavewell call to action area css
+22. start lavewell breadcumb Area css
+23. start lavewell about us area css
+24. start lavewell about me area css
+25. start lavewell pricing area css
+26. start lavewell team details area css
+27. start lavewell portfolio details css
+28. strt lavewell faq Accordion css
+29. start lavewell blog area 2column css
+30. Start lavewell blog details css
+31. start lavewell service details css
+32. Scroll Up Css 
+33. Curser pointer CSS
+34. lavewellro Loader Css
+=======================*/
+
+/*=====================================
+<-- 01. lavewell Nav Menu Area Css -->
+=======================================*/
+.lavewell_nav_manu {
+  margin: 24px 30px 0 60px;
+  transition: 0.5s;
+}
+
+#sticky-header.lavewell_nav_manu.style-2.lavewell_nav_manu {
+  top: -22px;
+  left: -56px;
+}
+
+.lavewell_nav_manu.style-2.lavewell_nav_manu {
+  margin: 21px 30px 15px 56px;
+  transition: 0.5s;
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.sticky {
+  left: 0;
+  margin: auto;
+  position: fixed !important;
+  top: 0;
+  width: 100%;
+  -webkit-box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 5px -2px rgba(0, 0, 0, 0.1);
+  background: #050a1e !important;
+  z-index: 500;
+  padding: 0 100px 0;
+  transition: 0.5s !important;
+  animation: slideInDown 0.5s ease;
+}
+
+.sticky .logo {
+  margin-top: 0;
+}
+
+.sticky.lavewell_nav_manu:before {
+  display: none;
+}
+
+/* lavewell Menu Css*/
+
+nav.lavewell_menu {
+  align-items: center !important;
+  justify-content: center;
+  display: flex;
+}
+
+.lavewell_menu ul {
+  list-style: none;
+  display: inline-block;
+  padding: 0;
+}
+
+.lavewell_menu > ul > li {
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+
+.lavewell_menu > ul > li > a {
+  display: block;
+  margin: 23px 26px 23px;
+  -webkit-transition: 0.5s;
+  text-decoration: none;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-family: "Josefin Sans";
+}
+
+nav.lavewell_menu ul li a i {
+  display: inline-block;
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+nav.lavewell_menu span {
+  font-size: 13px;
+  padding-left: 6px;
+  font-family: FontAwesome;
+  opacity: 0.5;
+}
+
+.sticky .lavewell_menu > ul > li > a:hover {
+  color: #fff;
+}
+
+.logo {
+  position: relative;
+  top: -3px;
+  z-index: 2;
+}
+
+.lavewell_menu > ul > li > a:hover {
+  color: #f4f4f4;
+}
+
+/*** Sub Menu Style ***/
+.lavewell_menu ul .sub-menu {
+  position: absolute;
+  left: 0;
+  top: 150%;
+  width: 217px;
+  text-align: left;
+  background: #fff;
+  margin: 0;
+  z-index: 1;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+  transition: 0.5s;
+  visibility: hidden;
+  opacity: 0;
+  border-bottom: 3px solid #97aa85;
+  border-top: 3px solid #97aa85;
+}
+
+.lavewell_menu ul li:hover > .sub-menu {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility: visible;
+  top: 100%;
+  opacity: 1;
+  z-index: 9999;
+}
+
+.lavewell_menu ul .sub-menu li {
+  position: relative;
+}
+
+.lavewell_menu ul .sub-menu li a {
+  display: block;
+  padding: 12px 20px;
+  margin: 0;
+  line-height: 1.3;
+  letter-spacing: normal;
+  font-size: 13px;
+  font-weight: 500;
+  -webkit-transition: 0.1s;
+  visibility: inherit !important;
+  color: #211e3b !important;
+  text-decoration: none;
+  transition: 0.5s;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+}
+
+.lavewell_menu ul .sub-menu li:hover > a,
+.lavewell_menu ul .sub-menu .sub-menu li:hover > a,
+.lavewell_menu ul .sub-menu .sub-menu .sub-menu li:hover > a,
+.lavewell_menu ul .sub-menu .sub-menu .sub-menu .sub-menu li:hover > a {
+  background: #97aa85;
+  color: #fff !important;
+}
+
+/* sub menu 2 */
+
+.lavewell_menu ul .sub-menu .sub-menu {
+  left: 100%;
+  top: 130%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  visibility: hidden;
+}
+
+.lavewell_menu ul .sub-menu li:hover > .sub-menu {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility: visible;
+  top: 0%;
+}
+
+/* sub menu 3 */
+
+.lavewell_menu ul .sub-menu .sub-menu li {
+  position: relative;
+}
+
+.lavewell_menu ul .sub-menu .sub-menu .sub-menu {
+  right: 100%;
+  left: auto;
+  top: 130%;
+  opacity: 0;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  visibility: hidden;
+}
+
+.lavewell_menu ul .sub-menu .sub-menu li:hover > .sub-menu {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility: visible;
+  top: 0%;
+}
+
+/* sub menu 4 */
+
+.lavewell_menu ul .sub-menu .sub-menu .sub-menu li {
+  position: relative;
+}
+
+.lavewell_menu ul .sub-menu .sub-menu .sub-menu li:hover > .sub-menu {
+  opacity: 1;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+  visibility: visible;
+  top: 0%;
+}
+
+.lavewell_menu li a:hover:before {
+  width: 100%;
+}
+
+.lavewell_nav_manu.sticky .logo_img {
+  display: none;
+}
+
+.main_sticky {
+  display: none;
+}
+
+.lavewell_nav_manu.sticky .main_sticky {
+  display: inherit;
+}
+
+.sticky .lavewell_menu li a {
+  color: #fff;
+}
+
+.lavewell_nav_manu.sticky a.dtbtn {
+  color: #fff;
+  background: #f16722;
+  border: 2px solid #f16722;
+}
+
+.lavewell_nav_manu.sticky a.dtbtn:hover {
+  color: #43baff;
+}
+
+.mobile-menu.mean-container {
+  overflow: hidden;
+}
+
+.header-btn {
+  text-align: right;
+}
+
+.header-btn a {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 500;
+  background: #97aa85;
+  padding: 15px 42px;
+  margin-right: 14px;
+  position: relative;
+  z-index: 9;
+  transition: 0.5s;
+}
+
+.header-btn a::before {
+  position: absolute;
+  content: "";
+  width: 141px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  left: 0px;
+  top: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+}
+
+.header-btn a::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #97aa85;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.header-btn a:hover::after {
+  transform: scale(1);
+}
+
+.header-btn a:hover a {
+  color: #fff;
+}
+
+.header-btn a i {
+  display: inline-block;
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+  margin-left: 3px;
+}
+
+.header-btn a:hover {
+  background: #fff;
+  color: #232323;
+}
+
+.header-btn a:hover {
+  color: #fff;
+}
+
+.lavewell_nav_manu.style-2 .lavewell_menu > ul > li > a {
+  color: #232323;
+}
+
+.lavewell_nav_manu.style-2.sticky .lavewell_menu > ul > li > a {
+  color: #fff !important;
+}
+
+/*
+<!-- =======================================-->
+ <!--start lavewell slider area css-->
+<!-- ======================================= -->*/
+section.lavewell-slider-area {
+  position: relative;
+  margin-top: -100px;
+}
+
+.lavewell-slider-height {
+  height: 950px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lavewell-slider-height-2 {
+  height: 950px;
+}
+
+.lavewell-slider-bg,
+.lavewell-slider-bg2 {
+  background: url(../images/wedding/slider-1-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.lavewell-slider-bg2 {
+  background: url(../images/wedding/slider-2-bg.jpg);
+}
+
+.lavewell-slider-bg,
+.lavewell-slider-bg2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+  transition: opacity 1500ms ease-in, -webkit-transform 7000ms ease;
+  transition: transform 9000ms ease, opacity 1500ms ease-in;
+  transition: transform 9000ms ease, opacity 1500ms ease-in,
+    -webkit-transform 9000ms ease;
+}
+
+.lavewell-slider-content {
+  padding-top: 55px;
+}
+
+.lavewell-slider-sub-title {
+  font-size: 25px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+}
+
+h1.lavewell-slider-title {
+  font-size: 140px;
+  color: #ffffff;
+  font-weight: 400;
+  margin-top: 15px;
+}
+
+.slider-btn {
+  display: inline-block;
+}
+
+.slider-btn a {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 500;
+  background: #97aa85;
+  padding: 15px 42px;
+  margin-right: 14px;
+  position: relative;
+  z-index: 1;
+  transition: 0.5s;
+}
+
+.slider-btn a::before {
+  position: absolute;
+  content: "";
+  width: 141px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  left: 0px;
+  top: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+}
+
+.slider-btn a::after {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #97aa85;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.slider-btn a:hover::after {
+  transform: scale(1);
+}
+
+.slider-btn:hover a {
+  color: #fff;
+}
+
+.slider-btn a:hover {
+  background: #fff;
+  color: #232323;
+}
+
+.slider-btn a:hover {
+  color: #fff;
+}
+
+.slider-video-btn {
+  display: inline-block;
+}
+
+.slider-video-btn a {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  line-height: 65px;
+  background-color: #232323;
+  text-align: center;
+}
+
+.slider-video-btn a i {
+  font-size: 20px;
+  color: #97aa85;
+}
+
+.lavewell-slider-arrow-box button {
+  font-size: 24px;
+  height: 60px;
+  line-height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  position: absolute;
+  left: 30px;
+  top: 472px;
+  z-index: 5;
+  border: 0;
+  background: url(../images/wedding/slider-1-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.lavewell-slider-arrow-box button.slider-next {
+  margin-bottom: 10px;
+  left: auto;
+  right: 60px;
+}
+
+button.slider-next {
+  background: url(../images/wedding/slider-2-bg.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.lavewell-slider-arrow-box button {
+  transition: 0.4s;
+}
+
+.lavewell-slider-arrow-box-2 button {
+  left: 0;
+}
+.lavewell-slider-arrow-box-2 button.slider-next {
+  right: 0;
+}
+
+.lavewell-slider-title-box {
+  opacity: 0;
+  z-index: 3;
+  position: relative;
+  transform: translateY(-150px);
+}
+.lavewell-slider-btn {
+  transform: translateY(150px);
+  opacity: 0;
+}
+.lavewell-slider-wrapper .swiper-slide.swiper-slide-active .lavewell-slider-bg {
+  -webkit-transform: scale(1.2);
+  transform: scale(1.1);
+}
+.lavewell-slider-wrapper
+  .swiper-slide.swiper-slide-active
+  .lavewell-slider-bg2 {
+  -webkit-transform: scale(1.2);
+  transform: scale(1);
+}
+.lavewell-slider-wrapper
+  .swiper-slide.swiper-slide-active
+  .lavewell-slider-title-box {
+  opacity: 1;
+  transform: translatey(0px);
+  transition: all 2500ms ease;
+}
+.lavewell-slider-wrapper
+  .swiper-slide.swiper-slide-active
+  .lavewell-slider-btn {
+  opacity: 1;
+  transform: translatey(0px);
+  transition: all 2500ms ease;
+}
+
+/*
+<!-- =======================================-->
+  <!--start  lavewell service area css-->
+<!-- ======================================= -->*/
+.service-area {
+  padding: 150px 0 100px;
+  background: url(../images/home-1/ser-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  position: relative;
+}
+.single-service-box,
+.single-service-box.box-2 {
+  text-align: center;
+  filter: drop-shadow(0px 5px 30px rgba(222, 222, 222, 0.6));
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  padding: 21px 20px 54px;
+  margin-right: 25px;
+}
+
+.single-service-box.box-2 {
+  margin-right: 0;
+  margin-left: 25px;
+}
+
+.service-content {
+  padding: 50px 38px 15px;
+}
+
+.service-thumb img {
+  width: 100%;
+}
+
+h5.service-sub-title {
+  font-size: 14px;
+  color: #97aa85;
+  font-weight: 500;
+  font-family: "Josefin Sans";
+}
+
+h1.service-title {
+  font-size: 60px;
+  line-height: 110px;
+  color: #232323;
+  font-weight: 400;
+  margin: 0;
+}
+
+h1.service-title a {
+  display: inline-block;
+  transition: 0.5s;
+}
+
+h1.service-title a:hover {
+  color: #97aa85;
+}
+
+p.service-desc {
+  font-size: 17px;
+  line-height: 27px;
+  color: #6e706c;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+.service-social-icon ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 12px;
+}
+
+.service-social-icon ul li a {
+  display: inline-block;
+  background: #232323;
+  color: #fff;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  border-radius: 50%;
+  font-size: 14px;
+  padding-top: 2px;
+  transition: 0.5s;
+}
+
+.service-social-icon ul li a:hover {
+  background: #97aa85;
+}
+.service-box-shape {
+  position: absolute;
+  bottom: -24px;
+  left: -36px;
+}
+
+.service-box-shape2 {
+  position: absolute;
+  bottom: -24px;
+  right: -36px;
+}
+
+.service-shape {
+  position: absolute;
+  left: 90px;
+  bottom: 320px;
+  animation: bounceleft 4s linear infinite;
+}
+
+.service-shape2 {
+  position: absolute;
+  right: 90px;
+  top: 320px;
+  animation: bounceleft 4s linear infinite;
+}
+
+/*
+<!-- =======================================-->
+  <!--start lavewell service area style-2-->
+<!-- ======================================= -->*/
+.service-area.style-2 {
+  padding: 125px 0 120px;
+  background: #fff;
+  position: relative;
+}
+
+.service-area.style-2 .single-service-box {
+  text-align: center;
+  background: #f4f0ed;
+  padding: 60px 0px 20px;
+  margin-right: 0;
+  margin-bottom: 30px;
+}
+
+.service-section .service-single-box {
+  margin-bottom: 30px;
+}
+
+.service-area.style-2 .service-content {
+  padding: 10px 38px 15px;
+}
+
+.service-area.style-2 h1.service-title {
+  font-size: 45px;
+  line-height: 80px;
+  color: #232323;
+  font-weight: 400;
+  margin: 0;
+}
+
+.service-area.style-2 p.service-desc {
+  font-size: 17px;
+  line-height: 27px;
+  color: #6e706c;
+  font-weight: 400;
+  margin-top: 8px;
+}
+
+/*
+<!-- =======================================-->
+  <!--start  lavewell counter area css-->
+<!-- ======================================= -->*/
+.coutner-area {
+  background: url(../images/home-1/counter-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 78px 0 66px;
+}
+
+h6.counter-sub-title {
+  font-size: 14px;
+  line-height: 27px;
+  color: #ffffff;
+  font-weight: 500;
+  font-family: "Josefin Sans";
+  margin: 0;
+}
+
+h2.counter-title {
+  font-size: 45px;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+.counter-single-box {
+  padding-top: 6px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.counter-single-box::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 70px;
+  background: rgb(255 255 255 / 30%);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.odometer-wrapper.counter-box-title h1 {
+  display: inline-block;
+  font-size: 80px;
+  line-height: 55px;
+  color: #ffffff;
+  font-weight: 400;
+  font-family: "Italianno";
+  margin: 0;
+}
+
+.counter-desc p {
+  font-size: 14px;
+  line-height: 27px;
+  color: #fff;
+  font-weight: 500;
+  font-family: "Josefin Sans";
+}
+
+.row.counter .col-lg-2:last-child .counter-single-box::before {
+  display: none;
+}
+
+/*==========================================
+<!--start lavewell coutner-area style-2-->
+============================================*/
+.coutner-area.style-2 {
+  background: #fff;
+  padding: 0 0 70px;
+  position: relative;
+}
+
+.coutner-area.style-2 .odometer-wrapper.counter-box-title h1 {
+  color: #232323;
+}
+
+.coutner-area.style-2 h1.count-text {
+  position: relative;
+  top: 10px !important;
+}
+
+.coutner-area.style-2 .counter-desc p {
+  color: #232323;
+  text-transform: uppercase;
+}
+
+.coutner-area.style-2 .counter-single-box {
+  text-align: center;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.coutner-area.style-2 .counter-single-box::before {
+  position: absolute;
+  content: "";
+  width: 1px;
+  height: 70px;
+  background: rgb(0 0 0 / 10%);
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+
+.row.counter-2 .col-lg-3:last-child .counter-single-box::before {
+  display: none;
+}
+
+.counter-shape {
+  position: absolute;
+  bottom: 109px;
+  left: 125px;
+  -webkit-animation: bounce 3s linear infinite;
+  animation: bounce 3s linear infinite;
+}
+
+.counter-shape2 {
+  position: absolute;
+  bottom: 109px;
+  right: 107px;
+  animation: bounceleft 4s linear infinite;
+}
+
+/*=====================================
+<--  start lavewell section title Css -->
+=======================================*/
+.section-title.text-center {
+  margin-bottom: 95px;
+}
+
+.section-title.text-left {
+  margin-bottom: 95px;
+}
+
+.section-sub-title h5 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 42px;
+  color: #97aa85;
+  font-family: "Josefin Sans";
+  text-transform: uppercase;
+}
+
+.section-main-title h1 {
+  font-size: 100px;
+  line-height: 55px;
+  font-weight: 400;
+  color: #232323;
+  margin-top: 28px;
+}
+
+.section-main-title h2 {
+  font-size: 60px;
+  line-height: 42px;
+  font-weight: 400;
+  color: #232323;
+  margin-top: 18px;
+}
+
+.section-main-title h3 {
+  font-size: 80px;
+  line-height: 35px;
+  font-weight: 400;
+  color: #232323;
+  margin-top: 28px;
+}
+
+.about-section .section-main-title h3 {
+  font-size: 80px;
+  line-height: 62px;
+  font-weight: 400;
+  color: #232323;
+  margin-top: 15px;
+}
+
+.section-title-desc p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #6e706c;
+  margin-top: 35px;
+  margin-bottom: 38px;
+  padding: 0 63px 0 0;
+}
+
+.about-us-area .section-title-desc p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #6e706c;
+  margin-top: 35px;
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.gallery-area.bottom .section-title-desc p {
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 27px;
+  color: #6e706c;
+  margin-top: 0;
+  margin-bottom: 34px;
+  padding: 0 0px 0 45px;
+}
+
+.wishes-area .section-title-desc p {
+  margin-top: 47px;
+}
+
+.about-area .section-title.text-left {
+  margin-bottom: 30px;
+}
+
+.about-section .section-title.text-left {
+  margin-bottom: 46px;
+}
+
+.about-area.style-2 .section-title-desc p {
+  padding: 0 0px 0 100px;
+}
+
+.service-section .section-title.text-center {
+  margin-bottom: 102px;
+}
+
+.best-friends-area .section-title.text-center {
+  margin-bottom: 65px;
+}
+
+.gallery-area .section-title.text-center {
+  margin-bottom: 80px;
+}
+
+.wishes-area .section-title.text-left {
+  margin-bottom: 45px;
+}
+
+.testimonial-area.style-2 .section-title.text-center {
+  margin-bottom: 85px;
+}
+
+.contact-area .section-title.text-center {
+  margin-bottom: 80px;
+}
+
+.blog-area .section-title.text-center {
+  margin-bottom: 65px;
+}
+
+.about-us-area .section-title.text-left {
+  margin-bottom: 0;
+}
+
+.contact-section .section-title.text-left {
+  margin-bottom: 65px;
+}
+
+/*============================================
+ <!--start lavewell wedding event area css-->
+==============================================*/
+.wedding-event-area {
+  background: url(../images/home-1/Wedding-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 125px 0 150px;
+  position: relative;
+}
+
+.single-wedding-box {
+  text-align: right;
+  margin: 0 57px 95px 52px;
+}
+
+.single-wedding-box.box-2 {
+  text-align: left;
+  margin: 0 81px 95px 0px;
+}
+
+.single-wedding-box.last-child {
+  margin: 0 57px 0 26px;
+}
+
+.single-wedding-box.last-child .wedding-desc p::before {
+  display: none;
+}
+.wedding-number span {
+  display: inline-block;
+  font-size: 15px;
+  line-height: 27px;
+  color: #ffffff;
+  font-weight: 400;
+  background-color: #97aa85;
+  padding: 1px 43px;
+}
+
+.wedding-title h1 {
+  font-size: 45px;
+  line-height: 42px;
+  color: #232323;
+  font-weight: 400;
+  margin: 36px 0 24px;
+}
+
+.wedding-desc p {
+  font-size: 17px;
+  line-height: 27px;
+  color: #6e706c;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+  position: relative;
+}
+
+.wedding-desc p::before {
+  position: absolute;
+  content: "";
+  opacity: 0.102;
+  width: 510px;
+  height: 1px;
+  background-color: rgb(0 0 0);
+  left: 0;
+  bottom: -44px;
+}
+
+.wedding-shape {
+  position: absolute;
+  top: 178px;
+  left: 220px;
+  animation: bounceleft 4s linear infinite;
+}
+
+.wedding-shape2 {
+  position: absolute;
+  top: 178px;
+  right: 220px;
+  animation: bounceleft 4s linear infinite;
+}
+
+.wedding-active {
+  overflow-x: hidden;
+}
+
+.lavewell-wedding-arrow-box button {
+  display: inline-block;
+  font-size: 30px;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  border: 0;
+  background: transparent;
+}
+
+.lavewell-wedding-arrow-box button.wedding-prev {
+  position: absolute;
+  margin-bottom: 10px;
+  left: 35%;
+  top: 58%;
+  z-index: 1;
+}
+
+.lavewell-wedding-arrow-box button.wedding-next {
+  position: absolute;
+  margin-bottom: 10px;
+  left: auto;
+  right: 39%;
+  top: 58%;
+  z-index: 1;
+}
+
+/*=====================================
+ <!--start lavewell about area css-->
+=======================================*/
+.about-area {
+  position: relative;
+}
+
+.about-area::before {
+  position: absolute;
+  content: "";
+  width: 42%;
+  height: 100%;
+  background: url(../images/wedding/about-thumb2.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+.about-area.style-2 {
+  background: url(../images/wedding/about-thumb3.png);
+  right: 0;
+  top: 0;
+}
+
+.about-content {
+  padding: 136px 0 0 75px;
+}
+
+.about-area.style-2 .about-content {
+  padding: 136px 75px 0 0px;
+  text-align: right;
+}
+
+.about-btn {
+  display: inline-block;
+}
+
+.about-btn a {
+  display: inline-block;
+  color: #232323;
+  font-size: 14px;
+  border: 1px solid rgb(35 35 35 / 10%);
+  padding: 12px 40px;
+  transition: 0.5s;
+  position: relative;
+  z-index: 1;
+}
+
+.about-btn a::before {
+  position: absolute;
+  content: "";
+  height: 100%;
+  width: 100%;
+  background: #97aa85;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.about-btn a:hover::before {
+  transform: scale(1);
+}
+
+.about-btn:hover a {
+  color: #fff;
+}
+
+/*============================================
+  <!--start lavewell best friends area css-->
+==============================================*/
+.best-friends-area {
+  padding: 125px 0 150px;
+  background: url(../images/home-1/friends-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  z-index: -1;
+}
+
+.single-best-friends {
+  background: #fff;
+  padding: 20px;
+}
+
+.friends-thumb img {
+  width: 100%;
+}
+
+.friends-content {
+  text-align: center;
+  padding: 45px 47px 16px;
+}
+
+.friends-name ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 22px;
+}
+
+.friends-name ul li a {
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #232323;
+  transition: 0.5s;
+}
+
+.friends-name ul li a:hover {
+  color: #97aa85;
+}
+
+.friends-desc p {
+  font-size: 17px;
+  color: #6e706c;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.friend-shape {
+  position: absolute;
+  left: 190px;
+  bottom: 83px;
+  z-index: -1;
+}
+
+.friend-shape2 {
+  position: absolute;
+  right: 102px;
+  bottom: 112px;
+  animation: bounceleft 4s linear infinite;
+}
+
+/*=====================================
+  <!--start lavewell gallery area css-->
+=======================================*/
+.gallery-area {
+  padding: 125px 52px 110px 32px;
+}
+
+.gallery-area.bottom {
+  padding: 125px 33px 50px 50px;
+  position: relative;
+}
+
+.gallery__thumb-box {
+  margin: 0 9px 40px;
+  position: relative;
+  transition: 0.5s;
+}
+
+.gallery__thumb-box::before {
+  position: absolute;
+  content: "";
+  height: 96%;
+  width: 96%;
+  background: rgb(151 170 133 / 0.9);
+  left: 2%;
+  top: 2%;
+  right: 2%;
+  bottom: 2%;
+  transform: scale(0);
+  transition: 0.5s;
+}
+
+.gallery__thumb-icon {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  text-align: center;
+  z-index: 11;
+}
+
+.gallery__thumb-box:hover::before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.gallery__thumb-box:hover .gallery__thumb-icon {
+  opacity: 2;
+}
+
+.gallery-title-shape {
+  position: absolute;
+  top: 0;
+  left: 220px;
+}
+
+.gallery-shape {
+  position: absolute;
+  top: 150px;
+  right: 108px;
+  animation: bounceleft 4s linear infinite;
+}
+
+/*=========================================
+   <!--start lavewell contact area css-->
+=========================================*/
+.contact-area {
+  background: url(../images/wedding/contact-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 125px 0 150px;
+}
+
+.form-box {
+  margin-bottom: 17px;
+}
+
+.form-box input {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid rgb(85 85 85 / 20%);
+  padding: 11px 10px;
+  transition: 0.3s;
+  box-shadow: none;
+}
+
+.form-box textarea {
+  width: 100%;
+  height: 205px;
+  background: transparent;
+  border: 1px solid rgb(85 85 85 / 20%);
+  margin: 10px 0 0px;
+  padding: 15px;
+}
+
+.form-box label {
+  font-size: 17px;
+  color: #555555;
+  font-weight: 400;
+  text-transform: capitalize;
+  padding-top: 35px;
+}
+
+.contact-area input::placeholder,
+textarea::placeholder {
+  font-size: 17px;
+  font-weight: 400;
+  color: #555555;
+}
+
+.submit-button button {
+  width: 100%;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  background: #97aa85;
+  text-transform: uppercase;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.submit-button button {
+  width: 100%;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  background: #97aa85;
+  text-transform: uppercase;
+  padding: 12px 20px;
+}
+
+/*=========================================
+   <!--start lavewell contact section css-->
+=========================================*/
+.contact-section {
+  background: #fff;
+  padding: 115px 0 150px;
+}
+
+.single-contact-box {
+  display: flex;
+  align-items: center;
+}
+
+.contact-address {
+  margin-bottom: 16px;
+}
+
+.contact-address.line {
+  position: relative;
+}
+
+.contact-address.line::before {
+  position: absolute;
+  content: "";
+  width: 566px;
+  height: 1px;
+  background: rgb(0 0 0 / 10%);
+  top: -15px;
+  left: 0;
+}
+
+.contact-icon {
+  margin-right: 15px;
+}
+
+.contact-icon i {
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  font-size: 17px;
+  background: #97aa85;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.contact-title h5 {
+  font-size: 17px;
+  color: #555555;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+}
+
+.contact-addres p {
+  font-size: 35px;
+  line-height: 45px;
+  color: #232323;
+  font-weight: 400;
+  font-family: "Italianno";
+}
+
+.row.form-bg {
+  background: #f4f0ed;
+  padding: 53px 60px 70px 60px;
+  position: relative;
+  margin-top: -268px;
+}
+
+.contact-form-title h2 {
+  margin-bottom: 35px;
+  font-size: 45px;
+  color: #003831;
+  font-weight: 400;
+  font-family: "Italianno";
+  text-align: center;
+}
+
+.contact-section .form-box {
+  margin-bottom: 30px;
+}
+
+.contact-section input::placeholder,
+textarea::placeholder {
+  font-size: 17px;
+  font-weight: 400;
+  color: #555555;
+  opacity: 0.702;
+  font-family: "Urbanist";
+}
+
+.contact-section .form-box input {
+  width: 100%;
+  height: 60px;
+  background: #fff;
+  border: 0;
+  border-bottom: 1px solid rgb(85 85 85 / 20%);
+  padding: 0px 30px;
+  transition: 0.3s;
+  box-shadow: none;
+}
+
+.contact-section .form-box textarea {
+  width: 100%;
+  height: 140px;
+  background: #fff;
+  border: 1px solid rgb(85 85 85 / 20%);
+  margin: 0;
+  padding: 14px 30px;
+}
+
+.contact-section .submit-button button {
+  width: 100%;
+  color: #fff;
+  border: 0;
+  outline: 0;
+  background: #97aa85;
+  text-transform: uppercase;
+  padding: 17px 20px;
+}
+
+/*=============================================
+   <!--start lavewell google map css-->
+===============================================*/
+.google-map iframe {
+  width: 100%;
+  height: 600px;
+}
+
+/*=============================================
+   <!--start lavewell testimonial-area css-->
+===============================================*/
+.testimonial-area {
+  background: url(../images/home-1/testi-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 142px 0 132px;
+  position: relative;
+  overflow: hidden;
+}
+
+.testi-single-box {
+  text-align: center;
+}
+
+ul.testi-rating li {
+  display: inline-block;
+  color: #ffab00;
+  font-size: 15px;
+  letter-spacing: 5px;
+}
+
+p.testi-desc {
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+  margin: 30px 0 40px;
+}
+
+h3.testi-user-name {
+  margin-top: 35px;
+  font-size: 45px;
+  color: #fff;
+  font-weight: 400;
+}
+
+h3.testi-user-name span {
+  display: block;
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "Josefin Sans";
+}
+
+.testimonial-area .lavewell-testi-arrow-box button {
+  display: inline-block;
+  font-size: 24px;
+  transition: all 0.3s ease 0s;
+  color: #fff;
+  border: 0;
+  background: transparent;
+}
+
+.testimonial-area .lavewell-testi-arrow-box button.testi-prev {
+  position: absolute;
+  margin-bottom: 10px;
+  left: 6px;
+  top: 44%;
+  z-index: 1;
+}
+
+.testimonial-area .lavewell-testi-arrow-box button.testi-next {
+  position: absolute;
+  margin-bottom: 10px;
+  left: auto;
+  right: 12px;
+  top: 44%;
+  z-index: 1;
+}
+
+.swiper.testi-active {
+  overflow-x: hidden;
+}
+
+/*====================================================
+   <!--start lavewell testimonial-area css style-2-->
+=======================================================*/
+.testimonial-area.style-2 {
+  background: url(../images/home-2/test-bg2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 125px 0 140px;
+}
+
+.testimonial-active {
+  overflow-x: hidden;
+}
+
+.testimonial-area.style-2 h3.testi-user-name {
+  font-size: 45px;
+  color: #232323;
+  font-weight: 400;
+}
+
+.testimonial-area.style-2 p.testi-desc {
+  font-size: 17px;
+  font-weight: 400;
+  color: #6e706c;
+  margin: 30px 0 35px;
+  text-align: center;
+}
+
+.testimonial-area.style-2 ul.testi-rating {
+  text-align: center;
+}
+
+.lavewell-testimonial-arrow-box button {
+  display: inline-block;
+  font-size: 30px;
+  transition: all 0.3s ease 0s;
+  color: #232323;
+  border: 0;
+  background: transparent;
+  opacity: 0.8;
+}
+
+.lavewell-testimonial-arrow-box button.testimonial-prev {
+  position: absolute;
+  margin-bottom: 10px;
+  left: 6px;
+  top: 44%;
+  z-index: 1;
+}
+
+.lavewell-testimonial-arrow-box button.testimonial-next {
+  position: absolute;
+  margin-bottom: 10px;
+  left: auto;
+  right: 6px;
+  top: 44%;
+  z-index: 1;
+}
+
+/*=====================================
+   <!--start lavewell blog area css-->
+=======================================*/
+.blog-area {
+  background: url(../images/home-1/blog-bg.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 125px 0 120px;
+  position: relative;
+}
+
+.blog-area::before {
+  position: absolute;
+  content: "";
+  width: 1320px;
+  height: 1px;
+  background-color: rgb(0, 0, 0);
+  opacity: 0.078;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.blog-singele-box {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.blog-thumb {
+  position: relative;
+}
+
+.blog-thumb img {
+  width: 100%;
+}
+
+.blog-content {
+  background: rgb(151 170 133 / 95%);
+  position: absolute;
+  bottom: 50px;
+  left: 15px;
+  padding: 36px 31px 46px 35px;
+  width: 91%;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.blog-date span {
+  display: inline-block;
+  color: #fff;
+  font-size: 15px;
+  line-height: 32px;
+  font-weight: 400;
+}
+
+h3.blog-title {
+  margin-bottom: 8px;
+}
+
+h3.blog-title a {
+  display: inline-block;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 400;
+}
+
+p.blog-desc {
+  font-size: 17px;
+  line-height: 27px;
+  color: #fff;
+  margin-bottom: 32px;
+}
+
+.blog-btn a {
+  display: inline-block;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+  transition: 0.5s;
+  padding-left: 32px;
+}
+
+.blog-btn a::before {
+  position: absolute;
+  content: "";
+  width: 141px;
+  height: 40px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  left: 0px;
+  top: 0;
+  right: 0;
+  margin: auto;
+  bottom: 0;
+}
+
+.blog-meta-title {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+}
+
+.blog-meta-title h2 a {
+  display: inline-block;
+  color: #fff;
+  font-size: 45px;
+  font-weight: 400;
+  transition: 0.5s;
+}
+
+/* all hover */
+.blog-singele-box:hover .blog-content {
+  opacity: 1;
+  bottom: 15px;
+}
+
+.blog-singele-box:hover .blog-meta-title h2 a {
+  opacity: 0;
+}
+
+.blog-btn a:hover {
+  color: #232323;
+  background: #fff;
+}
+
+/*=====================================
+  <!--start lavewell brand area css-->
+=======================================*/
+.brand-area {
+  background: #f4f0ed;
+  padding: 100px 0 95px;
+}
+
+.brand-box {
+  text-align: center;
+}
+
+.band-active {
+  overflow-x: hidden;
+}
+
+/*=====================================
+<!-- Start lavewell Footer Area css-->
+=======================================*/
+
+.footer-area {
+  background: #fff;
+  padding: 100px 0 82px;
+  position: relative;
+}
+
+.footer-area.style-2 {
+  padding: 100px 0 85px;
+}
+
+.footer-bg {
+  background: #f4f0ed;
+}
+
+.footer-single-item {
+  text-align: center;
+  padding-top: 92px;
+}
+
+.footer-single-item2 {
+  text-align: left;
+  padding-top: 92px;
+}
+
+.footer-logo {
+  text-align: center;
+  position: relative;
+}
+
+.footer-logo::before {
+  position: absolute;
+  content: "";
+  height: 110px;
+  width: 1px;
+  background: rgb(85 85 85 / 20%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  top: 110px;
+}
+
+.footer-title h1 {
+  font-size: 60px;
+  font-weight: 400;
+  color: #232323;
+  margin-bottom: 15px;
+  padding-left: 85px;
+}
+
+.footer-single-item2 .footer-title h1 {
+  padding-left: 60px;
+}
+
+.footer-info p,
+.footer-info span {
+  display: inline-block;
+  font-size: 17px;
+  font-weight: 400;
+  color: #6e706c;
+}
+
+.footer-info p {
+  margin-right: 33px;
+}
+
+.footer-info p i,
+.footer-info span i {
+  display: inline-block;
+  background: #97aa85;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 14px;
+}
+
+.footer-shape {
+  position: absolute;
+  left: 250px;
+  top: 150px;
+  animation: bounceleft 4s linear infinite;
+}
+
+.footer-shape2 {
+  position: absolute;
+  top: 210px;
+  right: 160px;
+  animation: bounceleft 4s linear infinite;
+}
+
+/*=====================================
+<--  end lavewell footer-area Css -->
+=======================================*/
+
+/*============================
+/* Scroll Up Css 
+==============================*/
+
+#progress {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: grid;
+  place-items: center;
+  z-index: 99999;
+  cursor: pointer;
+}
+
+.progress.hide {
+  display: none !important;
+  transition: 0.5s !important;
+}
+
+#progress-value {
+  display: block;
+  height: calc(100% - 15px);
+  width: calc(100% - 15px);
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+#container {
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+
