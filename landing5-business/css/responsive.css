@@ -138,6 +138,13 @@
     height: 145px;
   }
 
+  /* About - adaptive images on tablet-landscape */
+  .about__image {
+    max-width: 100%;
+    height: auto;
+    aspect-ratio: 466/560;
+  }
+
   /* About rounded - adaptive images */
   .about--rounded .about__image {
     max-width: 100%;
@@ -5262,5 +5269,190 @@
 
   .steps-6__card-text {
     font-size: 18px;
+  }
+}
+
+/* ===== STEPS-3 RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  /* Карточки с изображениями: 1 колонка */
+  .steps-3__cards {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  /* Компактные карточки: 1 колонка */
+  .steps-3__cards--compact {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Боковое изображение: под карточками */
+  .steps-3 .col-lg-5 {
+    margin-top: 30px;
+  }
+
+  .steps-3__side-image {
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .steps-3 {
+    padding: 50px 0;
+  }
+
+  .steps-3__title {
+    font-size: 26px;
+  }
+
+  .steps-3__card-title {
+    font-size: 18px;
+  }
+
+  .steps-3__card-text {
+    font-size: 16px;
+  }
+
+  .steps-3__cta .btn-primary {
+    width: 100%;
+    min-width: auto;
+    min-height: 55px;
+  }
+}
+
+/* ===== VIDEO SECTION RESPONSIVE ===== */
+@media (max-width: 767.98px) {
+  .video-section__wrapper {
+    border-radius: 15px;
+  }
+}
+
+/* ===== REVIEWS V1 RESPONSIVE ===== */
+@media (max-width: 1199.98px) {
+  .reviews__cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .reviews {
+    padding: 50px 0;
+  }
+
+  .reviews__title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .reviews__cards {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .reviews__arrow {
+    display: none;
+  }
+
+  .reviews__card-name {
+    font-size: 18px;
+  }
+
+  .reviews__card-text {
+    font-size: 16px;
+  }
+
+  .reviews__cta .btn-primary {
+    width: 100%;
+    min-width: auto;
+    min-height: 55px;
+  }
+}
+
+/* ===== HERO CENTERED RESPONSIVE ===== */
+@media (max-width: 991.98px) {
+  .hero-centered__layout {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero-centered__content {
+    order: -1;
+    flex: 0 0 100%;
+    max-width: 100%;
+    padding-top: 0;
+  }
+
+  .hero-centered__image {
+    flex: 0 0 200px;
+    max-width: 200px;
+  }
+
+  .hero-centered__image--left,
+  .hero-centered__image--right {
+    margin-top: 0;
+  }
+
+  .hero-centered__title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero--centered {
+    padding: 40px 0 0;
+  }
+
+  .hero-centered__layout {
+    gap: 20px;
+  }
+
+  .hero-centered__image {
+    flex: 0 0 calc(50% - 15px);
+    max-width: calc(50% - 15px);
+  }
+
+  .hero-centered__title {
+    font-size: 26px;
+  }
+
+  .hero-centered__subtitle {
+    font-size: 16px;
+  }
+
+  .hero-centered__bottom-image {
+    max-width: 100%;
+    margin-top: 20px;
+  }
+
+  .hero-centered__logo {
+    font-size: 32px;
+  }
+}
+
+/* ===== FEATURES CARDS 2x2 RESPONSIVE ===== */
+@media (max-width: 767.98px) {
+  .features-2x2 {
+    padding: 50px 0;
+  }
+
+  .features-2x2__title {
+    font-size: 26px;
+    margin-bottom: 30px;
+  }
+
+  .features-2x2__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .features-2x2__card {
+    padding: 25px 20px;
+  }
+
+  .features-2x2__card-title {
+    font-size: 18px;
+  }
+
+  .features-2x2__card-text {
+    font-size: 14px;
   }
 }

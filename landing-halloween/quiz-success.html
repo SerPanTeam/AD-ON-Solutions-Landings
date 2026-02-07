@@ -1,0 +1,151 @@
+<!-- ============================================
+     QUIZ PAGE SUCCESS - Landing Generator
+
+     Success/Thank you page after form submission.
+     Two-column layout: content left, image right.
+     Includes About section and map.
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - About section: #EEE3D0 (secondary)
+     - Title: Inter Bold, 45px
+     - CTA button: #E2C08D background
+     - Outline buttons for call/email
+     ============================================ -->
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kostenloses Halloween-Fotoshooting in Dieburg! Verspielt, mystisch und voller Fantasie. Begrenzte Plätze bis 15.11.2025. Jetzt Gutschein sichern!">
+  <title>Kostenloses Halloween-Fotoshooting | Fotostudio Sabine Wembacher - Erfolg</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="quiz-page quiz-page--success" data-quiz-step="success">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="header__logo">
+        <span class="logo-text">Logo</span>
+      </a>
+    </div>
+  </header>
+
+  <!-- Success Content -->
+  <main class="quiz-page__main">
+    <div class="container">
+      <div class="row">
+        <!-- Content Column -->
+        <div class="col-lg-5">
+          <h1 class="quiz-success__title">Herzlichen Glückwunsch!</h1>
+          <p class="quiz-success__subtitle">Der Eintrag war erfolgreich und ist nun vermerkt.</p>
+
+          <div class="quiz-success__text">
+            
+            <p>Ich melde mich so schnell wie möglich bei dir.</p>
+            
+          </div>
+
+          <!-- Primary CTA -->
+          
+
+          <!-- Alternative contact -->
+          
+
+          <!-- Contact buttons -->
+          <div class="quiz-success__buttons">
+            <a href="tel:+49123456789" class="btn btn-outline">Jetzt anrufen</a>
+            <a href="mailto:info@example.com" class="btn btn-outline">Mail mir!</a>
+          </div>
+        </div>
+
+        <!-- Image Column -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="quiz-success__image">
+            <img src="https://images.unsplash.com/photo-1604881991720-f91add269bed?w=550&h=529&fit=crop" alt="Halloween-Fotoshooting" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- About Section -->
+  <section class="quiz-success__about section--bg-secondary">
+    <div class="container">
+      <h2 class="quiz-success__about-name">Fotostudio Sabine Wembacher</h2>
+      <p class="quiz-success__about-tagline text-accent">Du kannst es kaum erwarten?
+Dann melde dich direkt bei mir!</p>
+
+      <div class="quiz-success__about-text">
+        
+      </div>
+
+      <!-- Social Icons -->
+      
+      <div class="quiz-success__social">
+        
+        <a href="#" class="social-icon" aria-label="Facebook" target="_blank">
+          <img src="assets/icons/facebook.svg" alt="Facebook" loading="lazy">
+        </a>
+        
+        
+        <a href="#" class="social-icon" aria-label="Instagram" target="_blank">
+          <img src="assets/icons/instagram.svg" alt="Instagram" loading="lazy">
+        </a>
+        
+        
+        <a href="#" class="social-icon" aria-label="Website" target="_blank">
+          <img src="assets/icons/web.svg" alt="Website" loading="lazy">
+        </a>
+        
+      </div>
+      
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="quiz-page__map">
+    
+    <iframe
+      src="https://maps.google.com/maps?q=Dieburg,+Germany&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - Standort">
+    </iframe>
+    
+  </section>
+
+  <!-- Footer -->
+  <footer class="quiz-page__footer">
+    <nav class="quiz-page__nav">
+      <a href="#">Impressum</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Datenschutzerklärung</a>
+      <span class="quiz-page__separator">·</span>
+      <a href="#">Cookie Richtlinien</a>
+    </nav>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/quiz-navigation.js"></script>
+</body>
+</html>

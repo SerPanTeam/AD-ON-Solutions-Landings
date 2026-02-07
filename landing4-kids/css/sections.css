@@ -108,8 +108,22 @@
   margin-bottom: 0;
 }
 
+.hero__note {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+  color: var(--color-accent);
+  margin-top: 16px;
+  margin-bottom: 0;
+  max-width: 450px;
+  white-space: pre-line;
+}
+
 .hero--v1 .btn-primary {
-  width: 286px; /* FIGMA: exact */
+  min-width: 286px; /* FIGMA: 286px base */
+  width: auto; /* allow growth for longer text */
+  max-width: 100%;
+  padding: 0 40px;
   height: 70px; /* FIGMA: exact */
 }
 
@@ -1432,6 +1446,17 @@
   margin-bottom: 16px; /* Меньше gap между параграфами */
 }
 
+/* Content V5 - prevent secondary image overflow on desktop 1200px */
+@media (max-width: 1250px) and (min-width: 992px) {
+  .content-section--v5 .content-section__image-secondary {
+    width: 90%;
+    right: 0;
+    bottom: -30px;
+    height: auto;
+    aspect-ratio: 474 / 340;
+  }
+}
+
 @media (max-width: 991.98px) {
   /* Stacked layout for all tablet */
   .content-section--v5 .row {
@@ -1477,7 +1502,7 @@
 
   /* Stacked images - tablet */
   .content-section--v5 .content-section__image-secondary {
-    width: 100%;
+    width: calc(100% - 30px);
     right: -30px;
     bottom: -30px;
     height: auto;
@@ -1584,9 +1609,28 @@
 .content-section__text {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-none); /* FIGMA: 100% */
-  margin-bottom: 0;
+  line-height: 1.4;
+  margin-bottom: 18px; /* readable gap between paragraphs */
   max-width: 520px; /* FIGMA: exact */
+}
+
+.content-section__text:last-of-type {
+  margin-bottom: 0;
+}
+
+.content-section__list {
+  list-style: disc;
+  padding-left: 20px;
+  margin-top: 8px;
+  margin-bottom: 18px;
+  max-width: 520px;
+}
+
+.content-section__list-item {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-medium);
+  line-height: 1.6;
+  color: var(--color-text-primary);
 }
 
 .content-section__accent {
@@ -1791,12 +1835,13 @@
 
 .features__wrapper {
   display: flex;
-  justify-content: space-evenly;
-  /* TODO: центральная карточка не точно по центру страницы - разобраться */
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
 }
 
 .feature-card {
-  width: 316px; /* FIGMA L2: exact text width */
+  flex: 0 1 316px; /* FIGMA L2: 316px base, shrinks for 4-col */
   text-align: left;
 }
 
@@ -1830,8 +1875,8 @@
 .feature-card__text {
   font-size: var(--font-size-text); /* FIGMA: 22px */
   font-weight: var(--font-weight-medium);
-  line-height: var(--line-height-none); /* FIGMA: 100% */
-  max-width: 316px; /* FIGMA L2: text width */
+  line-height: 1.4; /* readable line-height for long texts */
+  max-width: 100%;
 }
 
 /* ===== FEATURES GRID (Landing 3, 5) ===== */
@@ -3051,6 +3096,15 @@
 }
 
 .about__text:last-child {
+  margin-bottom: 0;
+}
+
+.about__accent {
+  font-size: var(--font-size-text);
+  font-weight: var(--font-weight-semibold);
+  font-style: italic;
+  color: var(--color-accent);
+  margin-top: 24px;
   margin-bottom: 0;
 }
 
@@ -5069,4 +5123,415 @@
     flex: 0 0 100%;
     font-size: 14px;
   }
+}
+
+/* ===== STEPS 3 (Парные, Пасха) ===== */
+/* FIGMA: 3 шага — два варианта: с изображениями в карточках или с боковым фото */
+
+.steps-3 {
+  padding: 80px 0;
+}
+
+.steps-3__title {
+  font-size: var(--font-size-h3); /* FIGMA: 35px */
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-none);
+  margin-bottom: 50px;
+}
+
+/* Вариант A: карточки с изображениями (Пасха) */
+.steps-3__cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.steps-3__card {
+  background-color: var(--color-bg-white, #fff);
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.steps-3__card-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+}
+
+.steps-3__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.steps-3__card-body {
+  padding: 25px 30px 30px;
+}
+
+.steps-3__card-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 15px;
+}
+
+.steps-3__number {
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border: 2px solid var(--color-text-primary);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: var(--font-weight-bold);
+  color: var(--color-text-primary);
+  flex-shrink: 0;
+}
+
+.steps-3__card-title {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.steps-3__card-text {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+  margin: 0;
+}
+
+/* Вариант B: компактные текстовые карточки (Парные) */
+.steps-3__cards--compact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.steps-3__card--compact {
+  background-color: var(--color-bg-white, #fff);
+  border-radius: 15px;
+  padding: 25px;
+}
+
+.steps-3__card--compact .steps-3__card-header {
+  margin-bottom: 12px;
+}
+
+.steps-3__card--compact .steps-3__card-text {
+  font-size: 16px;
+  line-height: 1.4;
+}
+
+/* Боковое изображение (Парные) */
+.steps-3__side-image {
+  border-radius: 20px;
+  overflow: hidden;
+  height: 100%;
+}
+
+.steps-3__side-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* CTA */
+.steps-3__cta {
+  margin-top: 30px;
+}
+
+.steps-3__cta--center {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.steps-3__cta .btn-primary {
+  min-width: 320px;
+  height: 60px;
+}
+
+/* ===== VIDEO SECTION (Halloween, Беременность) ===== */
+/* FIGMA: Простой видео-блок с rounded corners */
+
+.video-section {
+  padding: 0;
+}
+
+.video-section__wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-radius: 30px;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  background-color: var(--color-placeholder-dark, #999);
+}
+
+.video-section__iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.video-section__placeholder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.video-section__poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-section__play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.video-section__placeholder:hover .video-section__play {
+  opacity: 1;
+}
+
+/* ===== REVIEWS V1 (Новорождённые) ===== */
+/* FIGMA (218:135): 4 карточки отзывов + стрелки + CTA */
+
+.reviews {
+  padding: 80px 0;
+}
+
+.reviews__title {
+  font-size: var(--font-size-h3); /* FIGMA: 35px */
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.reviews__wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.reviews__arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  flex-shrink: 0;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.reviews__arrow:hover {
+  opacity: 1;
+}
+
+.reviews__cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  flex: 1;
+  overflow: hidden;
+}
+
+.reviews__card {
+  min-width: 0;
+}
+
+.reviews__card-image {
+  width: 100%;
+  aspect-ratio: 4/3;
+  border-radius: 20px;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.reviews__card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reviews__card-name {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 8px;
+}
+
+.reviews__card-text {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.3;
+}
+
+.reviews__cta {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.reviews__cta .btn-primary {
+  min-width: 320px;
+  height: 60px;
+}
+
+/* ===== HERO CENTERED (Новорождённые, Беременность) ===== */
+/* FIGMA: Центрированный layout — Logo, title, 2 фото по бокам */
+
+.hero--centered {
+  padding: 60px 0 0;
+  min-height: auto;
+}
+
+.hero-centered__layout {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+}
+
+.hero-centered__image {
+  flex: 0 0 280px;
+  max-width: 280px;
+}
+
+.hero-centered__image--left {
+  margin-top: 40px;
+}
+
+.hero-centered__image--right {
+  margin-top: 20px;
+}
+
+.hero-centered__image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.hero-centered__content {
+  flex: 0 1 440px;
+  text-align: center;
+  padding-top: 30px;
+}
+
+.hero-centered__logo {
+  font-size: var(--logo-font-size, 45px);
+  font-weight: var(--logo-font-weight, 700);
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
+  line-height: 1;
+}
+
+.hero-centered__title {
+  font-size: var(--font-size-h1); /* FIGMA: 55px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: var(--color-text-primary);
+}
+
+.hero-centered__accent {
+  font-weight: var(--font-weight-medium);
+  color: var(--color-accent, #9E9081);
+  font-style: italic;
+}
+
+.hero-centered__subtitle {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-medium);
+  line-height: 1.4;
+  color: var(--color-text-primary);
+  margin-bottom: 30px;
+}
+
+.hero-centered__bottom-image {
+  max-width: 500px;
+  margin: 40px auto 0;
+}
+
+.hero-centered__bottom-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+/* ===== FEATURES CARDS 2x2 (Мама и ребенок) ===== */
+/* FIGMA (241:72): 4 белые карточки в 2×2 сетке с иконками */
+
+.features-2x2 {
+  padding: 80px 0;
+}
+
+.features-2x2__title {
+  font-size: var(--font-size-h3); /* FIGMA: 35px */
+  font-weight: var(--font-weight-bold);
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.features-2x2__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.features-2x2__card {
+  background-color: var(--color-bg-white, #fff);
+  border-radius: 20px;
+  padding: 35px 30px;
+}
+
+.features-2x2__card-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.features-2x2__icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  flex-shrink: 0;
+}
+
+.features-2x2__icon img,
+.features-2x2__icon svg {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.features-2x2__card-title {
+  font-size: var(--font-size-text); /* FIGMA: 22px */
+  font-weight: var(--font-weight-bold);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.features-2x2__card-text {
+  font-size: 16px;
+  font-weight: var(--font-weight-medium);
+  line-height: 1.5;
+  color: var(--color-text-secondary, #666);
+  margin: 0;
 }

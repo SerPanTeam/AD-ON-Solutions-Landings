@@ -1,0 +1,1221 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kostenloses Familien-Fotoshooting – jetzt Platz sichern! Liebevolle, natürliche Familienbilder vom Profi.">
+  <meta name="keywords" content="Familien-Fotoshooting, kostenlos, Fotoshooting Aktion, Familienbilder, Gutschein">
+  <title>Kostenloses Familien-Fotoshooting | Fotostudio</title>
+
+  <!-- Open Graph / Facebook -->
+  <!-- CHANGE: SEO - Заголовок страницы для соцсетей -->
+  <meta property="og:title" content="Kostenloses Familien-Fotoshooting">
+  <!-- CHANGE: SEO - Описание для соцсетей (до 200 символов) -->
+  <meta property="og:description" content="Kostenloses Familien-Fotoshooting – jetzt Platz sichern!">
+  <!-- CHANGE: SEO - Картинка превью (1200x630px) -->
+  <meta property="og:image" content="images/og-preview.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Kostenloses Familien-Fotoshooting">
+  <meta name="twitter:description" content="Kostenloses Familien-Fotoshooting – jetzt Platz sichern!">
+  <meta name="twitter:image" content="images/og-preview.jpg">
+
+  <!-- FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/sections.css">
+  <link rel="stylesheet" href="css/quiz.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  
+</head>
+<body>
+  <!-- ============================================
+     HEADER V1 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Logo: Inter Bold, 45px, #3D3D3D
+     - Padding: 53px top (от края до текста логотипа)
+     - Left margin: 101px (в контейнере 1440px)
+     ============================================ -->
+
+<header class="header">
+  <div class="container">
+    <a href="index.html" class="header__logo">
+      <span class="logo-text">Logo</span>
+    </a>
+  </div>
+</header>
+
+
+<!-- ============================================
+     HERO V1 - Главный баннер (Landing 1, 2)
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → найдите <h1 class="hero__title">
+     • Подзаголовок → найдите <p class="hero__subtitle">
+     • Кнопка → найдите class="btn btn-primary"
+
+     КАРТИНКИ:
+     • Главная картинка: 428x394px → hero__image-main
+     • Вторая картинка: 306x290px → hero__image-secondary
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Цвет кнопки → css/variables.css → --color-button-primary
+     • Размер шрифта → css/variables.css → --font-size-h1
+     ============================================ -->
+
+<section class="hero hero--v1 section--bg-primary">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- ====== КОНТЕНТ СЛЕВА ====== -->
+      <div class="col-lg-6">
+        <div class="hero__content">
+          
+          <!-- CHANGE: Акцентный текст над заголовком -->
+          <span class="hero__label">Kostenloses</span>
+          
+
+          <!-- CHANGE: Главный заголовок страницы -->
+          <h1 class="hero__title">Familien-Fotoshooting!</h1>
+
+          <!-- CHANGE: Подзаголовок -->
+          <p class="hero__subtitle">Shootingplatz sichern</p>
+
+          
+
+          <!-- CHANGE: Текст кнопки и ссылка (href) -->
+          <a href="quiz-step1.html" class="btn btn-primary">Button</a>
+
+          
+        </div>
+      </div>
+
+      <!-- ====== КАРТИНКИ СПРАВА ====== -->
+      <div class="col-lg-6">
+        <div class="hero__image-wrapper">
+          <!-- CHANGE: Главное изображение (428x394px) -->
+          <div class="hero__image-main">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=428&h=394&fit=crop" alt="Kostenloses Familien-Fotoshooting">
+          </div>
+          <!-- CHANGE: Второе изображение (306x290px) -->
+          <div class="hero__image-secondary">
+            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=306&h=290&fit=crop" alt="Kostenloses Familien-Fotoshooting">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     CONTENT V1 - Секция с изображением и текстом
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок → найдите class="content-section__title"
+     • Подзаголовок → найдите class="content-section__subtitle"
+     • Текст → найдите class="content-section__text"
+     • Кнопка/Ссылка → найдите class="btn"
+
+     КАРТИНКА:
+     • Основная: 428x440px → content-section__image
+     • Вторая (опц.): → content-section__image-secondary
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Акцентный текст → css/variables.css → --color-accent
+     ============================================ -->
+
+<section class="content-section section--bg-primary">
+  <div class="container">
+    <div class="row align-items-center flex-lg-row-reverse">
+      <!-- ====== ИЗОБРАЖЕНИЕ ====== -->
+      <div class="col-lg-5 ms-auto">
+        <div class="content-section__image-frame">
+          <div class="content-section__image">
+            <!-- CHANGE: Основное изображение (428x440px) -->
+            <img src="https://images.unsplash.com/photo-1513279922550-250c2129b13a?w=428&h=533&fit=crop" alt="Für die schönsten Erinnerungen mit deinen Liebsten!" loading="lazy">
+          </div>
+          
+          
+          <!-- CHANGE: Акцентный текст на изображении -->
+          <p class="content-section__accent">– für dich, für dein Kind, für immer –</p>
+          
+        </div>
+      </div>
+
+      <!-- ====== КОНТЕНТ ====== -->
+      <div class="col-lg-6">
+        <div class="content-section__content">
+          
+          <!-- CHANGE: Заголовок секции -->
+          <h2 class="content-section__title">Für die schönsten Erinnerungen mit deinen Liebsten!</h2>
+          
+          
+          
+          <!-- CHANGE: Текст описания -->
+          <p class="content-section__text">Familien-Fotoshooting – liebevoll & natürlich</p>
+          
+
+          <!-- CHANGE: Текст описания -->
+          <p class="content-section__text">Ich nehme mir viel Zeit und schaffe eine entspannte Atmosphäre, in der echte, authentische Momente mit eurer Familie entstehen dürfen – voller Nähe, Herzlichkeit und echter Emotionen.</p>
+          
+          
+          
+          
+          <div class="content-section__divider"></div>
+          <!-- CHANGE: Текст ссылки-кнопки и href -->
+          <a href="quiz-step1.html" class="btn btn-outline content-section__btn">
+            Kostenloses Fotoshooting sichern
+            <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </a>
+          
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     PROMO V1 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #EEE3D0 (secondary)
+     - Image: 428x533px (Landing 2) или 428x440px (Landing 1, shortImage: true)
+     - Title: Inter Bold 28px
+     - Text: Inter Medium 22px
+     - Divider: 1px line
+     - Link with arrow
+
+     Поддерживает опциональную секцию subtitle + extraText
+     ============================================ -->
+
+<section class="promo section--bg-secondary">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- Изображение слева -->
+      <div class="col-lg-5">
+        <div class="promo__image promo__image--short">
+          <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=428&h=440&fit=crop" alt="" loading="lazy">
+        </div>
+      </div>
+
+      <!-- Контент справа -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="promo__content">
+          <div class="promo__top">
+            <h2 class="promo__title">Liebe Familien, aufgepasst!</h2>
+            
+              
+              <p class="promo__text">Jetzt kostenloses Familien-Fotoshooting sichern – bei mir im Studio!
+Die kostenlosen Fotoshootings sind nur bis zum 13.11.25</p>
+              
+
+              <p class="promo__text"><strong>Warum kostenlos?</strong></p>
+              
+
+              <p class="promo__text">Weil ich auf meine Qualität vertraue – und sicher bin, dass du deine Bilder lieben wirst.
+Du entscheidest selbst, ob und welche du kaufen möchtest – ganz ohne Risiko.</p>
+              
+            
+          </div>
+
+          
+
+          <div class="promo__bottom">
+            
+            <div class="promo__divider"></div>
+            
+            
+            <a href="quiz-step1.html" class="promo__link">
+              Hier geht's zu den Gutscheinen
+              <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </a>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY SLIDER - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Primary background
+     - 3 visible slides
+     - Navigation arrows
+     - Smooth slide transitions
+
+     VARIANT V5 (L5 Business):
+     - Center slide larger with white frame
+     - Side slides smaller without frame
+     - CTA button support
+     ============================================ -->
+
+<section class="gallery-slider section--bg-secondary">
+  <div class="gallery-slider__wrapper">
+    <button class="gallery-slider__arrow gallery-slider__arrow--prev" aria-label="Previous slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.5 14L1 7.5L7.5 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M19 7.5H1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+    <div class="gallery-slider__viewport">
+      <div class="gallery-slider__track">
+        
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=400&h=400&fit=crop" alt="Familie glücklich" loading="lazy">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=400&h=400&fit=crop" alt="Familie zusammen" loading="lazy">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=400&h=400&fit=crop" alt="Familie outdoor" loading="lazy">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=400&h=400&fit=crop" alt="Familienfoto" loading="lazy">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1576016770956-debb63d92058?w=400&h=400&fit=crop" alt="Kinder glücklich" loading="lazy">
+        </div>
+        
+
+        <div class="gallery-slider__slide">
+          <img src="https://images.unsplash.com/photo-1513279922550-250c2129b13a?w=400&h=400&fit=crop" alt="Familie Umarmung" loading="lazy">
+        </div>
+        
+      </div>
+    </div>
+    <button class="gallery-slider__arrow gallery-slider__arrow--next" aria-label="Next slide">
+      <svg width="20" height="15" viewBox="0 0 20 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.5 1L19 7.5L12.5 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M1 7.5H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+    </button>
+  </div>
+  
+</section>
+
+
+<!-- ============================================
+     FEATURES 3-COL - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - 3 columns with icons
+     - Icon: 150x150px
+     - Title: Inter Bold 22px
+     - Divider line: 158px width
+     - Text: Inter Medium 22px
+     ============================================ -->
+
+<section class="features section--bg-primary">
+  <div class="container">
+    
+    <div class="features__wrapper">
+      
+      <div class="feature-card">
+        <div class="feature-card__icon">
+          <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=150&h=150&fit=crop" alt="" loading="lazy">
+        </div>
+        <h3 class="feature-card__title">Viel Zeit & Raum</h3>
+        <div class="feature-card__divider"></div>
+        <p class="feature-card__text">für Momente für dich und deine Familie</p>
+      </div>
+      
+
+      <div class="feature-card">
+        <div class="feature-card__icon">
+          <img src="https://images.unsplash.com/photo-1554048612-b6a482bc67e5?w=150&h=150&fit=crop" alt="" loading="lazy">
+        </div>
+        <h3 class="feature-card__title">Professionelle Fotografie</h3>
+        <div class="feature-card__divider"></div>
+        <p class="feature-card__text">aus Leidenschaft und Professionalität</p>
+      </div>
+      
+
+      <div class="feature-card">
+        <div class="feature-card__icon">
+          <img src="https://images.unsplash.com/photo-1542038784456-1ea8e935640e?w=150&h=150&fit=crop" alt="" loading="lazy">
+        </div>
+        <h3 class="feature-card__title">Hohe Qualität</h3>
+        <div class="feature-card__divider"></div>
+        <p class="feature-card__text">der Fotos hautnah erleben</p>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     STEPS 4 - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #EEE3D0 (secondary)
+     - Title: Inter Bold 35px
+     - CTA button: outline (Landing 1, сверху справа) или primary (Landing 2, снизу)
+     - ctaBottom: true = кнопка снизу по центру, primary стиль
+     - 4 steps in 2x2 grid
+     ============================================ -->
+
+<section class="steps section--bg-secondary">
+  <div class="container">
+    <!-- Title (full width when ctaBottom, otherwise with button on right) -->
+    
+
+    
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-6">
+        <h2 class="steps__title">Wie genau komme ich zum Fotoshooting?</h2>
+      </div>
+      <div class="col-lg-6 text-lg-end">
+        <a href="quiz-step1.html" class="btn btn-outline steps__cta-btn">Deine Fotoshooting-Aktion – jetzt sichern!</a>
+      </div>
+    </div>
+    
+
+    <!-- Steps grid 2x2 -->
+    <div class="row">
+      
+      <div class="col-lg-6">
+        <div class="step-card">
+          <div class="step-card__header">
+            <div class="step-card__number">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6L6 11L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="step-card__title">1. Eintragen</h3>
+          </div>
+          <p class="step-card__text">Gehe das Quiz durch und beantworte die Fragen, damit ich genügend Zeit für dich einplanen kann. Melde dich für das Fotoshooting an und sichere dir deinen exklusiven Gutschein!</p>
+          <div class="step-card__divider"></div>
+        </div>
+      </div>
+      
+
+      <div class="col-lg-6">
+        <div class="step-card">
+          <div class="step-card__header">
+            <div class="step-card__number">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6L6 11L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="step-card__title">2. Shootingzeit</h3>
+          </div>
+          <p class="step-card__text">Während des Fotoshootings entstehen vielfältige und einzigartige Aufnahmen, damit ihr eine große Auswahl an Bildern habt und eure persönlichen Favoriten wählen könnt.</p>
+          <div class="step-card__divider"></div>
+        </div>
+      </div>
+      
+
+      <div class="col-lg-6">
+        <div class="step-card">
+          <div class="step-card__header">
+            <div class="step-card__number">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6L6 11L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="step-card__title">3. Wähle dein Lieblingsbild/er aus</h3>
+          </div>
+          <p class="step-card__text">Nach dem Fotoshooting könnt ihr in Ruhe eure Lieblingsbilder auswählen.</p>
+          <div class="step-card__divider"></div>
+        </div>
+      </div>
+      
+
+      <div class="col-lg-6">
+        <div class="step-card">
+          <div class="step-card__header">
+            <div class="step-card__number">
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 6L6 11L15 1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3 class="step-card__title">4. Ergebnis</h3>
+          </div>
+          <p class="step-card__text">Unvergängliche Erinnerungen in digitaler Form – jederzeit abrufbar, zum Teilen mit euren Liebsten oder für den besonderen Moment zum Wiedererleben.</p>
+          <div class="step-card__divider"></div>
+        </div>
+      </div>
+      
+    </div>
+
+    <!-- CTA at bottom -->
+    
+  </div>
+</section>
+
+
+<!-- ============================================
+     GALLERY FULLWIDTH - Landing Generator
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Max-width: 1440px
+     - Height: 656px
+     - Full-width image (no container for Landing 1/2)
+     - Между Steps и FAQ
+     - Rounded: 30px radius + container (Landing 3)
+
+     ФЛАГИ:
+     - title: Заголовок над изображением (опционально)
+     - rounded: Скруглённые углы + container
+     ============================================ -->
+
+<section class="gallery-fullwidth section--bg-secondary">
+  
+  
+  <div class="container">
+    <img src="https://images.unsplash.com/photo-1491013516836-7db643ee125a?w=1440&h=656&fit=crop" alt="Familie Fotoshooting" class="gallery-fullwidth__image" loading="lazy">
+  </div>
+  
+</section>
+
+
+<!-- ============================================
+     FAQ - Часто задаваемые вопросы
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок секции → class="faq__title"
+     • Вопросы → class="faq__question"
+     • Ответы → class="faq__answer-inner"
+     • Кнопка (опционально) → class="faq__cta"
+
+     ДОБАВИТЬ/УДАЛИТЬ ВОПРОС:
+     Скопируйте или удалите блок <div class="faq__item">
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     • Размер шрифта → --font-size-text-lg (вопрос)
+     ============================================ -->
+
+<section class="faq section--bg-primary">
+  <div class="container">
+    <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
+    <h2 class="faq__title">Häufige Fragen zum Fotoshooting</h2>
+
+    <!-- ====== СПИСОК ВОПРОСОВ ====== -->
+    <div class="faq__list">
+      
+      <!-- ВОПРОС: скопируйте для добавления нового -->
+      <div class="faq__item" data-faq-item>
+        <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
+          <span>Wie lange dauert das Familien-Fotoshooting?</span>
+          <span class="faq__icon faq__icon--plus">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="faq__icon faq__icon--chevron">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L12 12L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq__answer" data-faq-answer>
+          <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
+            <p>Das Fotoshooting dauert ca. 30 Minuten. In dieser Zeit entstehen vielfältige Aufnahmen, damit ihr eine große Auswahl an Bildern habt.</p>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- ВОПРОС: скопируйте для добавления нового -->
+      <div class="faq__item" data-faq-item>
+        <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
+          <span>Was sollen wir zum Fotoshooting anziehen?</span>
+          <span class="faq__icon faq__icon--plus">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="faq__icon faq__icon--chevron">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L12 12L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq__answer" data-faq-answer>
+          <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
+            <p>Wählt bequeme Kleidung in abgestimmten Farben. Neutrale Töne wie Beige, Weiß oder Dunkelblau harmonieren besonders gut. Vermeidet große Logos oder sehr auffällige Muster.</p>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- ВОПРОС: скопируйте для добавления нового -->
+      <div class="faq__item" data-faq-item>
+        <button class="faq__question" data-faq-toggle aria-expanded="false">
+          <!-- РЕДАКТИРОВАТЬ: Текст вопроса -->
+          <span>Können wir unsere Haustiere mitbringen?</span>
+          <span class="faq__icon faq__icon--plus">
+            <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path class="faq__icon-vertical" d="M15 1V29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path d="M1 15H29" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </span>
+          <span class="faq__icon faq__icon--chevron">
+            <svg width="24" height="14" viewBox="0 0 24 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2 2L12 12L22 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+        </button>
+        <div class="faq__answer" data-faq-answer>
+          <div class="faq__answer-inner">
+            <!-- РЕДАКТИРОВАТЬ: Текст ответа -->
+            <p>Ja, eure Haustiere sind herzlich willkommen! Teilt uns das einfach bei der Terminbuchung mit, damit wir genügend Zeit einplanen können.</p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    
+    
+  </div>
+</section>
+
+
+<!-- ============================================
+     SERVICES GRID - Секция услуг
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Заголовок секции → class="services__title"
+     • Карточки услуг → class="service-card"
+       - Название услуги → service-card__title
+       - Описание → service-card__text
+     • Кнопка внизу → class="btn"
+
+     КАРТИНКИ:
+     • Карточки: 300x300px → service-card__image
+
+     ДОБАВИТЬ/УДАЛИТЬ УСЛУГУ:
+     Скопируйте или удалите блок <div class="service-card">
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-secondary
+     • Размер шрифта → --font-size-h3 (заголовок)
+     ============================================ -->
+
+<section class="services section--bg-secondary">
+  <div class="container">
+    <div class="services__header">
+      <!-- РЕДАКТИРОВАТЬ: Заголовок секции -->
+      <h2 class="services__title">Das ganze Jahr über finden immer wieder verschiedene Aktionen zu Fotoshootings statt.</h2>
+    </div>
+
+    <!-- ====== КАРТОЧКИ УСЛУГ ====== -->
+    <div class="services__grid">
+      
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
+      <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
+        <div class="service-card__image">
+          <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=350&h=350&fit=crop" alt="" loading="lazy">
+        </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
+        <h3 class="service-card__title">Family Time</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
+        <p class="service-card__text">Die magische Möglichkeit, lebendige Erinnerungen mit deinen Liebsten und engsten Vertrauten einzufangen.</p>
+      </div>
+      
+
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
+      <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
+        <div class="service-card__image">
+          <img src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=350&h=350&fit=crop" alt="" loading="lazy">
+        </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
+        <h3 class="service-card__title">Kinder-Fotoshooting</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
+        <p class="service-card__text">Haltet die unbeschwerte Freude eurer Kinder in liebevollen, natürlichen Bildern fest.</p>
+      </div>
+      
+
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
+      <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
+        <div class="service-card__image">
+          <img src="https://images.unsplash.com/photo-1544126592-807ade215a0b?w=350&h=350&fit=crop" alt="" loading="lazy">
+        </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
+        <h3 class="service-card__title">Babybauch & Newborn</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
+        <p class="service-card__text">Schwangerschaft und Neugeborene in liebevollen Bildern festhalten – Erinnerungen, die bleiben.</p>
+      </div>
+      
+
+      <!-- КАРТОЧКА УСЛУГИ: скопируйте для добавления новой -->
+      <div class="service-card">
+        <!-- КАРТИНКА: 300x300px - замените src -->
+        <div class="service-card__image">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=350&h=350&fit=crop" alt="" loading="lazy">
+        </div>
+        <!-- РЕДАКТИРОВАТЬ: Название услуги -->
+        <h3 class="service-card__title">Portraitfotografie</h3>
+        <!-- РЕДАКТИРОВАТЬ: Описание услуги -->
+        <p class="service-card__text">Authentisch, ausdrucksstark, zeitlos – ich halte deine Persönlichkeit in einzigartigen Bildern fest.</p>
+      </div>
+      
+    </div>
+
+    <div class="services__cta">
+      <!-- РЕДАКТИРОВАТЬ: Текст кнопки и ссылка -->
+      <a href="quiz-step1.html" class="btn btn-outline">Jetzt Familien-Fotoshooting anfragen</a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     ABOUT - Секция "О фотографе"
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     ТЕКСТ:
+     • Подзаголовок → class="about__label"
+     • Имя фотографа → class="about__name"
+     • Описание → class="about__text" (можно несколько)
+     • Соцсети → class="social-icon" (ссылки)
+
+     КАРТИНКА:
+     • Фото автора: 466x560px → class="about__image"
+
+     ДОБАВИТЬ/УДАЛИТЬ ТЕКСТ:
+     Скопируйте или удалите блок <p class="about__text">
+
+     СОЦСЕТИ:
+     Скопируйте или удалите блок <a class="social-icon">
+     Измените href и src иконки
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --color-bg-primary
+     ============================================ -->
+
+<section class="about section--bg-primary">
+  <div class="container">
+    <div class="row align-items-start">
+      <!-- ====== ФОТО АВТОРА ====== -->
+      <div class="col-lg-5">
+        <!-- CHANGE: Фото автора (466x560px) -->
+        <div class="about__image-wrapper">
+          <div class="about__image">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=466&h=560&fit=crop" alt="Dorett Dornbusch" loading="lazy">
+          </div>
+          
+        </div>
+      </div>
+
+      <!-- ====== ИНФОРМАЦИЯ ====== -->
+      <div class="col-lg-6 offset-lg-1">
+        <div class="about__content">
+          
+          <!-- CHANGE: Подзаголовок (например "Ihr Fotograf") -->
+          
+          <p class="about__label">Willkommen bei</p>
+          
+          
+          <!-- CHANGE: Имя фотографа -->
+          <h2 class="about__name">Dorett Dornbusch</h2>
+          
+          
+          <div class="about__divider"></div>
+          
+          
+
+          <!-- ====== ОПИСАНИЕ (можно добавлять абзацы) ====== -->
+          
+
+          
+          <!-- CHANGE: Текст описания -->
+          <p class="about__text">Ich bin Dorett (Fotografenmeisterin), und liebe es, besondere Momente in authentischen Bildern festzuhalten.</p>
+          
+
+          <!-- CHANGE: Текст описания -->
+          <p class="about__text">In meinem Studio in Dortmund-Huckarde sorge ich für eine entspannte Atmosphäre, damit natürliche und emotionale Aufnahmen entstehen.</p>
+          
+
+          <!-- CHANGE: Текст описания -->
+          <p class="about__text">Mit meiner positiven Art nehme ich dir die Nervosität und mache das Shooting zu einem entspannten Erlebnis – gerne per Du!</p>
+          
+
+          
+
+          
+
+          <!-- ====== СОЦСЕТИ (опционально) ====== -->
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============================================
+     QUIZ CONTAINER - Landing Generator
+
+     Контейнер для всего квиза с шагами, формой и success.
+     Управляется через quiz.js
+
+     PIXEL-PERFECT ПО FIGMA:
+     - Background: #F5EDE0 (primary)
+     - Card style: square (L1, L2) or rounded (L3, L4)
+     ============================================ -->
+
+<section class="quiz section--bg-primary" id="quiz" data-quiz data-quiz-steps="4">
+  <div class="container">
+
+    
+    <!-- STEP 1: Kennst du mich bereits? -->
+    <div class="quiz-step" data-quiz-step="0">
+      <div class="quiz-step__header">
+        <span class="quiz-step__progress">4 Fragen bis zum Gutschein</span>
+        <h2 class="quiz-step__question">Kennst du mich bereits?</h2>
+      </div>
+      <div class="quiz-step__options quiz-step__options--4">
+        
+        <button class="quiz-option quiz-option--square" data-quiz-option="ja_vom_hoeren">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=300&h=300&fit=crop" alt="Ja, vom Hören" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Ja, vom Hören</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--square" data-quiz-option="ja_na_klar">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop" alt="Ja, na klar!" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Ja, na klar!</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--square" data-quiz-option="schon_sehr_lang">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=300&h=300&fit=crop" alt="Schon sehr lang" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Schon sehr lang</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--square" data-quiz-option="nein_noch_nicht">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1576016770956-debb63d92058?w=300&h=300&fit=crop" alt="Nein, noch nicht" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Nein, noch nicht</span>
+        </button>
+        
+      </div>
+    </div>
+    
+
+    <!-- STEP 2: Wer wird mit dabei sein? -->
+    <div class="quiz-step" data-quiz-step="1">
+      <div class="quiz-step__header">
+        <span class="quiz-step__progress">Nur noch 3 Fragen</span>
+        <h2 class="quiz-step__question">Wer wird mit dabei sein?</h2>
+      </div>
+      <div class="quiz-step__options quiz-step__options--3">
+        
+        <button class="quiz-option quiz-option--square" data-quiz-option="elternpaar">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?w=300&h=300&fit=crop" alt="Nur wir als Elternpaar" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Nur wir als Elternpaar</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--square" data-quiz-option="eltern_kinder">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1609220136736-443140cffec6?w=300&h=300&fit=crop" alt="Eltern und die Kinder" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Eltern und die Kinder</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--square" data-quiz-option="ganze_familie">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=300&h=300&fit=crop" alt="Die ganze Familie und unser Haustier" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Die ganze Familie und unser Haustier</span>
+        </button>
+        
+      </div>
+    </div>
+    
+
+    <!-- STEP 3: Welche Art von Bildern wünschst du dir? -->
+    <div class="quiz-step" data-quiz-step="2">
+      <div class="quiz-step__header">
+        <span class="quiz-step__progress">Fast geschafft!</span>
+        <h2 class="quiz-step__question">Welche Art von Bildern wünschst du dir?</h2>
+      </div>
+      <div class="quiz-step__options quiz-step__options--4">
+        
+        <button class="quiz-option quiz-option--square" data-quiz-option="portraits">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&h=300&fit=crop" alt="Portraits" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Portraits</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--square" data-quiz-option="actionbilder">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?w=300&h=300&fit=crop" alt="Actionbilder" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Actionbilder</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--square" data-quiz-option="natuerlich">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1478479405421-ce83c92fb3ba?w=300&h=300&fit=crop" alt="Natürlich" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Natürlich</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--square" data-quiz-option="kuenstlerisch">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1607453998774-d533f65dac99?w=300&h=300&fit=crop" alt="Künstlerisch" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Künstlerisch</span>
+        </button>
+        
+      </div>
+    </div>
+    
+
+    <!-- STEP 4: Schon mal ein Familien-Fotoshooting gehabt? -->
+    <div class="quiz-step" data-quiz-step="3">
+      <div class="quiz-step__header">
+        <span class="quiz-step__progress">Letzte Frage</span>
+        <h2 class="quiz-step__question">Schon mal ein Familien-Fotoshooting gehabt?</h2>
+      </div>
+      <div class="quiz-step__options quiz-step__options--2">
+        
+        <button class="quiz-option quiz-option--square" data-quiz-option="ja_hammer">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1540479859555-17af45c78602?w=300&h=300&fit=crop" alt="Ja, das war der Hammer!" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Ja, das war der Hammer!</span>
+        </button>
+        
+
+        <button class="quiz-option quiz-option--square" data-quiz-option="nein_noch_nicht">
+          
+          <div class="quiz-option__image">
+            <img src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=300&h=300&fit=crop" alt="Nein, bisher noch nicht!" loading="lazy">
+          </div>
+          
+          <span class="quiz-option__text">Nein, bisher noch nicht!</span>
+        </button>
+        
+      </div>
+    </div>
+    
+
+    <!-- FORM: Контактная форма -->
+    <div class="quiz-step quiz-form" data-quiz-step="form">
+      <div class="row">
+        <!-- Форма слева -->
+        <div class="col-lg-5">
+          <div class="quiz-form__header">
+            <span class="quiz-form__label">Klasse, jetzt zum Gutschein</span>
+            <p class="quiz-form__title">Trag dich jetzt ein und sichere dir dein kostenloses</p>
+            <h2 class="quiz-form__subtitle">Familien - Fotoshooting</h2>
+            <p class="quiz-form__note">Die kostenlosen Fotoshootings finden nur bis zum 13.11.25 statt!</p>
+          </div>
+
+          <form class="quiz-form__form" data-quiz-form>
+            <div class="form-group">
+              <input type="text" name="name" placeholder="Dein Vor- und Nachname" required>
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Deine E-Mail Adresse" required>
+            </div>
+            <div class="form-group">
+              <input type="tel" name="phone" placeholder="Deine Telefonnummer" required>
+            </div>
+            
+            <div class="form-group">
+              <select name="availability">
+                <option value="" disabled selected>Wann seid ihr erreichbar (Mehrfachauswahl)</option>
+                
+                <option value="morgens">Morgens</option>
+                
+
+                <option value="mittags">Mittags</option>
+                
+
+                <option value="nachmittags">Nachmittags</option>
+                
+
+                <option value="abends">Abends</option>
+                
+              </select>
+            </div>
+            
+            <div class="form-group form-group--checkbox">
+              <label>
+                <input type="checkbox" name="privacy" required>
+                <span>Ich akzeptiere die <a href="#" target="_blank">Datenschutzbestimmungen</a>.</span>
+              </label>
+            </div>
+            <button type="submit" class="btn btn-primary">Jetzt Gutschein sichern!</button>
+          </form>
+        </div>
+
+        <!-- Контент справа -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="quiz-form__image">
+            <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?w=549&h=670&fit=crop" alt="Familien-Fotoshooting" loading="lazy">
+          </div>
+          <p class="quiz-form__privacy">Deine Privatsphäre ist bei mir sicher – ich schätze dein Vertrauen.</p>
+          <div class="quiz-form__info">
+            <p class="quiz-form__info-title"></p>
+            <p class="quiz-form__info-text"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SUCCESS: Страница благодарности -->
+    <div class="quiz-step quiz-success" data-quiz-step="success">
+      <div class="row">
+        <!-- Контент слева -->
+        <div class="col-lg-5">
+          <h2 class="quiz-success__title">Herzlichen Glückwunsch!</h2>
+          <p class="quiz-success__subtitle">Deine Anfrage ist bei uns eingegangen!</p>
+          
+          <p class="quiz-success__text">Wir melden uns bald bei dir.</p>
+          
+
+          <p class="quiz-success__text">Du hast die Möglichkeit, dich direkt in unseren Kalender einzutragen und dir deine bevorzugte Zeit zu sichern!</p>
+          
+
+          
+          <div class="quiz-success__cta">
+            <a href="#" class="btn btn-primary">Jetzt Termin wählen & sichern!</a>
+          </div>
+          
+
+          
+          <p class="quiz-success__alternative">Natürlich kannst du uns auch ganz unkompliziert telefonisch oder per E-Mail erreichen – wir freuen uns auf deine Nachricht!</p>
+          
+
+          <div class="quiz-success__buttons">
+            <a href="tel:+49123456789" class="btn btn-outline">Jetzt anrufen</a>
+            <a href="mailto:info@example.com" class="btn btn-outline">Mail uns!</a>
+          </div>
+        </div>
+
+        <!-- Изображение справа -->
+        <div class="col-lg-6 offset-lg-1">
+          <div class="quiz-success__image">
+            <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=550&h=529&fit=crop" alt="Familien-Fotoshooting" loading="lazy">
+          </div>
+        </div>
+      </div>
+
+      <!-- About section -->
+      
+      <div class="quiz-success__about">
+        <div class="row">
+          <div class="col-lg-5">
+            <div class="about__image">
+              <img src="https://images.unsplash.com/photo-1542037104857-ffbb0b9155fb?w=550&h=529&fit=crop" alt="Yvonne Jadke – Fotograf Hannover" loading="lazy">
+            </div>
+          </div>
+          <div class="col-lg-6 offset-lg-1">
+            <h3 class="about__name">Yvonne Jadke – Fotograf Hannover</h3>
+            <p class="about__tagline">Familienfotos, Businessportraits & Hochzeitsfotografie</p>
+            
+            <p class="about__text">Wir freuen uns darauf, dein Fotograf für jegliche Anlässe zu sein – sei es für Familienfotos, Business-Portraits oder als Hochzeitsfotograf. Auf eine gute Zusammenarbeit!</p>
+            
+
+            <p class="about__text">Wenn du noch Fragen hast, stehen wir dir jederzeit gerne zur Verfügung.</p>
+            
+            <div class="about__social">
+              <a href="#" class="social-icon" aria-label="Facebook">
+                <img src="assets/icons/facebook.svg" alt="Facebook" loading="lazy">
+              </a>
+              <a href="#" class="social-icon" aria-label="Instagram">
+                <img src="assets/icons/instagram.svg" alt="Instagram" loading="lazy">
+              </a>
+              <a href="#" class="social-icon" aria-label="Website">
+                <img src="assets/icons/web.svg" alt="Website" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ============================================
+     FOOTER - Подвал сайта
+
+     ЧТО РЕДАКТИРОВАТЬ:
+     ─────────────────────────────────────────────
+     КАРТА:
+     • Google Maps → замените src в <iframe>
+     • Как получить код: Google Maps → Поделиться → Встроить
+
+     ССЫЛКИ:
+     • Impressum → измените href
+     • Datenschutz → измените href
+     • Cookie → измените href
+
+     ДАТА:
+     • "Letzte Aktualisierung" → измените дату
+
+     СТИЛИ:
+     • Цвет фона → css/variables.css → --footer-bg
+     ============================================ -->
+
+<footer class="footer">
+  <!-- ====== GOOGLE КАРТА ====== -->
+  <div class="footer__map">
+    
+    <!-- CHANGE: Google Maps - замените src на код вставки из Google Maps -->
+    <iframe
+      src="https://maps.google.com/maps?q=Hannover,+Germany&t=&z=13&ie=UTF8&iwloc=&output=embed"
+      width="100%"
+      height="100%"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      title="Google Maps - Standort">
+    </iframe>
+    
+  </div>
+
+  <!-- ====== НАВИГАЦИЯ ====== -->
+  <div class="footer__bottom">
+    <div class="container">
+      <nav class="footer__nav">
+        <!-- CHANGE: Ссылка на Impressum -->
+        <a href="#">Impressum</a>
+        <span class="footer__separator">·</span>
+        <!-- CHANGE: Ссылка на Datenschutz -->
+        <a href="#">Datenschutzerklärung</a>
+        <span class="footer__separator">·</span>
+        <!-- CHANGE: Ссылка на Cookie Richtlinien -->
+        <a href="#">Cookie Richtlinien</a>
+      </nav>
+      <!-- CHANGE: Дата последнего обновления -->
+      <p class="footer__updated">Letzte Aktualisierung: 07.02.2026 14:39</p>
+    </div>
+  </div>
+
+  <!-- ====== SEO: Structured Data (JSON-LD) ====== -->
+  <!-- CHANGE: SEO - Данные для Google (LocalBusiness) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Photographer",
+    "name": "Yvonne Jadke",
+    "image": "images/photographer.jpg",
+    "telephone": "+49 123 456789",
+    "email": "info@example.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hannover",
+      "addressCountry": "DE"
+    },
+    "priceRange": "€€"
+  }
+  </script>
+</footer>
+
+
+  <!-- Bootstrap 5 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Custom JS -->
+  <script src="js/faq.js"></script>
+  <script src="js/quiz.js"></script>
+  <script src="js/gallery-slider.js"></script>
+  <script src="js/analytics.js"></script>
+</body>
+</html>
